@@ -58,7 +58,7 @@
             android:id="@+id/rightEarButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RIght" />
+            android:text="Right" />
     </RadioGroup>
 
 </RelativeLayout>

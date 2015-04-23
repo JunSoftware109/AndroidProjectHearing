@@ -12,37 +12,31 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MoreInfo extends Activity {
-		
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.moreinfo_activity);
-	}	
-	
-  	public void loadView1(View v) 
-  	{
-  	    Intent intent = new Intent(MoreInfo.this, InfoView1.class);
-  	    startActivity(intent);
-  	}
-  	
-  	public void loadView2(View v) 
-  	{
-  	    Intent intent = new Intent(MoreInfo.this, InfoView2.class);
-  	    startActivity(intent);
-  	}
-  	
-	public void loadView3(View v) 
-  	{
-  	    Intent intent = new Intent(MoreInfo.this, InfoView3.class);
-  	    startActivity(intent);
-  	}
-	
-  	
-	public void loadView4(View v) 
-  	{
-  	    Intent intent = new Intent(MoreInfo.this, InfoView4.class);
-  	    startActivity(intent);
-  	}
+	}
+
+	public void loadView1(View v) {
+		Intent intent = new Intent(MoreInfo.this, InfoView1.class);
+		startActivity(intent);
+	}
+
+	public void loadView2(View v) {
+		Intent intent = new Intent(MoreInfo.this, InfoView2.class);
+		startActivity(intent);
+	}
+
+	public void loadView3(View v) {
+		Intent intent = new Intent(MoreInfo.this, InfoView3.class);
+		startActivity(intent);
+	}
+
+	public void loadView4(View v) {
+		Intent intent = new Intent(MoreInfo.this, InfoView4.class);
+		startActivity(intent);
+	}
 
 }
-

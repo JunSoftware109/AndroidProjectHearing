@@ -247,12 +247,12 @@ public class HearingTestActivity extends
 
 	public void updatePlot() {
 		// Remove all current series from each plot
-		Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
-		while (iterator1.hasNext()) {
-			XYSeries setElement = iterator1.next();
-			mySimpleXYPlot.removeSeries(setElement);
+		//Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
+		//while (iterator1.hasNext()) {
+			//XYSeries setElement = iterator1.next();
+			//mySimpleXYPlot.removeSeries(setElement);
 
-		}
+//		}
 
 		RectF rect = mySimpleXYPlot.getGraphWidget().getGridRect();
 		BitmapShader myShader = new BitmapShader(Bitmap.createScaledBitmap(
@@ -308,7 +308,6 @@ public class HearingTestActivity extends
 		// Context is an interface to flobal info about app environment
 		// context implementatio provided by OS.
 		AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-
 		// Run the function findViewById and pass it R.id.button1 as parameters
 		// Find out which button was pushed based on its ID
 		// Switch statement checks for which button was checked and changes that
@@ -403,11 +402,8 @@ public class HearingTestActivity extends
 	}
 
 	public void setDecibels() {
-
-		int i = 0;
-		i++;
+		for (int i = 0; i<120; i++)
 		yVals[0] = i;
 		updatePlot();
-
 	}
 } // end of class

@@ -14,29 +14,25 @@ import android.view.View;
 
 public class MainMenu extends Activity {
 
+	@Override
+	public void onCreate(Bundle savedInstanceState) { // activity is strarted
+														// here
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main_menu_activity);
+	}
 
-	    @Override
-	    public void onCreate(Bundle savedInstanceState) { // activity is strarted here      
-	      super.onCreate(savedInstanceState);
-	      setContentView(R.layout.main_menu_activity);   
-	    }
-	    
-	  	public void beginTest(View v) 
-	  	{
-	  	    Intent intent = new Intent(this, StartTest.class);
-	  	    startActivity(intent);
-	  	}
-	  	
-	  	public void moreInfo(View v)
-	  	{
-	  		Intent intent = new Intent(MainMenu.this, MoreInfo.class);
-	  		startActivity(intent);
-	   	}
-	  	
-	  	public void loadTest(View v)
-	  	{
-	  		Intent intent = new Intent(MainMenu.this, LoadTestActivity.class);
-	  		startActivity(intent);
-	   	}  			
+	public void beginTest(View v) {
+		Intent intent = new Intent(this, StartTest.class);
+		startActivity(intent);
+	}
+
+	public void moreInfo(View v) {
+		Intent intent = new Intent(MainMenu.this, MoreInfo.class);
+		startActivity(intent);
+	}
+
+	public void loadTest(View v) {
+		Intent intent = new Intent(MainMenu.this, LoadTestActivity.class);
+		startActivity(intent);
+	}
 }
-

@@ -21,64 +21,72 @@ import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYSeries;
 
 public class LoadTestActivity extends Activity {
-    private static final int NUM_PLOTS = 10;
-    private static final int NUM_POINTS_PER_SERIES = 10;
-    private static final int NUM_SERIES_PER_PLOT = 5;
-    private ListView lv;
+	private static final int NUM_PLOTS = 10;
+	private static final int NUM_POINTS_PER_SERIES = 10;
+	private static final int NUM_SERIES_PER_PLOT = 5;
+	private ListView lv;
 
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.loadprev_test);
-        lv = (ListView) findViewById(R.id.listaudiogram);
-        lv.setAdapter(new MyViewAdapter(getApplicationContext(), R.layout.loadprev_test, null));
-    }
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.loadprev_test);
+		lv = (ListView) findViewById(R.id.listaudiogram);
+		lv.setAdapter(new MyViewAdapter(getApplicationContext(),
+				R.layout.loadprev_test, null));
+	}
 
-    class MyViewAdapter extends ArrayAdapter<View> {
-        public MyViewAdapter(Context context, int resId, List<View> views) {
-            super(context, resId, views);
-        }
+	class MyViewAdapter extends ArrayAdapter<View> {
+		public MyViewAdapter(Context context, int resId, List<View> views) {
+			super(context, resId, views);
+		}
 
-        @Override
-        public int getCount() {
-            return 5;
-        }
+		@Override
+		public int getCount() {
+			return 5;
+		}
 
-        @Override
-        public View getView(int pos, View convertView, ViewGroup parent) {
-            LayoutInflater inf = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		@Override
+		public View getView(int pos, View convertView, ViewGroup parent) {
+			LayoutInflater inf = (LayoutInflater) getContext()
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            View v = convertView;
-            if (v == null) {
-                v = inf.inflate(R.layout.loadtest_item, parent, false);
-            }
+			View v = convertView;
+			if (v == null) {
+				v = inf.inflate(R.layout.loadtest_item, parent, false);
+			}
 
-            Plot p = (XYPlot) v.findViewById(R.id.xyplot);
-            Random generator = new Random();
+			Plot p = (XYPlot) v.findViewById(R.id.xyplot);
+			Random generator = new Random();
 
-            p.setTitle("plot" + pos);
+			p.setTitle("Audiogram" + pos);
 
-            for (int k = 0; k < NUM_SERIES_PER_PLOT; k++) {
-                ArrayList<Number> nums = new ArrayList<Number>();
-                for (int j = 0; j < NUM_POINTS_PER_SERIES; j++) {
-                    nums.add(generator.nextFloat());
-                }
+			for (int k = 0; k < NUM_SERIES_PER_PLOT; k++) {
+				ArrayList<Number> nums = new ArrayList<Number>();
+				for (int j = 0; j < NUM_POINTS_PER_SERIES; j++) {
+					nums.add(generator.nextFloat());
+				}
 
-                double rl = Math.random();
-                double gl = Math.random();
-                double bl = Math.random();
+				double rl = Math.random();
+				double gl = Math.random();
+				double bl = Math.random();
 
-                double rp = Math.random();
-                double gp = Math.random();
-                double bp = Math.random();
+				double rp = Math.random();
+				double gp = Math.random();
+				double bp = Math.random();
 
-                XYSeries series = new SimpleXYSeries(nums, SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "S" + k);
-                p.addSeries(series, new LineAndPointFormatter(
-                        Color.rgb(new Double(rl * 255).intValue(), new Double(gl * 255).intValue(), new Double(bl * 255).intValue()),
-                        Color.rgb(new Double(rp * 255).intValue(), new Double(gp * 255).intValue(), new Double(bp * 255).intValue()),
-                        null, null));
-            }
-            p.redraw();
-            return v;
-        }
-    }
+				XYSeries series = new SimpleXYSeries(nums,
+						SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "S" + k);
+				p.addSeries(
+						series,
+						new LineAndPointFormatter(Color.rgb(
+								new Double(rl * 255).intValue(), new Double(
+										gl * 255).intValue(), new Double(
+										bl * 255).intValue()), Color.rgb(
+								new Double(rp * 255).intValue(), new Double(
+										gp * 255).intValue(), new Double(
+										bp * 255).intValue()), null, null));
+			}
+			p.redraw();
+			return v;
+		}
+	}
 }
