@@ -17,6 +17,7 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -405,5 +406,37 @@ public class HearingTestActivity extends
 		for (int i = 0; i<120; i++)
 		yVals[0] = i;
 		updatePlot();
+	}
+	
+	// onDestroy called when app exited
+	// we stop app from playing tone in background
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		Log.d("HearingTest", "onDestroy called");
+		try {
+			frequencygen.audioTrack.release();
+			frequencygen.audioTrack = null;
+			frequencygen = null;
+
+		} catch (Exception e) {
+			Log.e("HearingTest", "onPause error: " + e.toString());
+		}
+	}
+	
+	// onPause is when user leaves the current activity
+	// so we stop frequencygen class from generating tone
+	@Override
+	protected void onPause() {
+		super.onPause();
+		Log.d("HearingTest", "onPause called");
+		try {
+			frequencygen.audioTrack.release();
+			frequencygen.audioTrack = null;
+			frequencygen = null;
+		} catch (Exception e) {
+			Log.e("HearingTest", "onPuse error: " + e.toString());
+
+		}
 	}
 } // end of class

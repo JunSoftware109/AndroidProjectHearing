@@ -47,9 +47,9 @@ public class FrequencyGen extends Activity {
 		audioTrack.getChannelConfiguration();
 
 		try {
-
 			audioTrack.play();
-			// audioTrack.setLoopPoints(0, numSamples/4, -1);
+			Thread.sleep(1000);
+			audioTrack.setLoopPoints(0, numSamples/4, -1);
 
 		} catch (Exception e) {
 			Toast.makeText(getApplicationContext(), "Error playing audio",

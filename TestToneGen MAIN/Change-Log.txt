@@ -14,9 +14,10 @@ Changelog Legend:
 (21/04/15) - Improvements - Version 1.05
 
 	[+] - added x and u graph to be updated using SimpleXYSeries
+	[+] - formatted java files and xml files with cleaner layout
+	[+] - updated app icons and image buttons
+	[+] - added onPause and onDestroy methods for main class to stop playing tone in background
 	[+] - 
-	[+] - 
-	[+] -
 	
 ------------------------------------------------------------------------------------------
 
