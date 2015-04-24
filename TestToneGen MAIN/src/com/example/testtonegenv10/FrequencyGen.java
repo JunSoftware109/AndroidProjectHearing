@@ -20,7 +20,6 @@ public class FrequencyGen extends Activity {
 	public AudioTrack audioTrack = null;
 
 	public void genTone() {
-
 		// fill out the array
 		for (int counter = 0; counter < numSamples; ++counter) {
 			sample[counter] = Math.sin(2 * Math.PI * counter
@@ -39,6 +38,11 @@ public class FrequencyGen extends Activity {
 		}
 	}
 
+	/*
+	 * audiotrack plays pcm audio buffers data is pushed to audiotrack object in
+	 * streaming mode the app writes continous data using write() method write
+	 * method takes three params audioData, offfsetinBYtes and sizeinBytes
+	 */
 	public void playSound() {
 		audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC, sampleRate,
 				AudioFormat.CHANNEL_OUT_STEREO, AudioFormat.ENCODING_PCM_16BIT,
@@ -48,9 +52,7 @@ public class FrequencyGen extends Activity {
 
 		try {
 			audioTrack.play();
-			Thread.sleep(1000);
-			audioTrack.setLoopPoints(0, numSamples/4, -1);
-
+			// audioTrack.setLoopPoints(0, numSamples / 4, -1);
 		} catch (Exception e) {
 			Toast.makeText(getApplicationContext(), "Error playing audio",
 					Toast.LENGTH_SHORT).show();

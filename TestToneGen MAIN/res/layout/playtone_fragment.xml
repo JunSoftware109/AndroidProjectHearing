@@ -29,16 +29,6 @@
         android:layout_toLeftOf="@+id/cannotHearButton"
         android:text="Barely hear" />
 
-    <Button
-        android:id="@+id/nextButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/radioGroup1"
-        android:layout_alignLeft="@+id/cannotHearButton"
-        android:layout_alignParentRight="true"
-        android:text="Next" />
-
     <RadioGroup
         android:id="@+id/radioGroup1"
         android:layout_width="wrap_content"
@@ -60,5 +50,22 @@
             android:layout_height="wrap_content"
             android:text="Right" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/playFrequencyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/radioGroup1"
+        android:layout_alignParentRight="true"
+        android:text="Play Tone" />
+
+    <Button
+        android:id="@+id/nextFrequencyButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playFrequencyButton"
+        android:layout_alignParentRight="true"
+        android:text="Next Frequency" />
 
 </RelativeLayout>

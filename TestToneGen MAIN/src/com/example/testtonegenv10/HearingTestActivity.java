@@ -40,7 +40,7 @@ public class HearingTestActivity extends
 	public HearingTestActivity() {
 	}
 
-	private Button canHearButton, cannotHearButton, nextButton, finishButton;
+	private Button canHearButton, cannotHearButton, nextFrequencyButton, finishButton, playFrequencyButton;
 	private RadioButton rightEarButton, leftEarButton;
 	static int TRUE = 1;// static variable only exists in one copy and belongs
 						// to class
@@ -59,8 +59,10 @@ public class HearingTestActivity extends
 			Color.WHITE, Shader.TileMode.REPEAT);
 
 	private int SERIES_LEN = 10; // length of array for x and y vals
-
-	Integer[] xVals = new Integer[SERIES_LEN];
+	
+	Integer[] xVals = {250, 500, 1000, 2000, 4000, 6000, 8000};
+//	public final  Integer[] frequencies = {250, 500, 1000, 2000, 4000, 6000, 8000};
+	//Integer[] xVals = new Integer[SERIES_LEN];
 	Integer[] yVals = new Integer[SERIES_LEN];
 
 	@Override
@@ -86,8 +88,13 @@ public class HearingTestActivity extends
 												// corresponding onClick()
 												// method
 
-		nextButton = (Button) findViewById(R.id.nextButton);
-		nextButton.setOnClickListener(this);// if button clicked onClickListener
+		playFrequencyButton = (Button) findViewById(R.id.playFrequencyButton);
+		playFrequencyButton.setOnClickListener(this);// if button clicked onClickListener
+											// runs corresponding onClick()
+											// method
+		
+		nextFrequencyButton = (Button) findViewById(R.id.nextFrequencyButton);
+		nextFrequencyButton.setOnClickListener(this);// if button clicked onClickListener
 											// runs corresponding onClick()
 											// method
 
@@ -248,12 +255,13 @@ public class HearingTestActivity extends
 
 	public void updatePlot() {
 		// Remove all current series from each plot
-		//Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
-		//while (iterator1.hasNext()) {
-			//XYSeries setElement = iterator1.next();
-			//mySimpleXYPlot.removeSeries(setElement);
+		 Iterator<XYSeries> iterator1 =
+		 mySimpleXYPlot.getSeriesSet().iterator();
+		 while (iterator1.hasNext()) {
+		 XYSeries setElement = iterator1.next();
+		 mySimpleXYPlot.removeSeries(setElement);
 
-//		}
+		 }
 
 		RectF rect = mySimpleXYPlot.getGraphWidget().getGridRect();
 		BitmapShader myShader = new BitmapShader(Bitmap.createScaledBitmap(
@@ -315,17 +323,22 @@ public class HearingTestActivity extends
 		// text
 		// get selected radio button
 		switch (v.getId()) {
+		
+		case R.id.nextFrequencyButton: {
+				xVals[0] += 250;
+				updatePlot();
+		}
 
-		case R.id.nextButton: {
-			xVals[0] = 250;
+		case R.id.playFrequencyButton: {
+			//xVals[0] = 250;
 			/*
 			 * xVals[0] = 250; xVals[1] = 500; xVals[2] = 1000; xVals[3] = 2000;
 			 * xVals[4] = 3000; xVals[5] = 4000; xVals[6] = 5000; xVals[7] =
 			 * 8000;
 			 */
-			if (xVals[0] == 250)
-				updatePlot();
-			frequencygen.freqOfTone = 250;
+		//	if (xVals[0] == 250)
+		//		updatePlot();
+			frequencygen.freqOfTone = 150;
 			frequencygen.genTone();
 			frequencygen.playSound();
 
@@ -374,7 +387,6 @@ public class HearingTestActivity extends
 
 		case R.id.cannotHearButton: {
 			try {
-				setDecibels();
 				audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
 						AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI);
 			} catch (Exception e) {
@@ -403,11 +415,12 @@ public class HearingTestActivity extends
 	}
 
 	public void setDecibels() {
-		for (int i = 0; i<120; i++)
-		yVals[0] = i;
+		int j =0;
+		for (int i = 0; i < 120; i++)
+			yVals[j] = i;
 		updatePlot();
 	}
-	
+
 	// onDestroy called when app exited
 	// we stop app from playing tone in background
 	@Override
@@ -423,7 +436,7 @@ public class HearingTestActivity extends
 			Log.e("HearingTest", "onPause error: " + e.toString());
 		}
 	}
-	
+
 	// onPause is when user leaves the current activity
 	// so we stop frequencygen class from generating tone
 	@Override
