@@ -11,7 +11,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Color;
-import android.graphics.LinearGradient;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.Shader;
@@ -29,7 +28,7 @@ import android.widget.Toast;
 import com.androidplot.xy.BoundaryMode;
 import com.androidplot.xy.LineAndPointFormatter;
 import com.androidplot.xy.PointLabelFormatter;
-import com.androidplot.xy.SimpleXYSeries;
+
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYSeries;
 import com.androidplot.xy.XYStepMode;
@@ -40,12 +39,9 @@ public class HearingTestActivity extends
 	public HearingTestActivity() {
 	}
 
-	private Button canHearButton, cannotHearButton, nextFrequencyButton, finishButton, playFrequencyButton;
+	private Button canHearButton, cannotHearButton, nextFrequencyButton,
+			finishButton, playFrequencyButton;
 	private RadioButton rightEarButton, leftEarButton;
-	static int TRUE = 1;// static variable only exists in one copy and belongs
-						// to class
-	static int newvalue = TRUE;// static variable only exists in one copy and
-								// belongs to classic
 	static final double currentdB = 40;
 	private FrequencyGen frequencygen = new FrequencyGen(); // create FreqGen
 															// reference
@@ -55,15 +51,14 @@ public class HearingTestActivity extends
 	// private AudioManager audioManager; // reference to AudioManager class
 	private XYPlot mySimpleXYPlot; // reference to XYPlot class
 	private SimpleXYSeries series1, series2;
-	private Shader WHITE_SHADER = new LinearGradient(1, 1, 1, 1, Color.WHITE,
-			Color.WHITE, Shader.TileMode.REPEAT);
 
-	private int SERIES_LEN = 10; // length of array for x and y vals
-	
-	Integer[] xVals = {250, 500, 1000, 2000, 4000, 6000, 8000};
-//	public final  Integer[] frequencies = {250, 500, 1000, 2000, 4000, 6000, 8000};
-	//Integer[] xVals = new Integer[SERIES_LEN];
-	Integer[] yVals = new Integer[SERIES_LEN];
+	private int FREQ_LEN = 120; // length of array for x and y vals
+	private int DB_LEN = 120;
+
+	// private int[] frequencies = new frequencies;
+    //Integer[] xVals = {250, 500, 1000, 2000, 4000, 6000, 8000};
+	Integer[] xVals = new Integer[FREQ_LEN];
+	Integer[] yVals = new Integer[DB_LEN];
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -73,6 +68,8 @@ public class HearingTestActivity extends
 		startUp(); // opens up info box
 
 		this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+		// frequencies = getResources().getIntArray(R.array.frequencies);
 
 		RadioGroup radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
 
@@ -89,14 +86,16 @@ public class HearingTestActivity extends
 												// method
 
 		playFrequencyButton = (Button) findViewById(R.id.playFrequencyButton);
-		playFrequencyButton.setOnClickListener(this);// if button clicked onClickListener
-											// runs corresponding onClick()
-											// method
-		
+		playFrequencyButton.setOnClickListener(this);// if button clicked
+														// onClickListener
+		// runs corresponding onClick()
+		// method
+
 		nextFrequencyButton = (Button) findViewById(R.id.nextFrequencyButton);
-		nextFrequencyButton.setOnClickListener(this);// if button clicked onClickListener
-											// runs corresponding onClick()
-											// method
+		nextFrequencyButton.setOnClickListener(this);// if button clicked
+														// onClickListener
+		// runs corresponding onClick()
+		// method
 
 		canHearButton = (Button) findViewById(R.id.canHearButton);
 		canHearButton.setOnClickListener(this);// if button clicked
@@ -112,58 +111,7 @@ public class HearingTestActivity extends
 
 		// initialize our XYPlot reference:
 		mySimpleXYPlot = (XYPlot) findViewById(R.id.mySimpleXYPlot);
-		mySimpleXYPlot.setTitle("Audiogram");
-		mySimpleXYPlot.setRangeLabel("[dB] Hearing level");
-		mySimpleXYPlot.setDomainLabel("Frequency Hz");
-
-		mySimpleXYPlot.setDomainBoundaries(0, 8000, BoundaryMode.FIXED);
-		mySimpleXYPlot.setRangeBoundaries(120, 0, BoundaryMode.FIXED);
-
-		mySimpleXYPlot.setDomainStep(XYStepMode.INCREMENT_BY_VAL, 1000);
-		// mySimpleXYPlot.setRangeStep(XYStepMode.INCREMENT_BY_VAL, 1);
-
-		mySimpleXYPlot.getBackgroundPaint().setColor(Color.WHITE);
-		mySimpleXYPlot.getGraphWidget().getBackgroundPaint()
-				.setColor(Color.WHITE);
-		mySimpleXYPlot.getGraphWidget().getGridBackgroundPaint()
-				.setColor(Color.WHITE);
-		mySimpleXYPlot.getGraphWidget().getDomainLabelPaint()
-				.setColor(Color.BLACK);
-		mySimpleXYPlot.getGraphWidget().getRangeLabelPaint()
-				.setColor(Color.BLACK);
-		mySimpleXYPlot.getGraphWidget().getDomainOriginLabelPaint()
-				.setColor(Color.BLACK);
-		mySimpleXYPlot.getGraphWidget().getDomainOriginLinePaint()
-				.setColor(Color.BLACK);
-		mySimpleXYPlot.getTitleWidget().getLabelPaint().setColor(Color.BLACK);
-		mySimpleXYPlot.getTitleWidget().getLabelPaint().setTextSize(15);
-		mySimpleXYPlot.getTitleWidget().setHeight(30);
-		mySimpleXYPlot.getTitleWidget().setWidth(400);
-
-		mySimpleXYPlot.getGraphWidget().setPaddingTop(8);
-		mySimpleXYPlot.getGraphWidget().setPaddingBottom(12);
-		mySimpleXYPlot.getGraphWidget().setPaddingLeft(-8);
-		mySimpleXYPlot.getGraphWidget().setPaddingRight(18);
-
-		// mySimpleXYPlot.getLegendWidget().setHeight(50);
-		// mySimpleXYPlot.getLegendWidget().setBackgroundPaint(new
-		// Paint(Color.BLUE));
-		// mySimpleXYPlot.getLegendWidget().setVisible(false);
-
-		// mySimpleXYPlot.getLegendWidget().getTextPaint().setTextSize(30);
-		// setHeight(300, SizeLayoutType.ABSOLUTE);
-
-		mySimpleXYPlot.getDomainLabelWidget().getLabelPaint().setTextSize(15);
-		mySimpleXYPlot.getDomainLabelWidget().setWidth(100);
-		mySimpleXYPlot.getDomainLabelWidget().setHeight(18);
-		mySimpleXYPlot.getDomainLabelWidget().getLabelPaint()
-				.setColor(Color.BLACK);
-
-		mySimpleXYPlot.getRangeLabelWidget().getLabelPaint().setTextSize(15);
-		mySimpleXYPlot.getRangeLabelWidget().setWidth(50);
-		mySimpleXYPlot.getRangeLabelWidget().setHeight(500);
-		mySimpleXYPlot.getRangeLabelWidget().getLabelPaint()
-				.setColor(Color.BLACK);
+		graphSettings(); // retrieve set up for audiogram
 
 		/*
 		 * // Create a couple arrays of y-values to plot: Number[]
@@ -253,63 +201,6 @@ public class HearingTestActivity extends
 		return super.onKeyDown(keyCode, event);
 	}
 
-	public void updatePlot() {
-		// Remove all current series from each plot
-		 Iterator<XYSeries> iterator1 =
-		 mySimpleXYPlot.getSeriesSet().iterator();
-		 while (iterator1.hasNext()) {
-		 XYSeries setElement = iterator1.next();
-		 mySimpleXYPlot.removeSeries(setElement);
-
-		 }
-
-		RectF rect = mySimpleXYPlot.getGraphWidget().getGridRect();
-		BitmapShader myShader = new BitmapShader(Bitmap.createScaledBitmap(
-				BitmapFactory.decodeResource(getResources(),
-						R.drawable.audiogram_background), 1, (int) rect
-						.height(), false), Shader.TileMode.CLAMP,
-				Shader.TileMode.CLAMP);
-		Matrix m = new Matrix();
-		m.setTranslate(rect.left, rect.top);
-		myShader.setLocalMatrix(m);
-
-		mySimpleXYPlot.getGraphWidget().getGridBackgroundPaint()
-				.setShader(myShader);
-
-		if (leftEarButton.isChecked()) {
-			// Create a formatter to use for drawing a series using
-			// LineAndPointRenderer
-			// and configure it from xml:
-			LineAndPointFormatter series1Format = new LineAndPointFormatter();
-			series1Format.setPointLabelFormatter(new PointLabelFormatter());
-			series1Format.configure(getApplicationContext(),
-					R.xml.line_point_formatter_with_plf1);
-
-			series1 = (SimpleXYSeries) getSeries();
-			mySimpleXYPlot.addSeries(series1, series1Format);
-			mySimpleXYPlot.redraw();
-		}
-		/*
-		 * else if (rightEarButton.isChecked()) { LineAndPointFormatter
-		 * series2Format = new LineAndPointFormatter();
-		 * series2Format.setPointLabelFormatter(new PointLabelFormatter());
-		 * series2Format.configure(getApplicationContext(),
-		 * R.xml.line_point_formatter_with_plf2);
-		 * 
-		 * mySimpleXYPlot.redraw();
-		 * 
-		 * // add a new series' to the xyplot: mySimpleXYPlot.addSeries(series2,
-		 * series2Format); }
-		 */
-
-		// Setup our Series with the selected number of elements
-		// series1 = new SimpleXYSeries(Arrays.asList(series1Numbers),
-		// SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Us");
-		// series2 = new SimpleXYSeries(Arrays.asList(series2Numbers),
-		// SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Them");
-
-	}
-
 	// onClick method gets called each time a button is pressed
 	@Override
 	public void onClick(View v) {
@@ -323,21 +214,22 @@ public class HearingTestActivity extends
 		// text
 		// get selected radio button
 		switch (v.getId()) {
-		
+
 		case R.id.nextFrequencyButton: {
-				xVals[0] += 250;
-				updatePlot();
+			setFrequency();
+			setDecibels();
+			updatePlot();
 		}
 
 		case R.id.playFrequencyButton: {
-			//xVals[0] = 250;
+			// xVals[0] = 250;
 			/*
 			 * xVals[0] = 250; xVals[1] = 500; xVals[2] = 1000; xVals[3] = 2000;
 			 * xVals[4] = 3000; xVals[5] = 4000; xVals[6] = 5000; xVals[7] =
 			 * 8000;
 			 */
-		//	if (xVals[0] == 250)
-		//		updatePlot();
+			// if (xVals[0] == 250)
+			// updatePlot();
 			frequencygen.freqOfTone = 150;
 			frequencygen.genTone();
 			frequencygen.playSound();
@@ -414,11 +306,140 @@ public class HearingTestActivity extends
 		}
 	}
 
-	public void setDecibels() {
-		int j =0;
-		for (int i = 0; i < 120; i++)
-			yVals[j] = i;
+	private void setFrequency() {
+		xVals[0] = 250;
+		xVals[1] = 500;
+		xVals[2] = 1000;
+		xVals[3] = 2000;
+		xVals[4] = 3000;
+		xVals[5] = 4000;
+		xVals[6] = 6000;
+		xVals[7] = 8000;
+		
+		yVals[0] = 40;
+
+
+
+		//for (int i = 1; i < 120; i += 1) {
+		//	xVals[i] = xVals[i-1] + (int)(Math.random() * i);
+		//}
+	}
+
+	private void setDecibels() {
+		yVals[0] = 40;
+		for (int i = 1; i < DB_LEN; i += 1) {
+			yVals[i] = (int)(Math.random() * 140);
+		}
+		// int i = 0;
+		// yVals[i++] = 40;
 		updatePlot();
+	}
+
+	private void updatePlot() {
+		// Remove all current series from each plot
+		Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
+		while (iterator1.hasNext()) {
+			XYSeries setElement = iterator1.next();
+			mySimpleXYPlot.removeSeries(setElement);
+		}
+		drawBackground();
+
+		if (leftEarButton.isChecked()) {
+			// Create a formatter to use for drawing a series using
+			// LineAndPointRenderer
+			// and configure it from xml:
+			LineAndPointFormatter series1Format = new LineAndPointFormatter();
+			series1Format.setPointLabelFormatter(new PointLabelFormatter());
+			series1Format.configure(getApplicationContext(),
+					R.xml.line_point_formatter_with_plf1);
+
+			series1 = (SimpleXYSeries) getSeries(); // call getSeries function
+			mySimpleXYPlot.addSeries(series1, series1Format);
+			mySimpleXYPlot.redraw(); // redraw series
+		}
+		/*
+		 * else if (rightEarButton.isChecked()) { LineAndPointFormatter
+		 * series2Format = new LineAndPointFormatter();
+		 * series2Format.setPointLabelFormatter(new PointLabelFormatter());
+		 * series2Format.configure(getApplicationContext(),
+		 * R.xml.line_point_formatter_with_plf2);
+		 * 
+		 * mySimpleXYPlot.redraw();
+		 * 
+		 * // add a new series' to the xyplot: mySimpleXYPlot.addSeries(series2,
+		 * series2Format); }
+		 */
+
+		// Setup our Series with the selected number of elements
+		// series1 = new SimpleXYSeries(Arrays.asList(series1Numbers),
+		// SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Us");
+		// series2 = new SimpleXYSeries(Arrays.asList(series2Numbers),
+		// SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Them");
+
+	}
+
+	private void drawBackground() {
+		RectF rect = mySimpleXYPlot.getGraphWidget().getGridRect();
+		BitmapShader myShader = new BitmapShader(Bitmap.createScaledBitmap(
+				BitmapFactory.decodeResource(getResources(),
+						R.drawable.audiogram_background), 1, (int) rect
+						.height(), false), Shader.TileMode.CLAMP,
+				Shader.TileMode.CLAMP);
+		Matrix m = new Matrix();
+		m.setTranslate(rect.left, rect.top);
+		myShader.setLocalMatrix(m);
+
+		mySimpleXYPlot.getGraphWidget().getGridBackgroundPaint()
+				.setShader(myShader);
+
+	}
+
+	public void graphSettings() {
+
+		mySimpleXYPlot.setTitle("Audiogram");
+		mySimpleXYPlot.setRangeLabel("[dB] Hearing level");
+		mySimpleXYPlot.setDomainLabel("Frequency Hz");
+
+		mySimpleXYPlot.setDomainBoundaries(0, 8000, BoundaryMode.FIXED);
+		mySimpleXYPlot.setRangeBoundaries(120, 0, BoundaryMode.FIXED);
+
+		mySimpleXYPlot.setDomainStep(XYStepMode.INCREMENT_BY_VAL, 1000);
+		// mySimpleXYPlot.setRangeStep(XYStepMode.INCREMENT_BY_VAL, 1);
+
+		mySimpleXYPlot.getBackgroundPaint().setColor(Color.WHITE);
+		mySimpleXYPlot.getGraphWidget().getBackgroundPaint()
+				.setColor(Color.WHITE);
+		mySimpleXYPlot.getGraphWidget().getGridBackgroundPaint()
+				.setColor(Color.WHITE);
+		mySimpleXYPlot.getGraphWidget().getDomainLabelPaint()
+				.setColor(Color.BLACK);
+		mySimpleXYPlot.getGraphWidget().getRangeLabelPaint()
+				.setColor(Color.BLACK);
+		mySimpleXYPlot.getGraphWidget().getDomainOriginLabelPaint()
+				.setColor(Color.BLACK);
+		mySimpleXYPlot.getGraphWidget().getDomainOriginLinePaint()
+				.setColor(Color.BLACK);
+		mySimpleXYPlot.getTitleWidget().getLabelPaint().setColor(Color.BLACK);
+		mySimpleXYPlot.getTitleWidget().getLabelPaint().setTextSize(15);
+		mySimpleXYPlot.getTitleWidget().setHeight(30);
+		mySimpleXYPlot.getTitleWidget().setWidth(400);
+
+		mySimpleXYPlot.getGraphWidget().setPaddingTop(8);
+		mySimpleXYPlot.getGraphWidget().setPaddingBottom(12);
+		mySimpleXYPlot.getGraphWidget().setPaddingLeft(-8);
+		mySimpleXYPlot.getGraphWidget().setPaddingRight(18);
+
+		mySimpleXYPlot.getDomainLabelWidget().getLabelPaint().setTextSize(15);
+		mySimpleXYPlot.getDomainLabelWidget().setWidth(100);
+		mySimpleXYPlot.getDomainLabelWidget().setHeight(18);
+		mySimpleXYPlot.getDomainLabelWidget().getLabelPaint()
+				.setColor(Color.BLACK);
+
+		mySimpleXYPlot.getRangeLabelWidget().getLabelPaint().setTextSize(15);
+		mySimpleXYPlot.getRangeLabelWidget().setWidth(50);
+		mySimpleXYPlot.getRangeLabelWidget().setHeight(500);
+		mySimpleXYPlot.getRangeLabelWidget().getLabelPaint()
+				.setColor(Color.BLACK);
 	}
 
 	// onDestroy called when app exited

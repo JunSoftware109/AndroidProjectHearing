@@ -10,7 +10,7 @@ public class StartTest extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.headphone_info);
+		setContentView(R.layout.calibration_info);
 	}	
 	
   	public void startTest(View v) 

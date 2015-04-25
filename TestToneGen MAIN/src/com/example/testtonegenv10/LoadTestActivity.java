@@ -23,7 +23,7 @@ import com.androidplot.xy.XYSeries;
 public class LoadTestActivity extends Activity {
 	private static final int NUM_PLOTS = 10;
 	private static final int NUM_POINTS_PER_SERIES = 10;
-	private static final int NUM_SERIES_PER_PLOT = 5;
+	private static final int NUM_SERIES_PER_PLOT = 2;
 	private ListView lv;
 
 	public void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,7 @@ public class LoadTestActivity extends Activity {
 			Plot p = (XYPlot) v.findViewById(R.id.xyplot);
 			Random generator = new Random();
 
-			p.setTitle("Audiogram" + pos);
+			p.setTitle("Audiogram " + pos);
 
 			for (int k = 0; k < NUM_SERIES_PER_PLOT; k++) {
 				ArrayList<Number> nums = new ArrayList<Number>();

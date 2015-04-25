@@ -1,5 +1,5 @@
 Junaid Malik - Final Year Project 2015 - Hearing Aid App
-
+------------------- MAIN PROJECT IS SAVED IN GIT HUB, BACKUP IN WORKSPACE ---------------
 Changelog Legend:
 -----------------------------------------------------------------------------------------
 	[+] = Added
@@ -13,11 +13,15 @@ Changelog Legend:
 
 (21/04/15) - Improvements - Version 1.05
 
-	[+] - added x and u graph to be updated using SimpleXYSeries
-	[+] - formatted java files and xml files with cleaner layout
-	[+] - updated app icons and image buttons
-	[+] - added onPause and onDestroy methods for main class to stop playing tone in background
-	[+] - 
+	[+] - added x and y graph to be updated using SimpleXYSeries
+	[*] - formatted java files and xml files with cleaner layout
+	[*] - updated app icons and image buttons
+	[*] - added onPause and onDestroy methods for main class to stop playing tone in background
+	[*] - changed headphone_info to calibration_info
+	[+] - added a custom SimpleXYSeries, removed code that limits x,y size
+	[+] - added preset frequency values as they never change
+	[+] - added colors.xml(values folder), nice_button.xml and a drawable folder
+	[+] - removed multiple launchers from android manifest
 	
 ------------------------------------------------------------------------------------------
 
