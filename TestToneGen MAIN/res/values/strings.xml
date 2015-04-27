@@ -14,7 +14,7 @@
     <string name="Infoview3">What is a hearing test?</string>
     <string name="Infoview4">About developer</string>
     <string name="audiogram_screen">This screen displays the results</string>
-    <string name="hello_world">\t\t\t\t\t\tWelcome to the \n\t\tPure Tone Audiometry App</string>
+    <string name="hello_world">\t\tWelcome to the \n\t\tPure Tone Audiometry App</string>
   	<string name="testing_screen">Test Screen</string>
   	<string name="start_test">Test starting.</string>
   	<string name="calibrate_title">Calibration</string>

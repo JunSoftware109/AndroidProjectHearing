@@ -42,7 +42,7 @@ public class HearingTestActivity extends
 	private Button canHearButton, cannotHearButton, nextFrequencyButton,
 			finishButton, playFrequencyButton;
 	private RadioButton rightEarButton, leftEarButton;
-	static final double currentdB = 40;
+	static  int defaultdB = 40;
 	private FrequencyGen frequencygen = new FrequencyGen(); // create FreqGen
 															// reference
 	private FragmentAudiogram audiogram = new FragmentAudiogram(); // create
@@ -214,10 +214,11 @@ public class HearingTestActivity extends
 		// text
 		// get selected radio button
 		switch (v.getId()) {
-
 		case R.id.nextFrequencyButton: {
+			int index = 0;
 			setFrequency();
-			setDecibels();
+			//setDecibels();			
+			yVals[++index] = 40;
 			updatePlot();
 		}
 
@@ -268,8 +269,10 @@ public class HearingTestActivity extends
 
 		case R.id.canHearButton: {
 			try {
+				yVals[0] -= 1;
+				updatePlot();
 				audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,
-						AudioManager.ADJUST_LOWER, AudioManager.FLAG_SHOW_UI);
+						AudioManager.ADJUST_LOWER, AudioManager.FLAG_VIBRATE);
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(), "Error",
 						Toast.LENGTH_SHORT).show();
@@ -279,8 +282,10 @@ public class HearingTestActivity extends
 
 		case R.id.cannotHearButton: {
 			try {
+				yVals[0] += 1;
+				updatePlot();
 				audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
-						AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI);
+						AudioManager.ADJUST_RAISE, AudioManager.FLAG_VIBRATE);
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(), "Error",
 						Toast.LENGTH_SHORT).show();
@@ -289,6 +294,32 @@ public class HearingTestActivity extends
 		}
 		} // end of switch case
 	} // end of onClick methodrightEarButton
+
+	private void setFrequency() {
+		xVals[0] = 250;
+		xVals[1] = 500;
+		xVals[2] = 1000;
+		xVals[3] = 2000;
+		xVals[4] = 3000;
+		xVals[5] = 4000;
+		xVals[6] = 6000;
+		xVals[7] = 8000;
+
+		//for (int i = 1; i < 120; i += 1) {
+		//	xVals[i] = xVals[i-1] + (int)(Math.random() * i);
+		//}
+	}
+
+	private void setDecibels() {
+	//	yVals[0] = 40;
+	//	for (int i = 1; i < DB_LEN; i += 1) {
+		//	yVals[i] = (int)(Math.random() * 140);
+	//	}
+		// int i = 0;
+		// yVals[i++] = 40;
+		updatePlot();
+	}
+	
 
 	// nested class of SimpleXYSeries
 	public SimpleXYSeries getSeries() {
@@ -305,36 +336,7 @@ public class HearingTestActivity extends
 			// same as above:
 		}
 	}
-
-	private void setFrequency() {
-		xVals[0] = 250;
-		xVals[1] = 500;
-		xVals[2] = 1000;
-		xVals[3] = 2000;
-		xVals[4] = 3000;
-		xVals[5] = 4000;
-		xVals[6] = 6000;
-		xVals[7] = 8000;
-		
-		yVals[0] = 40;
-
-
-
-		//for (int i = 1; i < 120; i += 1) {
-		//	xVals[i] = xVals[i-1] + (int)(Math.random() * i);
-		//}
-	}
-
-	private void setDecibels() {
-		yVals[0] = 40;
-		for (int i = 1; i < DB_LEN; i += 1) {
-			yVals[i] = (int)(Math.random() * 140);
-		}
-		// int i = 0;
-		// yVals[i++] = 40;
-		updatePlot();
-	}
-
+	
 	private void updatePlot() {
 		// Remove all current series from each plot
 		Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
@@ -404,7 +406,7 @@ public class HearingTestActivity extends
 		mySimpleXYPlot.setRangeBoundaries(120, 0, BoundaryMode.FIXED);
 
 		mySimpleXYPlot.setDomainStep(XYStepMode.INCREMENT_BY_VAL, 1000);
-		// mySimpleXYPlot.setRangeStep(XYStepMode.INCREMENT_BY_VAL, 1);
+		// mySimpleXYPlot.setRangeStep(XYStepMode.INCREMENT_BY_VAL, 10);
 
 		mySimpleXYPlot.getBackgroundPaint().setColor(Color.WHITE);
 		mySimpleXYPlot.getGraphWidget().getBackgroundPaint()
