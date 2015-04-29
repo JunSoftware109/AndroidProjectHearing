@@ -9,6 +9,20 @@ Changelog Legend:
 	[x] = Deleted
 	[!] = Bugs
 	
+------------------------------------------------------------------------------------------	
+
+(29/04/15) - Improvements - Version 1.08
+	
+	[+] - increments yVals with simple (+= 1) etc
+	[+] - xVals are fixed and do need to be changed
+	[+] - added "rate this app" plug in by Keisuke Kobayashi - added library and main code
+	[+] - added strings for "rate this app"
+	[+] - added indexYval to control index position 
+	[+] - next frequency always set 40
+	[+] - added strings and xml layout for morinfoview 2, also added to main menu
+	[+] - added info and new icon to main menu
+
+	
 ------------------------------------------------------------------------------------------
 
 (21/04/15) - Improvements - Version 1.05

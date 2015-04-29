@@ -20,65 +20,87 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/imageButton1"
+            android:layout_marginLeft="30dp"
             android:text="Begin test" />
-
-        <TextView
-            android:id="@+id/TextView02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/TextView01"
-            android:layout_alignBottom="@+id/TextView01"
-            android:layout_alignRight="@+id/imageButton3"
-            android:layout_marginRight="14dp"
-            android:text="About" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:background="#FFFFFF"
-            android:onClick="loadTest"
-            android:src="@drawable/load2" />
 
         <ImageButton
             android:id="@+id/imageButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
+            android:layout_alignLeft="@+id/textView2"
             android:layout_alignTop="@+id/imageButton2"
             android:background="#FFFFFF"
             android:onClick="beginTest"
             android:src="@drawable/blue_ear" />
 
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignLeft="@+id/imageButton2"
+            android:text="Load test" />
+
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/imageButton2"
+            android:layout_above="@+id/TextView02"
+            android:layout_alignLeft="@+id/TextView01"
             android:background="#FFFFFF"
             android:onClick="moreInfo"
             android:src="@drawable/about_icon" />
 
         <TextView
-            android:id="@+id/TextView01"
+            android:id="@+id/TextView02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageButton2"
-            android:layout_centerHorizontal="true"
-            android:text="Load test" />
+            android:layout_alignLeft="@+id/imageButton3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/imageButton3"
+            android:layout_marginBottom="61dp"
+            android:text="    About" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/TextView02"
+            android:layout_alignLeft="@+id/textView2"
+            android:background="#FFFFFF"
+            android:onClick="moreInfo2"
+            android:src="@drawable/how_hearing_works" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView02"
+            android:layout_alignBottom="@+id/TextView02"
+            android:layout_alignLeft="@+id/imageButton4"
+            android:text="Learn more?" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="74dp"
+            android:background="#FFFFFF"
+            android:onClick="loadTest"
+            android:src="@drawable/load2" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="@string/hello_world"
-            android:textSize="20dp" />
+            android:textSize="25dp" />
 
     </RelativeLayout>
 

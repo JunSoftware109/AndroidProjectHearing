@@ -97,6 +97,15 @@
              </intent-filter>
         </activity>
         
+          <activity 
+            android:name="com.example.testtonegenv10.MoreInfo2" 
+            android:label="@string/moreinfo2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.EMBED" />    
+             </intent-filter>
+        </activity>
+        
         <activity 
             android:name="com.example.testtonegenv10.InfoView1" 
             android:label="@string/Infoview1" >

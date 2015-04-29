@@ -7,6 +7,8 @@
  */
 package com.example.testtonegenv10;
 
+import com.kskkbys.rate.RateThisApp;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,5 +36,20 @@ public class MainMenu extends Activity {
 	public void loadTest(View v) {
 		Intent intent = new Intent(MainMenu.this, LoadTestActivity.class);
 		startActivity(intent);
+	}
+	
+	public void moreInfo2(View v) {
+		Intent intent = new Intent(MainMenu.this, MoreInfo2.class);
+		startActivity(intent);
+	}
+	
+	@Override
+	protected void onStart() {
+	    super.onStart();
+
+	    // Monitor launch times and interval from installation
+	    RateThisApp.onStart(this);
+	    // If the criteria is satisfied, "Rate this app" dialog will be shown
+	    RateThisApp.showRateDialogIfNeeded(this);
 	}
 }

@@ -1,5 +1,6 @@
 package com.example.testtonegenv10;
 
+import com.example.testtonegenv10.R;
 import android.app.Activity;
 import android.os.Bundle;
 

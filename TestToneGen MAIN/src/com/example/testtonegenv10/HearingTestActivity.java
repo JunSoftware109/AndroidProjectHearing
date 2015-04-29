@@ -1,6 +1,5 @@
 package com.example.testtonegenv10;
 
-/* main class*/
 import java.util.Arrays;
 import java.util.Iterator;
 
@@ -28,7 +27,6 @@ import android.widget.Toast;
 import com.androidplot.xy.BoundaryMode;
 import com.androidplot.xy.LineAndPointFormatter;
 import com.androidplot.xy.PointLabelFormatter;
-
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYSeries;
 import com.androidplot.xy.XYStepMode;
@@ -36,13 +34,13 @@ import com.androidplot.xy.XYStepMode;
 public class HearingTestActivity extends
 		android.support.v4.app.FragmentActivity implements OnClickListener {
 
-	public HearingTestActivity() {
+	public HearingTestActivity() { // empty default constructor
 	}
 
 	private Button canHearButton, cannotHearButton, nextFrequencyButton,
 			finishButton, playFrequencyButton;
 	private RadioButton rightEarButton, leftEarButton;
-	static  int defaultdB = 40;
+	static  int defaultdB = 40; // default dB level (yVal point)
 	private FrequencyGen frequencygen = new FrequencyGen(); // create FreqGen
 															// reference
 	private FragmentAudiogram audiogram = new FragmentAudiogram(); // create
@@ -51,23 +49,28 @@ public class HearingTestActivity extends
 	// private AudioManager audioManager; // reference to AudioManager class
 	private XYPlot mySimpleXYPlot; // reference to XYPlot class
 	private SimpleXYSeries series1, series2;
-
-	private int FREQ_LEN = 120; // length of array for x and y vals
-	private int DB_LEN = 120;
+	private int indexYval = 0; // initial index position for yVals
+	private int indexXvals = 0;
+	private int FREQ_LEN = 120; // length of array for x vals
+	private int DB_LEN = 120; // length of array for y vals
 
 	// private int[] frequencies = new frequencies;
-    //Integer[] xVals = {250, 500, 1000, 2000, 4000, 6000, 8000};
-	Integer[] xVals = new Integer[FREQ_LEN];
+	// Integer[] xVals = {250, 500, 1000, 2000, 4000, 6000, 8000};
+	Integer[] xVals = new Integer[FREQ_LEN]; // array of type Integer with
+												// length defined
 	Integer[] yVals = new Integer[DB_LEN];
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.hearingtest_view);
+		setContentView(R.layout.hearingtest_view); // setting the view with
+													// defined xml file
 
 		startUp(); // opens up info box
 
-		this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
+		this.setVolumeControlStream(AudioManager.STREAM_MUSIC); // reference to
+																// current
+																// volume stream
 
 		// frequencies = getResources().getIntArray(R.array.frequencies);
 
@@ -111,7 +114,7 @@ public class HearingTestActivity extends
 
 		// initialize our XYPlot reference:
 		mySimpleXYPlot = (XYPlot) findViewById(R.id.mySimpleXYPlot);
-		graphSettings(); // retrieve set up for audiogram
+		graphSettings(); // retrieve layout for audiogram
 
 		/*
 		 * // Create a couple arrays of y-values to plot: Number[]
@@ -158,49 +161,6 @@ public class HearingTestActivity extends
 		 */
 	}
 
-	public void startUp() {
-		AlertDialog.Builder alertbox = new AlertDialog.Builder(
-				HearingTestActivity.this);
-		alertbox.setIcon(R.drawable.ic_launcher);
-		alertbox.setMessage("You will hear a series of tones for 5 seconds each."
-				+ "\n\nSelect whether you can hear or cannot hear"
-				+ "\n\nAt clearest dB you can hear a tone then choose select");
-		alertbox.setTitle("Getting started");
-		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface arg0, int arg1) {
-				// finish used for destroyed activity
-			}
-		});
-		alertbox.show();
-
-	}
-
-	// Method for alert dialog, when user exits
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if ((keyCode == KeyEvent.KEYCODE_BACK)) {
-			AlertDialog.Builder alertbox = new AlertDialog.Builder(
-					HearingTestActivity.this);
-			alertbox.setIcon(R.drawable.ic_launcher);
-			alertbox.setTitle("Cancel the test?");
-			alertbox.setPositiveButton("Yes",
-					new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface arg0, int arg1) {
-							// finish used for destroyed activity
-							finish();
-						}
-					});
-			alertbox.setNegativeButton("No",
-					new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface arg0, int arg1) {
-							Toast.makeText(getApplicationContext(),
-									"Test continue", Toast.LENGTH_SHORT).show();
-						}
-					});
-			alertbox.show();
-		}
-		return super.onKeyDown(keyCode, event);
-	}
-
 	// onClick method gets called each time a button is pressed
 	@Override
 	public void onClick(View v) {
@@ -211,26 +171,16 @@ public class HearingTestActivity extends
 		// Run the function findViewById and pass it R.id.button1 as parameters
 		// Find out which button was pushed based on its ID
 		// Switch statement checks for which button was checked and changes that
-		// text
-		// get selected radio button
 		switch (v.getId()) {
 		case R.id.nextFrequencyButton: {
-			int index = 0;
 			setFrequency();
-			//setDecibels();			
-			yVals[++index] = 40;
+		//	setDecibels();
+			indexYval += 1;
+			yVals[ indexYval ] = 40;
 			updatePlot();
 		}
 
 		case R.id.playFrequencyButton: {
-			// xVals[0] = 250;
-			/*
-			 * xVals[0] = 250; xVals[1] = 500; xVals[2] = 1000; xVals[3] = 2000;
-			 * xVals[4] = 3000; xVals[5] = 4000; xVals[6] = 5000; xVals[7] =
-			 * 8000;
-			 */
-			// if (xVals[0] == 250)
-			// updatePlot();
 			frequencygen.freqOfTone = 150;
 			frequencygen.genTone();
 			frequencygen.playSound();
@@ -269,7 +219,7 @@ public class HearingTestActivity extends
 
 		case R.id.canHearButton: {
 			try {
-				yVals[0] -= 1;
+				yVals[indexYval] -= 1;
 				updatePlot();
 				audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,
 						AudioManager.ADJUST_LOWER, AudioManager.FLAG_VIBRATE);
@@ -282,7 +232,7 @@ public class HearingTestActivity extends
 
 		case R.id.cannotHearButton: {
 			try {
-				yVals[0] += 1;
+				yVals[indexYval] += 1;
 				updatePlot();
 				audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
 						AudioManager.ADJUST_RAISE, AudioManager.FLAG_VIBRATE);
@@ -304,16 +254,18 @@ public class HearingTestActivity extends
 		xVals[5] = 4000;
 		xVals[6] = 6000;
 		xVals[7] = 8000;
-
-		//for (int i = 1; i < 120; i += 1) {
-		//	xVals[i] = xVals[i-1] + (int)(Math.random() * i);
-		//}
+		
+		if(xVals[indexXvals] > xVals[7] ) {
+			xVals[indexXvals] = xVals[7];
+		}
 	}
 
 	private void setDecibels() {
-	//	yVals[0] = 40;
+		
+		//yVals[ indexYval + 1 ] = 40;
+
 	//	for (int i = 1; i < DB_LEN; i += 1) {
-		//	yVals[i] = (int)(Math.random() * 140);
+	//yVals[i] = ((int) + yVals[i]);
 	//	}
 		// int i = 0;
 		// yVals[i++] = 40;
@@ -442,6 +394,49 @@ public class HearingTestActivity extends
 		mySimpleXYPlot.getRangeLabelWidget().setHeight(500);
 		mySimpleXYPlot.getRangeLabelWidget().getLabelPaint()
 				.setColor(Color.BLACK);
+	}
+
+	public void startUp() {
+		AlertDialog.Builder alertbox = new AlertDialog.Builder(
+				HearingTestActivity.this);
+		alertbox.setIcon(R.drawable.ic_launcher);
+		alertbox.setMessage("You will hear a series of tones for 5 seconds each."
+				+ "\n\nSelect whether you can hear or cannot hear"
+				+ "\n\nAt clearest dB you can hear a tone then choose select");
+		alertbox.setTitle("Getting started");
+		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface arg0, int arg1) {
+				// finish used for destroyed activity
+			}
+		});
+		alertbox.show();
+
+	}
+
+	// Method for alert dialog, when user exits
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+			AlertDialog.Builder alertbox = new AlertDialog.Builder(
+					HearingTestActivity.this);
+			alertbox.setIcon(R.drawable.ic_launcher);
+			alertbox.setTitle("Cancel the test?");
+			alertbox.setPositiveButton("Yes",
+					new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface arg0, int arg1) {
+							// finish used for destroyed activity
+							finish();
+						}
+					});
+			alertbox.setNegativeButton("No",
+					new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface arg0, int arg1) {
+							Toast.makeText(getApplicationContext(),
+									"Test continue", Toast.LENGTH_SHORT).show();
+						}
+					});
+			alertbox.show();
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 
 	// onDestroy called when app exited

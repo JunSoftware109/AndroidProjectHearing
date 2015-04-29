@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/progressBar1"
         android:layout_centerHorizontal="true"
-        android:text="Junaid Hearing\nAid App\n21/April/2015"
+        android:text="Junaid Hearing\nAid App\n29/April/2015"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#FF6600"
         android:textSize="35sp" />

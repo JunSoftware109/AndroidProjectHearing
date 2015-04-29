@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class InfoView2 extends Activity implements OnClickListener {
+public class InfoView2 extends Activity {
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -19,9 +19,4 @@ public class InfoView2 extends Activity implements OnClickListener {
 		setContentView(R.layout.infoview2);
 	}
 
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		
-	}
 }
