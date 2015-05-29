@@ -11,7 +11,7 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
         <TextView
@@ -81,26 +81,26 @@
             android:layout_alignLeft="@+id/imageButton4"
             android:text="Learn more?" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/textView1"
-            android:layout_marginTop="74dp"
-            android:background="#FFFFFF"
-            android:onClick="loadTest"
-            android:src="@drawable/load2" />
-
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:gravity="center"
+            android:gravity="top|center"
             android:text="@string/hello_world"
             android:textSize="25dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="76dp"
+            android:background="#FFFFFF"
+            android:onClick="loadTest"
+            android:src="@drawable/load2" />
 
     </RelativeLayout>
 

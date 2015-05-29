@@ -21,7 +21,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.androidplot.xy.BoundaryMode;
@@ -49,13 +48,15 @@ public class HearingTestActivity extends
 	// private AudioManager audioManager; // reference to AudioManager class
 	private XYPlot mySimpleXYPlot; // reference to XYPlot class
 	private SimpleXYSeries series1, series2;
+	//private int[] frequencies;
+	private int currentFreq = 0;
 	private int indexYval = 0; // initial index position for yVals
 	private int indexXvals = 0;
 	private int FREQ_LEN = 120; // length of array for x vals
 	private int DB_LEN = 120; // length of array for y vals
 
 	// private int[] frequencies = new frequencies;
-	// Integer[] xVals = {250, 500, 1000, 2000, 4000, 6000, 8000};
+    Integer[] frequencies = {250, 500, 1000, 2000, 4000, 6000, 8000};
 	Integer[] xVals = new Integer[FREQ_LEN]; // array of type Integer with
 												// length defined
 	Integer[] yVals = new Integer[DB_LEN];
@@ -64,17 +65,17 @@ public class HearingTestActivity extends
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.hearingtest_view); // setting the view with
-													// defined xml file
-
+													// defined XML file
 		startUp(); // opens up info box
 
 		this.setVolumeControlStream(AudioManager.STREAM_MUSIC); // reference to
 																// current
 																// volume stream
+		//frequencies = getResources().getIntArray(R.array.frequencies);
+
 
 		// frequencies = getResources().getIntArray(R.array.frequencies);
 
-		RadioGroup radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
 
 		leftEarButton = (RadioButton) findViewById(R.id.leftEarButton);
 		leftEarButton.setOnClickListener(this);// if button clicked
@@ -115,80 +116,34 @@ public class HearingTestActivity extends
 		// initialize our XYPlot reference:
 		mySimpleXYPlot = (XYPlot) findViewById(R.id.mySimpleXYPlot);
 		graphSettings(); // retrieve layout for audiogram
-
-		/*
-		 * // Create a couple arrays of y-values to plot: Number[]
-		 * series1Numbers = {40, 40, 40, 40, 40, 40}; Number[] series2Numbers =
-		 * {40, 40, 40, 40, 40, 40};
-		 * 
-		 * // Turn the above arrays into XYSeries': XYSeries series1 = new
-		 * SimpleXYSeries( Arrays.asList(series1Numbers), // SimpleXYSeries
-		 * takes a List so turn our array into a List
-		 * SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the
-		 * element index as the x value "Right Ear"); // Set the display title
-		 * of the series
-		 * 
-		 * // same as above XYSeries series2 = new SimpleXYSeries(
-		 * Arrays.asList(series2Numbers),
-		 * SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Left Ear");
-		 * 
-		 * // Create a formatter to use for drawing a series using
-		 * LineAndPointRenderer // and configure it from xml:
-		 * LineAndPointFormatter series1Format = new LineAndPointFormatter();
-		 * series1Format.setPointLabelFormatter(new PointLabelFormatter());
-		 * series1Format.configure(getApplicationContext(),
-		 * R.xml.line_point_formatter_with_plf1);
-		 * 
-		 * // add a new series' to the xyplot: mySimpleXYPlot.addSeries(series1,
-		 * series1Format);
-		 * 
-		 * // same as above: LineAndPointFormatter series2Format = new
-		 * LineAndPointFormatter(); series2Format.setPointLabelFormatter(new
-		 * PointLabelFormatter());
-		 * series2Format.configure(getApplicationContext(),
-		 * R.xml.line_point_formatter_with_plf2);
-		 * 
-		 * // add a new series' to the xyplot: mySimpleXYPlot.addSeries(series2,
-		 * series2Format);
-		 * 
-		 * // reduce the number of range labels
-		 * mySimpleXYPlot.setTicksPerRangeLabel(3);
-		 * mySimpleXYPlot.getGraphWidget().setDomainLabelOrientation(0);
-		 * 
-		 * // series = (SimpleXYSeries) getSeries(); //
-		 * mySimpleXYPlot.addSeries(series, series1Format); //
-		 * mySimpleXYPlot.redraw();
-		 */
 	}
 
 	// onClick method gets called each time a button is pressed
 	@Override
 	public void onClick(View v) {
 		// audio manager provides access to volume control
-		// Context is an interface to flobal info about app environment
-		// context implementatio provided by OS.
+		// Context is an interface to global info about app environment
+		// context implementation provided by OS.
 		AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 		// Run the function findViewById and pass it R.id.button1 as parameters
 		// Find out which button was pushed based on its ID
 		// Switch statement checks for which button was checked and changes that
 		switch (v.getId()) {
 		case R.id.nextFrequencyButton: {
-			setFrequency();
-		//	setDecibels();
+			setFreqIndex();
+			//setFreqValue();
 			indexYval += 1;
-			yVals[ indexYval ] = 40;
+			currentFreq += 1;
+			yVals[ indexYval ] = 40; // set next index to default value 40
 			updatePlot();
 		}
 
 		case R.id.playFrequencyButton: {
-			frequencygen.freqOfTone = 150;
+
+			frequencygen.freqOfTone = frequencies[currentFreq];
 			frequencygen.genTone();
 			frequencygen.playSound();
-
-			/*
-			 * if(xVals[1] == 500) updatePlot(); frequencygen.freqOfTone = 250;
-			 * frequencygen.genTone(); frequencygen.playSound();
-			 */
+			
 		}
 
 		case R.id.leftEarButton: {
@@ -245,7 +200,7 @@ public class HearingTestActivity extends
 		} // end of switch case
 	} // end of onClick methodrightEarButton
 
-	private void setFrequency() {
+	private void setFreqIndex() {
 		xVals[0] = 250;
 		xVals[1] = 500;
 		xVals[2] = 1000;
@@ -255,9 +210,9 @@ public class HearingTestActivity extends
 		xVals[6] = 6000;
 		xVals[7] = 8000;
 		
-		if(xVals[indexXvals] > xVals[7] ) {
-			xVals[indexXvals] = xVals[7];
-		}
+	//	if(xVals[indexXvals] == xVals[7] ) {
+	//		xVals[0] = 40;
+	//	}
 	}
 
 	private void setDecibels() {
@@ -272,13 +227,19 @@ public class HearingTestActivity extends
 		updatePlot();
 	}
 	
+	private void setFreqValue() {
+		 
+			
+			frequencygen.freqOfTone = frequencies[currentFreq];
+			if (currentFreq > 6) {
+				frequencies[0] = currentFreq;
+			}	
+			currentFreq += 1;
 
+	}
+	
 	// nested class of SimpleXYSeries
 	public SimpleXYSeries getSeries() {
-		// for (int counter = 1; counter < SERIES_LEN; counter += 1){
-		// xVals[counter] = xVals[counter-1] + (int)(Math.random() * counter);
-		// yVals[counter] = (int)(Math.random() * 140);
-		// }
 		if (leftEarButton.isChecked()) {
 			return new SimpleXYSeries(Arrays.asList(xVals),
 					Arrays.asList(yVals), "Left Ear");
@@ -289,6 +250,9 @@ public class HearingTestActivity extends
 		}
 	}
 	
+	/**
+	 * 
+	 */
 	private void updatePlot() {
 		// Remove all current series from each plot
 		Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
@@ -299,6 +263,7 @@ public class HearingTestActivity extends
 		drawBackground();
 
 		if (leftEarButton.isChecked()) {
+
 			// Create a formatter to use for drawing a series using
 			// LineAndPointRenderer
 			// and configure it from xml:
@@ -306,23 +271,27 @@ public class HearingTestActivity extends
 			series1Format.setPointLabelFormatter(new PointLabelFormatter());
 			series1Format.configure(getApplicationContext(),
 					R.xml.line_point_formatter_with_plf1);
-
+			mySimpleXYPlot.clear();
+			
 			series1 = (SimpleXYSeries) getSeries(); // call getSeries function
 			mySimpleXYPlot.addSeries(series1, series1Format);
 			mySimpleXYPlot.redraw(); // redraw series
 		}
-		/*
-		 * else if (rightEarButton.isChecked()) { LineAndPointFormatter
-		 * series2Format = new LineAndPointFormatter();
-		 * series2Format.setPointLabelFormatter(new PointLabelFormatter());
-		 * series2Format.configure(getApplicationContext(),
-		 * R.xml.line_point_formatter_with_plf2);
-		 * 
-		 * mySimpleXYPlot.redraw();
-		 * 
-		 * // add a new series' to the xyplot: mySimpleXYPlot.addSeries(series2,
-		 * series2Format); }
-		 */
+	
+		else {
+			LineAndPointFormatter series2Format = new LineAndPointFormatter();
+			series2Format.setPointLabelFormatter(new PointLabelFormatter());
+			series2Format.configure(getApplicationContext(),
+					R.xml.line_point_formatter_with_plf2);
+			
+			mySimpleXYPlot.clear();
+
+			series2 = (SimpleXYSeries) getSeries(); // call getSeries function
+			// add a new series' to the xyplot:
+			mySimpleXYPlot.addSeries(series2, series2Format);
+			
+			mySimpleXYPlot.redraw();
+		}
 
 		// Setup our Series with the selected number of elements
 		// series1 = new SimpleXYSeries(Arrays.asList(series1Numbers),
@@ -330,6 +299,15 @@ public class HearingTestActivity extends
 		// series2 = new SimpleXYSeries(Arrays.asList(series2Numbers),
 		// SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Them");
 
+	}
+	
+	private void clearPlot() {
+		// Remove all current series from each plot
+		Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
+		while (iterator1.hasNext()) {
+			XYSeries setElement = iterator1.next();
+			mySimpleXYPlot.removeSeries(setElement);
+		}
 	}
 
 	private void drawBackground() {

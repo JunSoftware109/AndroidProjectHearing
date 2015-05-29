@@ -11,6 +11,14 @@ Changelog Legend:
 	
 ------------------------------------------------------------------------------------------	
 
+(04/05/15) - Improvements - Version 1.09
+
+	[+] - increment for frequency array values
+	[*] - change next frequency button to have method setFreqValue
+	
+	
+------------------------------------------------------------------------------------------	
+
 (29/04/15) - Improvements - Version 1.08
 	
 	[+] - increments yVals with simple (+= 1) etc

@@ -46,7 +46,6 @@ public class MainMenu extends Activity {
 	@Override
 	protected void onStart() {
 	    super.onStart();
-
 	    // Monitor launch times and interval from installation
 	    RateThisApp.onStart(this);
 	    // If the criteria is satisfied, "Rate this app" dialog will be shown

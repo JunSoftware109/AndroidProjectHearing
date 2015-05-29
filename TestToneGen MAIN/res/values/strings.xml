@@ -76,15 +76,15 @@
 	<string name="infoView4">The system of the body that lets a person hear sound is called the auditory system. It is made up of four main parts. 
 The visible part of the ear and the ear canal make up the outer ear.
 The area behind the eardrum is called the middle ear. It is made up of the three smallest bones in the body (malleus, incus and stapes) and the Eustachian tube, which leads from the middle ear to the back of the throat.
-The main organ for hearing, the  cochlea, is in the inner ear. The cochlea is the sense organ for hearing like the nose is for smelling. The middle ear bones are connected to the cochlea and the cochlea is connected to the  auditory nerve.
+\n\nThe main organ for hearing, the  cochlea, is in the inner ear. The cochlea is the sense organ for hearing like the nose is for smelling. The middle ear bones are connected to the cochlea and the cochlea is connected to the  auditory nerve.
 The auditory nerve is the nerve that runs from the inner ear (cochlea) to the brainstem. The cochlea sends signals to the auditory nerve; then the auditory nerve sends these signals to the brain.
 Hearing loss can happen because of problems in any part of the auditory system.</string>
 
 	<string name="infoView5">Hearing is different than other senses like vision, smell and taste. The hearing system is about changing movement into a signal that the brain can understand. Sound travels through the air as vibrations in the air pressure (i.e. sound waves). It takes four steps through the auditory system before the brain can understand sounds.
-	    Step 1: Sound moves into the ear through the outer ear and the ear canal. Once the sound has moved down the ear canal, the sound waves hit the eardrum, which makes the eardrum vibrate.
-	    Step 2: When the eardrum vibrates, it moves the bones of the middle part of the ear (malleus, incus and stapes). The movement of the malleus and incus makes the stapes move in and out of the entrance of the inner ear, the oval window.
-	    Step 3: The other side of the oval window, in the inner ear, is filled with fluid. As the stapes moves back and forth on the oval window, it makes waves. This changes the vibrations of the middle ear into hydraulic energy.
-	    Step 4: The hydraulic energy of the waves makes tiny hair cells in the  cochlea sway back and forth. The swaying action creates signals, which move through the  auditory nerve then up the levels of the brainstem until they reach the brain.</string>
+	    \n\nStep 1: Sound moves into the ear through the outer ear and the ear canal. Once the sound has moved down the ear canal, the sound waves hit the eardrum, which makes the eardrum vibrate.
+	    \n\nStep 2: When the eardrum vibrates, it moves the bones of the middle part of the ear (malleus, incus and stapes). The movement of the malleus and incus makes the stapes move in and out of the entrance of the inner ear, the oval window.
+	    \n\nStep 3: The other side of the oval window, in the inner ear, is filled with fluid. As the stapes moves back and forth on the oval window, it makes waves. This changes the vibrations of the middle ear into hydraulic energy.
+	    \n\nStep 4: The hydraulic energy of the waves makes tiny hair cells in the  cochlea sway back and forth. The swaying action creates signals, which move through the  auditory nerve then up the levels of the brainstem until they reach the brain.</string>
 	    					 	
 	<string name="rta_dialog_title">Rate this app</string>
     <string name="rta_dialog_message">If you enjoy this app, please take a moment to rate this app. It won\'t take more than a minute. Thank you for your support!</string>

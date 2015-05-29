@@ -5,24 +5,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="900dp" >
+        android:layout_height="1465dp" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="38dp"
-            android:gravity="center"
-            android:text="The Auditory System"
-            android:textColor="#3399FF"
-            android:textSize="25sp" />
-
-        <ScrollView
+        <LinearLayout
             android:id="@+id/scrollView1"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:layout_height="match_parent"
             android:layout_below="@+id/textView1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp" >
@@ -31,8 +19,11 @@
                 android:id="@+id/infoView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/infoView4" />
-        </ScrollView>
+                android:text="@string/infoView4"
+                android:textSize="20sp"
+                android:width="310dp" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout1"
@@ -44,8 +35,8 @@
 
             <ImageView
                 android:id="@+id/imageView1"
-                android:layout_width="match_parent"
-                android:layout_height="276dp"
+                android:layout_width="320dp"
+                android:layout_height="298dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="33dp"
                 android:src="@drawable/human_ear" />
@@ -53,38 +44,56 @@
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/linearLayout1" >
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginTop="81dp" >
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="34dp"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:text="How Hearing Works"
                 android:textColor="#3399FF"
                 android:textSize="25sp" />
         </LinearLayout>
 
-        <ScrollView
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="The Auditory System"
+            android:textColor="#3399FF"
+            android:textSize="25sp" />
+
+        <LinearLayout
             android:id="@+id/scrollView3"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_alignParentLeft="true"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/scrollView1"
             android:layout_below="@+id/linearLayout2"
-            android:layout_marginTop="15dp" >
+            android:layout_marginTop="28dp"
+            android:gravity="center" >
 
             <TextView
                 android:id="@+id/infoView5"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/infoView5" />
+                android:layout_height="wrap_content"
+                android:includeFontPadding="true"
+                android:text="@string/infoView5"
+                android:textSize="20sp"
+                android:width="310dp" />
 
-        </ScrollView>
+        </LinearLayout>
+
     </RelativeLayout>
 
 </ScrollView>
