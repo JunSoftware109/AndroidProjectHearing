@@ -20,7 +20,7 @@ public class MainMenu extends Activity {
 	public void onCreate(Bundle savedInstanceState) { // activity is strarted
 														// here
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_menu_activity);
+		setContentView(R.layout.main_menu);
 	}
 
 	public void beginTest(View v) {

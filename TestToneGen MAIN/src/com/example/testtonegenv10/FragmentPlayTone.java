@@ -19,7 +19,7 @@ public class FragmentPlayTone extends Fragment   {
     	//---Inflate the layout for this fragment---    	
     	
         return inflater.inflate(
-            R.layout.playtone_fragment, container, false); 
+            R.layout.frequency_fragment, container, false); 
  
     }
 }

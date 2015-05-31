@@ -16,7 +16,7 @@ public class MoreInfo extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.moreinfo_activity);
+		setContentView(R.layout.moreinfo);
 	}
 
 	public void loadView1(View v) {

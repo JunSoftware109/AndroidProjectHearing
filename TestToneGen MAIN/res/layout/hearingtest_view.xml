@@ -21,6 +21,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         class="com.example.testtonegenv10.FragmentPlayTone"
-        tools:layout="@layout/playtone_fragment" />
+        tools:layout="@layout/frequency_fragment" />
 
 </RelativeLayout>
