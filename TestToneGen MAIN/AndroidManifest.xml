@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.testtonegenv10"
     android:versionCode="10"
-    android:versionName="10"
-    >
-    
+    android:versionName="10" >
+
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="16" />
@@ -14,134 +13,132 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-    
-        <activity 
-            android:name="com.example.testtonegenv10.SplashScreen" 
+        <activity
+            android:name="com.example.testtonegenv10.SplashScreen"
             android:label="@string/splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />    
-             </intent-filter>
-       </activity>
-                    
-       <activity
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.example.testtonegenv10.MainMenu"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
-        
-       <activity 
-            android:name="com.example.testtonegenv10.StartTest" 
+        <activity
+            android:name="com.example.testtonegenv10.StartTest"
             android:label="@string/start_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
         </activity>
-        
         <activity
             android:name="com.example.testtonegenv10.HearingTestActivity"
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
-        
-        <activity 
-            android:name="com.example.testtonegenv10.FragmentPlayTone" 
+        <activity
+            android:name="com.example.testtonegenv10.FragmentFrequency"
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
-        </activity>    
-        
-         <activity 
-            android:name="com.example.testtonegenv10.FrequencyGen" 
-            android:label="@string/testing_screen" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
-        </activity>    
 
-		 <activity 
-            android:name="com.example.testtonegenv10.FragmentAudiogram" 
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.testtonegenv10.FrequencyGenerator"
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
-        </activity>      
-        
-        <activity 
-            android:name="com.example.testtonegenv10.LoadTestActivity" 
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.testtonegenv10.FragmentAudiogram"
+            android:label="@string/testing_screen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.testtonegenv10.LoadTestActivity"
             android:label="@string/loadprev_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
         </activity>
-        
-        
-        <activity 
-            android:name="com.example.testtonegenv10.MoreInfo" 
+        <activity
+            android:name="com.example.testtonegenv10.MoreInfo"
             android:label="@string/moreinfo_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
         </activity>
-        
-          <activity 
-            android:name="com.example.testtonegenv10.MoreInfo2" 
+        <activity
+            android:name="com.example.testtonegenv10.MoreInfo2"
             android:label="@string/moreinfo2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
         </activity>
-        
-        <activity 
-            android:name="com.example.testtonegenv10.InfoView1" 
+        <activity
+            android:name="com.example.testtonegenv10.InfoView1"
             android:label="@string/Infoview1" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
-        </activity>  
-        
-        <activity 
-            android:name="com.example.testtonegenv10.InfoView2" 
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.testtonegenv10.InfoView2"
             android:label="@string/Infoview2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
-        </activity>          
-               
-        <activity 
-            android:name="com.example.testtonegenv10.InfoView3" 
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.testtonegenv10.InfoView3"
             android:label="@string/Infoview3" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
-        </activity>  
-        
-         <activity 
-            android:name="com.example.testtonegenv10.InfoView4" 
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.testtonegenv10.InfoView4"
             android:label="@string/Infoview4" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.EMBED" />    
-             </intent-filter>
-        </activity>  
-        
 
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
     </application>
+
 </manifest>

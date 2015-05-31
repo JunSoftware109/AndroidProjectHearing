@@ -20,11 +20,11 @@ public class MainMenu extends Activity {
 	public void onCreate(Bundle savedInstanceState) { // activity is strarted
 														// here
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_menu);
+		setContentView(R.layout.main_menu); // main menu view is loaded first
 	}
 
 	public void beginTest(View v) {
-		Intent intent = new Intent(this, StartTest.class);
+		Intent intent = new Intent(this, StartTest.class); // intent used to launch activity
 		startActivity(intent);
 	}
 
@@ -37,18 +37,19 @@ public class MainMenu extends Activity {
 		Intent intent = new Intent(MainMenu.this, LoadTestActivity.class);
 		startActivity(intent);
 	}
-	
+
 	public void moreInfo2(View v) {
 		Intent intent = new Intent(MainMenu.this, MoreInfo2.class);
 		startActivity(intent);
 	}
 	
+	// code from rate this app by Keisuke Kobayashi 
 	@Override
 	protected void onStart() {
-	    super.onStart();
-	    // Monitor launch times and interval from installation
-	    RateThisApp.onStart(this);
-	    // If the criteria is satisfied, "Rate this app" dialog will be shown
-	    RateThisApp.showRateDialogIfNeeded(this);
+		super.onStart();
+		// Monitor launch times and interval from installation
+		RateThisApp.onStart(this);
+		// If the criteria is satisfied, "Rate this app" dialog will be shown
+		RateThisApp.showRateDialogIfNeeded(this);
 	}
 }

@@ -20,7 +20,7 @@
         android:layout_height="149dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        class="com.example.testtonegenv10.FragmentPlayTone"
+        class="com.example.testtonegenv10.FragmentFrequency"
         tools:layout="@layout/frequency_fragment" />
 
 </RelativeLayout>

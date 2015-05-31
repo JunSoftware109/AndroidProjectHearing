@@ -1,3 +1,10 @@
+/*
+ * {This class is used to run methods based on what user chooses
+ * 	for the Frequency Generator }
+ *
+ * @version Build {1.0} (14 May 2015)
+ * @author Junaid Malik
+ */
 package com.example.testtonegenv10;
 
 import android.app.Activity;
@@ -7,34 +14,39 @@ import android.media.AudioTrack;
 import android.media.MediaPlayer;
 import android.widget.Toast;
 
-public class FrequencyGen extends Activity {
+// this class is based on Marble Mice: Generate And Play A Tone In Android
+// www.marblemice.blogspot.ie/2010/04/generate-and-play-tone-in-android.html
+public class FrequencyGenerator extends Activity {
 
-	public final int duration = 5; // seconds
-	public int sampleRate = 44100;
+	public final int duration = 5; // length of tone in seconds
+	public int sampleRate = 44100; // sample rate at 44,100 times per second
 	public final int numSamples = duration * sampleRate;
-	public final double sample[] = new double[numSamples];
-	public double freqOfTone; // hz
-	public final byte generatedSound[] = new byte[2 * numSamples];
+	public final double sample[] = new double[numSamples]; // number of samples
+															// = duration multiplied by
+															// sample rate
+	public double freqOfTone; // frequency in Hz
+	public final byte generatedSound[] = new byte[2 * numSamples]; 
 	public static final int LEFT_EAR = 1;
 	public static final int RIGHT_EAR = 2;
-	public AudioTrack audioTrack = null;
+	public AudioTrack audioTrack = null; // null object of type audioTrack
 
 	public void genTone() {
-		// fill out the array
+		// fill out the array with samples
 		for (int counter = 0; counter < numSamples; ++counter) {
-			sample[counter] = Math.sin(2 * Math.PI * counter
+			sample[counter] = Math.sin(2 * Math.PI * counter // x(t)=A Sin 2pi n
+																// fa/fs
 					/ (sampleRate / freqOfTone));
 		}
 
 		// convert to 16 bit pcm sound array
 		// assumes the sample buffer is normalised.
 		int index = 0;
-		for (final double dVal : sample) {
+		for (final double doubleValue : sample) { 
 			// scale to maximum amplitude
-			final short val = (short) ((dVal * 32767));
+			final short value = (short) ((doubleValue * 32767));
 			// in 16 bit wav PCM, first byte is the low order byte
-			generatedSound[index++] = (byte) (val & 0x00ff);
-			generatedSound[index++] = (byte) ((val & 0xff00) >>> 8);
+			generatedSound[index++] = (byte) (value & 0x00ff);
+			generatedSound[index++] = (byte) ((value & 0xff00) >>> 8);
 		}
 	}
 
@@ -52,7 +64,6 @@ public class FrequencyGen extends Activity {
 
 		try {
 			audioTrack.play();
-			// audioTrack.setLoopPoints(0, numSamples / 4, -1);
 		} catch (Exception e) {
 			Toast.makeText(getApplicationContext(), "Error playing audio",
 					Toast.LENGTH_SHORT).show();

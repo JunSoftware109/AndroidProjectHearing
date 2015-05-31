@@ -40,7 +40,7 @@ public class HearingTestActivity extends
 			finishButton, playFrequencyButton;
 	private RadioButton rightEarButton, leftEarButton;
 	static  int defaultdB = 40; // default dB level (yVal point)
-	private FrequencyGen frequencygen = new FrequencyGen(); // create FreqGen
+	private FrequencyGenerator frequencygen = new FrequencyGenerator(); // create FreqGen
 															// reference
 	private FragmentAudiogram audiogram = new FragmentAudiogram(); // create
 																	// AudioGram
@@ -149,7 +149,7 @@ public class HearingTestActivity extends
 		case R.id.leftEarButton: {
 			try {
 				if (leftEarButton.isChecked())
-					frequencygen.playTone(FrequencyGen.LEFT_EAR);
+					frequencygen.playTone(FrequencyGenerator.LEFT_EAR);
 
 				else
 					frequencygen.playTone(0.0f, 1.0f);
@@ -163,7 +163,7 @@ public class HearingTestActivity extends
 		case R.id.rightEarButton: {
 			try {
 				if (rightEarButton.isChecked())
-					frequencygen.playTone(FrequencyGen.RIGHT_EAR);
+					frequencygen.playTone(FrequencyGenerator.RIGHT_EAR);
 
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(), "Error",
