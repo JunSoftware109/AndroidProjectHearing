@@ -214,18 +214,6 @@ public class HearingTestActivity extends
 	//		xVals[0] = 40;
 	//	}
 	}
-
-	private void setDecibels() {
-		
-		//yVals[ indexYval + 1 ] = 40;
-
-	//	for (int i = 1; i < DB_LEN; i += 1) {
-	//yVals[i] = ((int) + yVals[i]);
-	//	}
-		// int i = 0;
-		// yVals[i++] = 40;
-		updatePlot();
-	}
 	
 	private void setFreqValue() {
 		 

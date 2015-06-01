@@ -19,5 +19,4 @@ public class StartTest extends Activity {
   	    startActivity(intent);
   	}
   	
-
 }

@@ -85,7 +85,6 @@ public final class R {
         public static final int nextFrequencyButton=0x7f0a000c;
         public static final int playFrequencyButton=0x7f0a000b;
         public static final int playtone_fragment=0x7f0a000e;
-        public static final int progressBar1=0x7f0a002a;
         public static final int radioGroup1=0x7f0a0008;
         public static final int relativeLayout1=0x7f0a0019;
         public static final int rightEarButton=0x7f0a000a;
@@ -112,7 +111,6 @@ public final class R {
         public static final int main_menu=0x7f03000a;
         public static final int moreinfo=0x7f03000b;
         public static final int moreinfo2=0x7f03000c;
-        public static final int splash=0x7f03000d;
     }
     public static final class string {
         public static final int Infoview1=0x7f080009;
