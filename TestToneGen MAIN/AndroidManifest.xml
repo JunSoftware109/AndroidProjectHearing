@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme" >
    
         <activity
-            android:name="com.example.testtonegenv10.MainMenu"
+            android:name="com.malikjunaid.testtonegenv10.MainMenu"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.StartTest"
+            android:name="com.malikjunaid.testtonegenv10.StartTest"
             android:label="@string/start_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.HearingTestActivity"
+            android:name="com.malikjunaid.testtonegenv10.HearingTestActivity"
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.FragmentFrequency"
+            android:name="com.malikjunaid.testtonegenv10.FragmentFrequency"
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,7 +51,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.FrequencyGenerator"
+            android:name="com.malikjunaid.testtonegenv10.FrequencyGenerator"
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,7 +60,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.FragmentAudiogram"
+            android:name="com.malikjunaid.testtonegenv10.FragmentAudiogram"
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,7 +69,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.TestResults"
+            android:name="com.malikjunaid.testtonegenv10.TestResults"
             android:label="@string/results_sreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,7 +78,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.LoadTestActivity"
+            android:name="com.malikjunaid.testtonegenv10.LoadTestActivity"
             android:label="@string/loadprev_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -87,7 +87,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.MoreInfo"
+            android:name="com.malikjunaid.testtonegenv10.MoreInfo"
             android:label="@string/moreinfo_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -96,7 +96,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.MoreInfo2"
+            android:name="com.malikjunaid.testtonegenv10.MoreInfo2"
             android:label="@string/moreinfo2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -105,7 +105,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.InfoView1"
+            android:name="com.malikjunaid.testtonegenv10.InfoView1"
             android:label="@string/Infoview1" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -114,7 +114,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.InfoView2"
+            android:name="com.malikjunaid.testtonegenv10.InfoView2"
             android:label="@string/Infoview2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -123,7 +123,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.InfoView3"
+            android:name="com.malikjunaid.testtonegenv10.InfoView3"
             android:label="@string/Infoview3" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -132,7 +132,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.testtonegenv10.InfoView4"
+            android:name="com.malikjunaid.testtonegenv10.InfoView4"
             android:label="@string/Infoview4" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

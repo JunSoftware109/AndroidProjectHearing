@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,12 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.testtonegenv10.MainMenu" >
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+    tools:context="com.malikjunaid.testtonegenv10.MainMenu" >
 
         <TextView
             android:id="@+id/textView2"
@@ -81,16 +76,6 @@
             android:layout_alignLeft="@+id/imageButton4"
             android:text="Learn more?" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="top|center"
-            android:text="@string/hello_world"
-            android:textSize="25dp" />
-
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="wrap_content"
@@ -102,6 +87,14 @@
             android:onClick="loadTest"
             android:src="@drawable/load2" />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageButton1"
+            android:layout_alignParentTop="true"
+            android:gravity="top|center"
+            android:text="@string/hello_world"
+            android:textSize="30dp" />
 
-</LinearLayout>
+</RelativeLayout>

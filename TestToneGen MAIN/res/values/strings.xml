@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Dr Hearing V10</string>
+    <string name="app_name">Dr Hearing</string>
     <string name="splash">SplashScreen</string>
     <string name="begin">Begin a test</string>
     <string name="load">Load test</string>
@@ -86,6 +86,15 @@ Hearing loss can happen because of problems in any part of the auditory system.<
 	    \n\nStep 2: When the eardrum vibrates, it moves the bones of the middle part of the ear (malleus, incus and stapes). The movement of the malleus and incus makes the stapes move in and out of the entrance of the inner ear, the oval window.
 	    \n\nStep 3: The other side of the oval window, in the inner ear, is filled with fluid. As the stapes moves back and forth on the oval window, it makes waves. This changes the vibrations of the middle ear into hydraulic energy.
 	    \n\nStep 4: The hydraulic energy of the waves makes tiny hair cells in the  cochlea sway back and forth. The swaying action creates signals, which move through the  auditory nerve then up the levels of the brainstem until they reach the brain.</string>
+	    
+	<string name="result_info1">Depending on the range of your audiogram results
+		\n\nBelow is the classfication based upon decibel level
+		\n\nNormal hearing 0 to 20 dB
+		\n\nMild 21 to 40 dB
+		\n\nModerate 41 to 55 dB
+		\n\nModerately-severe 56 to 70 dB
+		\n\nSevere 71 to 90 dB
+		\n\nProfound 91+ dB </string>
 	    					 	
 	<string name="rta_dialog_title">Rate this app</string>
     <string name="rta_dialog_message">If you enjoy this app, please take a moment to rate this app. It won\'t take more than a minute. Thank you for your support!</string>

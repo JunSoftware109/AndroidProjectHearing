@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.testtonegenv10.FragmentFrequency" >
+    tools:context="com.malikjunaid.testtonegenv10.FragmentFrequency" >
 
     <Button
         android:id="@+id/cannotHearButton"

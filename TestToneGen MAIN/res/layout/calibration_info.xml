@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:gravity="center" >
-    
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -52,7 +52,5 @@
         android:layout_below="@+id/textView1"
         android:background="#FFFFFF"
         android:src="@drawable/head_phones_img" />
-    
-    
 
 </RelativeLayout>
