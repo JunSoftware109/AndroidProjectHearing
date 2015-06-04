@@ -137,16 +137,24 @@ public class HearingTestActivity extends
 				currentFreq += 1;
 				yVals[indexYval] = 40; // set next index to default value 40
 				updatePlot();
-			} catch (Exception e) {
-				Toast.makeText(getApplicationContext(), "Error",
+			} catch (ArrayIndexOutOfBoundsException exception) {
+				if (currentFreq >= 8) {
+					currentFreq = 0;
+				}
+				Toast.makeText(getApplicationContext(), "You have reached end of test",
 						Toast.LENGTH_SHORT).show();
 			}
 		}
 
 		case R.id.playFrequencyButton: {
+			try{
 			frequencygen.freqOfTone = frequencies[currentFreq];
 			frequencygen.genTone();
 			frequencygen.playSound();
+			} catch (ArrayIndexOutOfBoundsException exception) {
+				Toast.makeText(getApplicationContext(), "You have reached end of test",
+						Toast.LENGTH_SHORT).show();
+			}
 			
 		}
 
@@ -178,7 +186,7 @@ public class HearingTestActivity extends
 
 		case R.id.canHearButton: {
 			try {
-				yVals[indexYval] -= 1;
+				yVals[indexYval] -= 5;
 				updatePlot();
 				audioManager.adjustVolume(AudioManager.ADJUST_LOWER, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
 			} catch (Exception e) {
@@ -190,7 +198,7 @@ public class HearingTestActivity extends
 
 		case R.id.cannotHearButton: {
 			try {
-				yVals[indexYval] += 1;
+				yVals[indexYval] += 5;
 				updatePlot();
 				audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
 						AudioManager.ADJUST_RAISE, AudioManager.FLAG_VIBRATE);

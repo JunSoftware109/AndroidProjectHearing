@@ -11,7 +11,6 @@ import android.app.Activity;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
-import android.media.MediaPlayer;
 import android.widget.Toast;
 
 // this class is based on Marble Mice: Generate And Play A Tone In Android
