@@ -69,6 +69,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.testtonegenv10.TestResults"
+            android:label="@string/results_sreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.example.testtonegenv10.LoadTestActivity"
             android:label="@string/loadprev_test" >
             <intent-filter>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TestToneGen V10</string>
+    <string name="app_name">Dr Hearing V10</string>
     <string name="splash">SplashScreen</string>
     <string name="begin">Begin a test</string>
     <string name="load">Load test</string>
@@ -15,9 +15,10 @@
     <string name="Infoview3">What is a hearing test?</string>
     <string name="Infoview4">About developer</string>
     <string name="audiogram_screen">This screen displays the results</string>
-    <string name="hello_world">\t\tWelcome to the \n\t\tHearing Test App</string>
+    <string name="hello_world">\t\tWelcome to the \n\t\tDr Hearing App</string>
   	<string name="testing_screen">Test Screen</string>
   	<string name="start_test">Test starting.</string>
+  	<string name="results_sreen">Results Interpretation</string>
   	<string name="calibrate_title">Calibration</string>
   	<string name="calibrate_info">For best results, its highly recommended that you use headphones for the remainder of this test.</string>
   	<string name="calibrate_button">Click here to continue</string>

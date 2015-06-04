@@ -2,10 +2,10 @@ package com.example.testtonegenv10;
 
 import java.util.Arrays;
 import java.util.Iterator;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
@@ -30,10 +30,10 @@ import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYSeries;
 import com.androidplot.xy.XYStepMode;
 
-public class HearingTestActivity extends
-		android.support.v4.app.FragmentActivity implements OnClickListener {
+public class HearingTestActivity extends android.support.v4.app.FragmentActivity implements OnClickListener {
 
 	public HearingTestActivity() { // empty default constructor
+	
 	}
 
 	private Button canHearButton, cannotHearButton, nextFrequencyButton,
@@ -51,7 +51,6 @@ public class HearingTestActivity extends
 	//private int[] frequencies;
 	private int currentFreq = 0;
 	private int indexYval = 0; // initial index position for yVals
-	private int indexXvals = 0;
 	private int FREQ_LEN = 120; // length of array for x vals
 	private int DB_LEN = 120; // length of array for y vals
 
@@ -138,8 +137,8 @@ public class HearingTestActivity extends
 				yVals[indexYval] = 40; // set next index to default value 40
 				updatePlot();
 			} catch (ArrayIndexOutOfBoundsException exception) {
-				if (currentFreq >= 8) {
-					currentFreq = 0;
+				if (currentFreq > 8) {
+					
 				}
 				Toast.makeText(getApplicationContext(), "You have reached end of test",
 						Toast.LENGTH_SHORT).show();
@@ -154,6 +153,7 @@ public class HearingTestActivity extends
 			} catch (ArrayIndexOutOfBoundsException exception) {
 				Toast.makeText(getApplicationContext(), "You have reached end of test",
 						Toast.LENGTH_SHORT).show();
+				restartTestAlert();
 			}
 			
 		}
@@ -207,6 +207,10 @@ public class HearingTestActivity extends
 						Toast.LENGTH_SHORT).show();
 			}
 			break;
+		}
+		
+		case R.id.finishButton: {
+			finisTest();
 		}
 		} // end of switch case
 	} // end of onClick methodrightEarButton
@@ -262,7 +266,6 @@ public class HearingTestActivity extends
 		drawBackground();
 
 		if (leftEarButton.isChecked()) {
-
 			// Create a formatter to use for drawing a series using
 			// LineAndPointRenderer
 			// and configure it from xml:
@@ -282,9 +285,7 @@ public class HearingTestActivity extends
 			series2Format.setPointLabelFormatter(new PointLabelFormatter());
 			series2Format.configure(getApplicationContext(),
 					R.xml.line_point_formatter_with_plf2);
-			
 			mySimpleXYPlot.clear();
-
 			series2 = (SimpleXYSeries) getSeries(); // call getSeries function
 			// add a new series' to the xyplot:
 			mySimpleXYPlot.addSeries(series2, series2Format);
@@ -305,7 +306,12 @@ public class HearingTestActivity extends
 		Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
 		while (iterator1.hasNext()) {
 			XYSeries setElement = iterator1.next();
-			mySimpleXYPlot.removeSeries(setElement);
+			mySimpleXYPlot.removeSeries(setElement);		
+			mySimpleXYPlot.redraw();
+			xVals[0] = 0;
+			yVals[0] = 0;
+			currentFreq = 0;
+			FREQ_LEN = 0;
 		}
 	}
 
@@ -388,6 +394,37 @@ public class HearingTestActivity extends
 		});
 		alertbox.show();
 
+	}
+	
+	public void restartTestAlert() {
+		AlertDialog.Builder alertbox = new AlertDialog.Builder(
+				HearingTestActivity.this);
+		alertbox.setIcon(R.drawable.ic_launcher);
+		alertbox.setMessage("Restart Test?");
+		alertbox.setTitle("End of Test");
+		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface arg0, int arg1) {
+				// finish used for destroyed activity
+				clearPlot();			
+			}
+		});
+		alertbox.show();	
+	}
+	
+	public void finisTest() {
+		AlertDialog.Builder alertbox = new AlertDialog.Builder(
+				HearingTestActivity.this);
+		alertbox.setIcon(R.drawable.ic_launcher);
+		alertbox.setMessage("Finish Test?");
+		alertbox.setTitle("End of Test");
+		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface arg0, int arg1) {
+				// finish used for destroyed activity
+			}
+		});
+		alertbox.show();
+		Intent intent = new Intent(this, TestResults.class); // intent used to launch activity
+		startActivity(intent);
 	}
 
 	// Method for alert dialog, when user exits

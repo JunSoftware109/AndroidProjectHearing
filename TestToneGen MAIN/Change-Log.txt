@@ -11,6 +11,16 @@ Changelog Legend:
 	
 ------------------------------------------------------------------------------------------	
 
+(4/6/15) - Improvements - Version 1.11
+
+	[*] - renamed application name to Dr Hearing App
+	[+] - added classes for results TestResults.java and results_screen.xml
+	[*] - refactored methods and names in HearingTestActivity.java to make it more readable
+	[+] - added exception catching for ArrayIndexOutOfBounds
+	[+] - 
+	[!] - issue with dB values and volume not adjusting properly
+------------------------------------------------------------------------------------------	
+
 (1/6/15) - Improvements - Version 1.10
 
 	[*] - refactored and changed name of ambigious classes and methods

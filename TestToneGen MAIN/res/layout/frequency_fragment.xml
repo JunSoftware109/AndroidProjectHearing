@@ -27,7 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/cannotHearButton"
-        android:text="Barely hear" />
+        android:layout_toRightOf="@+id/canHearButton"
+        android:text="Finish" />
 
     <RadioGroup
         android:id="@+id/radioGroup1"
@@ -56,6 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/radioGroup1"
+        android:layout_alignLeft="@+id/nextFrequencyButton"
         android:layout_alignParentRight="true"
         android:text="Play Tone" />
 
