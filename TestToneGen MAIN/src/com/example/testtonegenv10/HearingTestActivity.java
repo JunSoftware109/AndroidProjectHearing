@@ -56,7 +56,7 @@ public class HearingTestActivity extends
 	private int DB_LEN = 120; // length of array for y vals
 
 	// private int[] frequencies = new frequencies;
-    Integer[] frequencies = {250, 500, 1000, 2000, 4000, 6000, 8000};
+    Integer[] frequencies = {0, 250, 500, 1000, 2000, 4000, 6000, 8000};
 	Integer[] xVals = new Integer[FREQ_LEN]; // array of type Integer with
 												// length defined
 	Integer[] yVals = new Integer[DB_LEN];
@@ -130,16 +130,20 @@ public class HearingTestActivity extends
 		// Switch statement checks for which button was checked and changes that
 		switch (v.getId()) {
 		case R.id.nextFrequencyButton: {
-			setFreqIndex();
-			//setFreqValue();
-			indexYval += 1;
-			currentFreq += 1;
-			yVals[ indexYval ] = 40; // set next index to default value 40
-			updatePlot();
+			try {
+				setFreqIndex();
+				// setFreqValue();
+				indexYval += 1;
+				currentFreq += 1;
+				yVals[indexYval] = 40; // set next index to default value 40
+				updatePlot();
+			} catch (Exception e) {
+				Toast.makeText(getApplicationContext(), "Error",
+						Toast.LENGTH_SHORT).show();
+			}
 		}
 
 		case R.id.playFrequencyButton: {
-
 			frequencygen.freqOfTone = frequencies[currentFreq];
 			frequencygen.genTone();
 			frequencygen.playSound();
@@ -176,8 +180,7 @@ public class HearingTestActivity extends
 			try {
 				yVals[indexYval] -= 1;
 				updatePlot();
-				audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,
-						AudioManager.ADJUST_LOWER, AudioManager.FLAG_VIBRATE);
+				audioManager.adjustVolume(AudioManager.ADJUST_LOWER, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(), "Error",
 						Toast.LENGTH_SHORT).show();
