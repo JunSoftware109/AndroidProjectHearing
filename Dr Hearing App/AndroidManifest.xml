@@ -16,7 +16,9 @@
    
         <activity
             android:name="com.malikjunaid.testtonegenv10.MainMenu"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +27,8 @@
         </activity>
         <activity
             android:name="com.malikjunaid.testtonegenv10.StartTest"
-            android:label="@string/start_test" >
+            android:label="@string/start_test"
+            android:screenOrientation="portrait"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +37,8 @@
         </activity>
         <activity
             android:name="com.malikjunaid.testtonegenv10.HearingTestActivity"
-            android:label="@string/testing_screen" >
+            android:label="@string/testing_screen"
+            android:screenOrientation="portrait"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

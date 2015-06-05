@@ -44,10 +44,7 @@ public class HearingTestActivity extends
 	static int defaultdB = 40; // default dB level (yVal point)
 	private FrequencyGenerator frequencygen = new FrequencyGenerator(); // create
 																		// FreqGen
-	// reference
-	private FragmentAudiogram audiogram = new FragmentAudiogram(); // create
-																	// AudioGram
-																	// reference
+	
 	// private AudioManager audioManager; // reference to AudioManager class
 	private XYPlot mySimpleXYPlot; // reference to XYPlot class
 	private SimpleXYSeries series1, series2;

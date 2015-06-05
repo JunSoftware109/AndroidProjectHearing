@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/TextView02"
         android:layout_centerHorizontal="true"
-        android:text="Hearing Test App"
+        android:text="Dr Hearing App"
         android:textColor="#FFFFFF"
         android:textSize="25dp" />
 

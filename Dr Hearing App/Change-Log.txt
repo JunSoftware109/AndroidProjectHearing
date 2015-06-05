@@ -23,7 +23,6 @@ Changelog Legend:
 	[+] - added classes for results TestResults.java and results_screen.xml
 	[*] - refactored methods and names in HearingTestActivity.java to make it more readable
 	[+] - added exception catching for ArrayIndexOutOfBounds
-	[+] - 
 	[!] - issue with dB values and volume not adjusting properly
 ------------------------------------------------------------------------------------------	
 
