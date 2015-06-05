@@ -31,32 +31,34 @@ import com.androidplot.xy.XYSeries;
 import com.androidplot.xy.XYStepMode;
 import com.example.testtonegenv10.R;
 
-public class HearingTestActivity extends android.support.v4.app.FragmentActivity implements OnClickListener {
+public class HearingTestActivity extends
+		android.support.v4.app.FragmentActivity implements OnClickListener {
 
 	public HearingTestActivity() { // empty default constructor
-	
+
 	}
 
 	private Button canHearButton, cannotHearButton, nextFrequencyButton,
 			finishButton, playFrequencyButton;
 	private RadioButton rightEarButton, leftEarButton;
-	static  int defaultdB = 40; // default dB level (yVal point)
-	private FrequencyGenerator frequencygen = new FrequencyGenerator(); // create FreqGen
-															// reference
+	static int defaultdB = 40; // default dB level (yVal point)
+	private FrequencyGenerator frequencygen = new FrequencyGenerator(); // create
+																		// FreqGen
+	// reference
 	private FragmentAudiogram audiogram = new FragmentAudiogram(); // create
 																	// AudioGram
 																	// reference
 	// private AudioManager audioManager; // reference to AudioManager class
 	private XYPlot mySimpleXYPlot; // reference to XYPlot class
 	private SimpleXYSeries series1, series2;
-	//private int[] frequencies;
+	// private int[] frequencies;
 	private int currentFreq = 0;
 	private int indexYval = 0; // initial index position for yVals
 	private int FREQ_LEN = 120; // length of array for x vals
 	private int DB_LEN = 120; // length of array for y vals
 
 	// private int[] frequencies = new frequencies;
-    Integer[] frequencies = {0, 250, 500, 1000, 2000, 4000, 6000, 8000};
+	Integer[] frequencies = { 0, 250, 500, 1000, 2000, 4000, 6000, 8000 };
 	Integer[] xVals = new Integer[FREQ_LEN]; // array of type Integer with
 												// length defined
 	Integer[] yVals = new Integer[DB_LEN];
@@ -71,11 +73,9 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 		this.setVolumeControlStream(AudioManager.STREAM_MUSIC); // reference to
 																// current
 																// volume stream
-		//frequencies = getResources().getIntArray(R.array.frequencies);
-
-
 		// frequencies = getResources().getIntArray(R.array.frequencies);
 
+		// frequencies = getResources().getIntArray(R.array.frequencies);
 
 		leftEarButton = (RadioButton) findViewById(R.id.leftEarButton);
 		leftEarButton.setOnClickListener(this);// if button clicked
@@ -112,12 +112,12 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 													// onClickListener runs
 													// corresponding onClick()
 													// method
-		
+
 		finishButton = (Button) findViewById(R.id.finishButton);
 		finishButton.setOnClickListener(this);// if button clicked
-													// onClickListener runs
-													// corresponding onClick()
-													// method
+												// onClickListener runs
+												// corresponding onClick()
+												// method
 
 		// initialize our XYPlot reference:
 		mySimpleXYPlot = (XYPlot) findViewById(R.id.mySimpleXYPlot);
@@ -145,24 +145,26 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 				updatePlot();
 			} catch (ArrayIndexOutOfBoundsException exception) {
 				if (currentFreq > 8) {
-					
+
 				}
-				Toast.makeText(getApplicationContext(), "You have reached end of test",
-						Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(),
+						"You have reached end of test", Toast.LENGTH_SHORT)
+						.show();
 			}
 		}
 
 		case R.id.playFrequencyButton: {
-			try{
-			frequencygen.freqOfTone = frequencies[currentFreq];
-			frequencygen.genTone();
-			frequencygen.playSound();
+			try {
+				frequencygen.freqOfTone = frequencies[currentFreq];
+				frequencygen.genTone();
+				frequencygen.playSound();
 			} catch (ArrayIndexOutOfBoundsException exception) {
-				Toast.makeText(getApplicationContext(), "You have reached end of test",
-						Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(),
+						"You have reached end of test", Toast.LENGTH_SHORT)
+						.show();
 				restartTestAlert();
 			}
-			
+
 		}
 
 		case R.id.leftEarButton: {
@@ -195,7 +197,8 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 			try {
 				yVals[indexYval] -= 5;
 				updatePlot();
-				audioManager.adjustVolume(AudioManager.ADJUST_LOWER, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
+				audioManager.adjustVolume(AudioManager.ADJUST_LOWER,
+						AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(), "Error",
 						Toast.LENGTH_SHORT).show();
@@ -215,7 +218,7 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 			}
 			break;
 		}
-		
+
 		case R.id.finishButton: {
 			finisTest();
 		}
@@ -233,17 +236,17 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 		xVals[7] = 8000;
 	}
 	
+	// not currently used
 	private void setFreqValue() {
-		 
-			
-			frequencygen.freqOfTone = frequencies[currentFreq];
-			if (currentFreq > 6) {
-				frequencies[0] = currentFreq;
-			}	
-			currentFreq += 1;
+
+		frequencygen.freqOfTone = frequencies[currentFreq];
+		if (currentFreq > 6) {
+			frequencies[0] = currentFreq;
+		}
+		currentFreq += 1;
 
 	}
-	
+
 	// nested class of SimpleXYSeries
 	public SimpleXYSeries getSeries() {
 		if (leftEarButton.isChecked()) {
@@ -255,7 +258,7 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 			// same as above:
 		}
 	}
-	
+
 	/**
 	 * 
 	 */
@@ -277,12 +280,12 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 			series1Format.configure(getApplicationContext(),
 					R.xml.line_point_formatter_with_plf1);
 			mySimpleXYPlot.clear();
-			
+
 			series1 = (SimpleXYSeries) getSeries(); // call getSeries function
 			mySimpleXYPlot.addSeries(series1, series1Format);
 			mySimpleXYPlot.redraw(); // redraw series
 		}
-	
+
 		else {
 			LineAndPointFormatter series2Format = new LineAndPointFormatter();
 			series2Format.setPointLabelFormatter(new PointLabelFormatter());
@@ -292,7 +295,7 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 			series2 = (SimpleXYSeries) getSeries(); // call getSeries function
 			// add a new series' to the xyplot:
 			mySimpleXYPlot.addSeries(series2, series2Format);
-			
+
 			mySimpleXYPlot.redraw();
 		}
 
@@ -303,13 +306,13 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 		// SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Them");
 
 	}
-	
+
 	private void clearPlot() {
 		// Remove all current series from each plot
 		Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
 		while (iterator1.hasNext()) {
 			XYSeries setElement = iterator1.next();
-			mySimpleXYPlot.removeSeries(setElement);		
+			mySimpleXYPlot.removeSeries(setElement);
 			mySimpleXYPlot.redraw();
 			xVals[0] = 0;
 			yVals[0] = 0;
@@ -398,7 +401,7 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 		alertbox.show();
 
 	}
-	
+
 	public void restartTestAlert() {
 		AlertDialog.Builder alertbox = new AlertDialog.Builder(
 				HearingTestActivity.this);
@@ -408,12 +411,12 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface arg0, int arg1) {
 				// finish used for destroyed activity
-				clearPlot();			
+				clearPlot();
 			}
 		});
-		alertbox.show();	
+		alertbox.show();
 	}
-	
+
 	public void finisTest() {
 		AlertDialog.Builder alertbox = new AlertDialog.Builder(
 				HearingTestActivity.this);
@@ -426,7 +429,9 @@ public class HearingTestActivity extends android.support.v4.app.FragmentActivity
 			}
 		});
 		alertbox.show();
-		Intent intent = new Intent(this, TestResults.class); // intent used to launch activity
+		Intent intent = new Intent(this, TestResults.class); // intent used to
+																// launch
+																// activity
 		startActivity(intent);
 	}
 

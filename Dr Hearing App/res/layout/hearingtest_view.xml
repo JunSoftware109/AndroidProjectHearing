@@ -15,7 +15,7 @@
         tools:layout="@layout/audiogram_fragment" />
 
     <fragment
-        android:id="@+id/playtone_fragment"
+        android:id="@+id/frequency_fragment"
         android:layout_width="match_parent"
         android:layout_height="149dp"
         android:layout_alignParentBottom="true"
