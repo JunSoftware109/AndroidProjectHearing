@@ -37,6 +37,10 @@ import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYSeries;
 import com.example.testtonegenv10.R;
 
+/**
+ * Class loads simple listview of audiogram xyplots
+ *
+ */
 public class LoadTestActivity extends Activity {
 	private static final int NUM_PLOTS = 10;
 	private static final int NUM_POINTS_PER_SERIES = 10;

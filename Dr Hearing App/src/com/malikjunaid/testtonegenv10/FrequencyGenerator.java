@@ -13,8 +13,11 @@ import android.media.AudioManager;
 import android.media.AudioTrack;
 import android.widget.Toast;
 
-// this class is based on Marble Mice: Generate And Play A Tone In Android
-// www.marblemice.blogspot.ie/2010/04/generate-and-play-tone-in-android.html
+/**
+ * A class used to generate simple sine wave pure tone signal
+ * Class is based on Marble Mice: Generate And Play A Tone In Android
+ * www.marblemice.blogspot.ie/2010/04/generate-and-play-tone-in-android.html
+ */
 public class FrequencyGenerator extends Activity {
 
 	public final int duration = 5; // length of tone in seconds
@@ -62,8 +65,8 @@ public class FrequencyGenerator extends Activity {
 		}
 	}
 
-	/*
-	 * audiotrack plays pcm audio buffers data is pushed to audiotrack object in
+	/**
+	 * Audiotrack plays pcm audio buffers data is pushed to audiotrack object in
 	 * streaming mode the system writes continous data using write() method this
 	 * method takes three params audioData, offfsetinBYtes and sizeinBytes
 	 */
@@ -81,12 +84,20 @@ public class FrequencyGenerator extends Activity {
 					Toast.LENGTH_SHORT).show();
 		}
 	}
-
+	
+	/**
+	 * Method plays tone at highest volume
+	 */
 	public void playTone() {
 		playTone(1.0f, 1.0f); // this method plays tone with full
 								// volume in both ear
 	}
-
+	
+	/**
+	 * Method takes int value for left or right ear
+	 * @param left
+	 * @param right
+	 */
 	public void playTone(float left, float right) { // overloaded playTone
 													// method with volume
 													// determined by user
@@ -110,7 +121,11 @@ public class FrequencyGenerator extends Activity {
 					Toast.LENGTH_SHORT).show();
 		}
 	}
-
+	
+	/**
+	 * Method takes int value that is associated with selection
+	 * @param earSelect
+	 */
 	public void playTone(int earSelect) {
 		switch (earSelect) {
 		case LEFT_EAR:
@@ -121,11 +136,17 @@ public class FrequencyGenerator extends Activity {
 			break;
 		}
 	}
-
+	
+	/**
+	 * Plays the audiotrack
+	 */
 	public void start() {
 		audioTrack.play();
 	}
-
+	
+	/**
+	 * Stops the audiotrack
+	 */
 	public void stop() {
 		audioTrack.stop();
 	}

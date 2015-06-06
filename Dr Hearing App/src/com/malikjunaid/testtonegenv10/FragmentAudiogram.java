@@ -1,3 +1,9 @@
+/*
+ * {Simple class loads FragmentAudiogram.java}
+ *
+ * @version Build (6 June 2015)
+ * @author Junaid Malik
+ */
 package com.malikjunaid.testtonegenv10;
 
 import com.example.testtonegenv10.R;
@@ -8,7 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentAudiogram extends Fragment {
+/**
+ * A class used to create layout for audiogram fragment
+ */
+public class FragmentAudiogram extends Fragment { // extends Fragment class
 
 	public FragmentAudiogram() {
 	}
@@ -19,5 +28,5 @@ public class FragmentAudiogram extends Fragment {
 		return inflater.inflate(R.layout.audiogram_fragment, container, false);
 
 	}
-	
+
 }

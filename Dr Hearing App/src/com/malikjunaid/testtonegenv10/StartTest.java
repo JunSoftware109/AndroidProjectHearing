@@ -2,11 +2,17 @@ package com.malikjunaid.testtonegenv10;
 
 import com.example.testtonegenv10.R;
 
+
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * A class used to create layout for calibration screen
+ * and contains intent to create next activity
+ */
 public class StartTest extends Activity {
 	
 	@Override

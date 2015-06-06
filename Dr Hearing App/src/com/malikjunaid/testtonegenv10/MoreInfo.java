@@ -13,6 +13,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * A class used to create layout for moreinfo 
+ * and contains intents for other activities
+ */
 public class MoreInfo extends Activity {
 
 	@Override

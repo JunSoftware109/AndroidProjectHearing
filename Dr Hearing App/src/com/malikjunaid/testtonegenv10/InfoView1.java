@@ -13,18 +13,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class InfoView1 extends Activity implements OnClickListener {
-	
+/**
+ * Class creates layout for infoview1
+ *
+ */
+public class InfoView1 extends Activity {
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.infoview1);
-	}
-
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		
 	}
 }

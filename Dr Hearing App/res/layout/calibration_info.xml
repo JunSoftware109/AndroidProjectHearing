@@ -37,7 +37,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/textView2"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/nice_button"
+        android:background="@drawable/calibration_button"
         android:gravity="center"
         android:onClick="startTest"
         android:shadowColor="@android:color/black"

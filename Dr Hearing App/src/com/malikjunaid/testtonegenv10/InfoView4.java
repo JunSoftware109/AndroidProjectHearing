@@ -4,6 +4,10 @@ import com.example.testtonegenv10.R;
 import android.app.Activity;
 import android.os.Bundle;
 
+/**
+ * Class creates layout for infoview4
+ *
+ */
 public class InfoView4 extends Activity {
 	
 	@Override

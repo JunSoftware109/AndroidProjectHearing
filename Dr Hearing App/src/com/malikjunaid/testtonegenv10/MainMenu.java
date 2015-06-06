@@ -15,6 +15,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * A class used to create layout for main menu
+ * and contains intents for other activities
+ */
 public class MainMenu extends Activity {
 
 	@Override
@@ -44,7 +48,9 @@ public class MainMenu extends Activity {
 		startActivity(intent);
 	}
 	
-	// code from rate this app by Keisuke Kobayashi 
+	/**
+	 * Code from rate this app by Keisuke Kobayashi x
+	 */
 	@Override
 	protected void onStart() {
 		super.onStart();

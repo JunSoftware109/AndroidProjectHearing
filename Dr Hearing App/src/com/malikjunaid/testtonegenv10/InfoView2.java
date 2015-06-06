@@ -1,7 +1,7 @@
 /*
  * {Simple class loads infoView2.java}
  *
- * @version Build {0.6} (26 March 2015)
+ * @version Build (26 March 2015)
  * @author Junaid Malik
  */
 package com.malikjunaid.testtonegenv10;
@@ -13,6 +13,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+/**
+ * Class creates layout for infoview2
+ *
+ */
 public class InfoView2 extends Activity {
 	
 	@Override

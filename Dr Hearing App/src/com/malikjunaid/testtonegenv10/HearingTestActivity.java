@@ -1,3 +1,10 @@
+/*
+ * This class contains main operation of hearing test
+ * rendering of audiogram
+ *
+ * @version Build (6 June 2015)
+ * @author Junaid Malik
+ */
 package com.malikjunaid.testtonegenv10;
 
 import java.util.Arrays;
@@ -31,10 +38,14 @@ import com.androidplot.xy.XYSeries;
 import com.androidplot.xy.XYStepMode;
 import com.example.testtonegenv10.R;
 
+/**
+ * A class used to create instances of Hearing Test with Audiogram and Frequency
+ * Generator
+ */
 public class HearingTestActivity extends
 		android.support.v4.app.FragmentActivity implements OnClickListener {
 
-	public HearingTestActivity() { // empty default constructor
+	public HearingTestActivity() { // default constructor
 
 	}
 
@@ -44,7 +55,7 @@ public class HearingTestActivity extends
 	static int defaultdB = 40; // default dB level (yVal point)
 	private FrequencyGenerator frequencygen = new FrequencyGenerator(); // create
 																		// FreqGen
-	
+
 	// private AudioManager audioManager; // reference to AudioManager class
 	private XYPlot mySimpleXYPlot; // reference to XYPlot class
 	private SimpleXYSeries series1, series2;
@@ -232,7 +243,7 @@ public class HearingTestActivity extends
 		xVals[6] = 6000;
 		xVals[7] = 8000;
 	}
-	
+
 	// not currently used
 	private void setFreqValue() {
 
@@ -244,7 +255,9 @@ public class HearingTestActivity extends
 
 	}
 
-	// nested class of SimpleXYSeries
+	/**
+	 * Nested class that retusn series based on what ear is selected
+	 */
 	public SimpleXYSeries getSeries() {
 		if (leftEarButton.isChecked()) {
 			return new SimpleXYSeries(Arrays.asList(xVals),
@@ -257,7 +270,7 @@ public class HearingTestActivity extends
 	}
 
 	/**
-	 * 
+	 * Method changes which points and what color is rendered
 	 */
 	private void updatePlot() {
 		// Remove all current series from each plot
@@ -304,6 +317,9 @@ public class HearingTestActivity extends
 
 	}
 
+	/**
+	 * Method clears plot points
+	 */
 	private void clearPlot() {
 		// Remove all current series from each plot
 		Iterator<XYSeries> iterator1 = mySimpleXYPlot.getSeriesSet().iterator();
@@ -318,6 +334,9 @@ public class HearingTestActivity extends
 		}
 	}
 
+	/**
+	 * Method draws simple bitmap image from resources /Drawable
+	 */
 	private void drawBackground() {
 		RectF rect = mySimpleXYPlot.getGraphWidget().getGridRect();
 		BitmapShader myShader = new BitmapShader(Bitmap.createScaledBitmap(
@@ -334,6 +353,10 @@ public class HearingTestActivity extends
 
 	}
 
+	/**
+	 * Method to create the audiogram it is placed in xml layout here we add the
+	 * extra details
+	 */
 	public void graphSettings() {
 
 		mySimpleXYPlot.setTitle("Audiogram");
@@ -382,9 +405,11 @@ public class HearingTestActivity extends
 				.setColor(Color.BLACK);
 	}
 
+	/**
+	 * Method displays start up Alert Box
+	 */
 	public void startUp() {
-		AlertDialog.Builder alertbox = new AlertDialog.Builder(
-				HearingTestActivity.this);
+		AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
 		alertbox.setIcon(R.drawable.ic_launcher);
 		alertbox.setMessage("You will hear a series of tones for 5 seconds each."
 				+ "\n\nSelect whether you can hear or cannot hear"
@@ -396,9 +421,11 @@ public class HearingTestActivity extends
 			}
 		});
 		alertbox.show();
-
 	}
 
+    /**
+     * Method displays alert when user restarting test
+     */
 	public void restartTestAlert() {
 		AlertDialog.Builder alertbox = new AlertDialog.Builder(
 				HearingTestActivity.this);
@@ -414,6 +441,9 @@ public class HearingTestActivity extends
 		alertbox.show();
 	}
 
+	/**
+	 * Method displays finish Alert Box
+	 */
 	public void finisTest() {
 		AlertDialog.Builder alertbox = new AlertDialog.Builder(
 				HearingTestActivity.this);
@@ -432,7 +462,10 @@ public class HearingTestActivity extends
 		startActivity(intent);
 	}
 
-	// Method for alert dialog, when user exits
+	/**
+	 * Metod for handling back press by user by prompting to avoid accidental
+	 * exits
+	 */
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if ((keyCode == KeyEvent.KEYCODE_BACK)) {
 			AlertDialog.Builder alertbox = new AlertDialog.Builder(
@@ -458,8 +491,9 @@ public class HearingTestActivity extends
 		return super.onKeyDown(keyCode, event);
 	}
 
-	// onDestroy called when app exited
-	// we stop app from playing tone in background
+	/**
+	 * Method onDestror when exiting app to stop playing tone
+	 */
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
@@ -470,12 +504,13 @@ public class HearingTestActivity extends
 			frequencygen = null;
 
 		} catch (Exception e) {
-			Log.e("HearingTest", "onPause error: " + e.toString());
+			Log.e("HearingTest", "onDestroy error: " + e.toString());
 		}
 	}
 
-	// onPause is when user leaves the current activity
-	// so we stop frequencygen class from generating tone
+	/**
+	 * Method onPause when we pause activity we also stop any tones from playing
+	 */
 	@Override
 	protected void onPause() {
 		super.onPause();
@@ -485,7 +520,7 @@ public class HearingTestActivity extends
 			frequencygen.audioTrack = null;
 			frequencygen = null;
 		} catch (Exception e) {
-			Log.e("HearingTest", "onPuse error: " + e.toString());
+			Log.e("HearingTest", "onPause error: " + e.toString());
 
 		}
 	}
