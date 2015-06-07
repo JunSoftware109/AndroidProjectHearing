@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="140dp"
-        class="com.malikjunaid.testtonegenv10.FragmentAudiogram"
+        class="com.malikjunaid.drhearing.FragmentAudiogram"
         tools:layout="@layout/audiogram_fragment" />
 
     <fragment
@@ -20,7 +20,7 @@
         android:layout_height="149dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        class="com.malikjunaid.testtonegenv10.FragmentFrequency"
+        class="com.malikjunaid.drhearing.FragmentFrequency"
         tools:layout="@layout/frequency_fragment" />
 
 </RelativeLayout>

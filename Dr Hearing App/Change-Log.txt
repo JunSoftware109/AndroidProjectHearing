@@ -10,6 +10,12 @@ Changelog Legend:
 	[!] = Bugs
 	
 ------------------------------------------------------------------------------------------	
+(7/6/15) - Improvements - Version 1.14	
+
+	[*] - refactored more ambigious file names
+	[+] - load test now has same layout of audiograms
+	
+------------------------------------------------------------------------------------------	
 (6/6/15) - Improvements - Version 1.13
 
 	[+] - added comments for majority of code

@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.malikjunaid.testtonegenv10.MainMenu" >
+    tools:context="com.malikjunaid.drhearing.MainMenu" >
 
         <TextView
             android:id="@+id/textView2"
@@ -16,7 +16,8 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/imageButton1"
             android:layout_marginLeft="30dp"
-            android:text="Begin test" />
+            android:text="Begin test"
+            android:textSize="15sp" />
 
         <ImageButton
             android:id="@+id/imageButton1"
@@ -35,7 +36,8 @@
             android:layout_alignBaseline="@+id/textView2"
             android:layout_alignBottom="@+id/textView2"
             android:layout_alignLeft="@+id/imageButton2"
-            android:text="Load test" />
+            android:text="Load test"
+            android:textSize="15sp" />
 
         <ImageButton
             android:id="@+id/imageButton3"
@@ -55,7 +57,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/imageButton3"
             android:layout_marginBottom="61dp"
-            android:text="    About" />
+            android:text="    About"
+            android:textSize="15sp" />
 
         <ImageButton
             android:id="@+id/imageButton4"
@@ -74,7 +77,8 @@
             android:layout_alignBaseline="@+id/TextView02"
             android:layout_alignBottom="@+id/TextView02"
             android:layout_alignLeft="@+id/imageButton4"
-            android:text="Learn more?" />
+            android:text="Learn more?"
+            android:textSize="15sp" />
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -95,6 +99,7 @@
             android:layout_alignParentTop="true"
             android:gravity="top|center"
             android:text="@string/hello_world"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
 </RelativeLayout>

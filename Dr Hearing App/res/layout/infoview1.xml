@@ -16,7 +16,7 @@
             android:layout_alignParentTop="true"
             android:gravity="center_vertical"
             android:text="@string/infoView1"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </RelativeLayout>
 
 </ScrollView>

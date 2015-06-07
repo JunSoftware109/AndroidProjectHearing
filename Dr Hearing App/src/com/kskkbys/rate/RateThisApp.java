@@ -17,8 +17,6 @@ package com.kskkbys.rate;
 
 import java.util.Date;
 
-import com.example.testtonegenv10.R;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -29,6 +27,8 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.net.Uri;
 import android.util.Log;
+
+import com.malikjunaid.drhearing.R;
 
 /**
  * RateThisApp<br>
