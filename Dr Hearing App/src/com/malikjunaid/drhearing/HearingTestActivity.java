@@ -77,7 +77,7 @@ public class HearingTestActivity extends
 		setContentView(R.layout.hearingtest_view); // setting the view with
 													// defined XML file
 		startUp(); // opens up info box
-
+		
 		this.setVolumeControlStream(AudioManager.STREAM_MUSIC); // reference to
 																// current
 																// volume stream
@@ -130,6 +130,7 @@ public class HearingTestActivity extends
 		// initialize our XYPlot reference:
 		audiogram = (XYPlot) findViewById(R.id.mySimpleXYPlot);
 		graphSettings(); // retrieve layout for audiogram
+
 	}
 
 	// onClick method gets called each time a button is pressed
@@ -203,10 +204,16 @@ public class HearingTestActivity extends
 
 		case R.id.canHearButton: {
 			try {
+				
 				yVals[indexYval] -= 5;
 				updatePlot();
 				audioManager.adjustVolume(AudioManager.ADJUST_LOWER,
 						AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
+				if (yVals[indexYval] < 1) {
+					yVals[indexYval] += 1;
+					Toast.makeText(getApplicationContext(), "Lowest dB reached!",
+							Toast.LENGTH_SHORT).show();
+				}
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(), "Error",
 						Toast.LENGTH_SHORT).show();
@@ -220,6 +227,9 @@ public class HearingTestActivity extends
 				updatePlot();
 				audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
 						AudioManager.ADJUST_RAISE, AudioManager.FLAG_VIBRATE);
+				if (yVals[indexYval] > 120) {
+					
+				}
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(), "Error",
 						Toast.LENGTH_SHORT).show();
@@ -324,6 +334,7 @@ public class HearingTestActivity extends
 			yVals[0] = 0;
 			currentFreq = 0;
 			FREQ_LEN = 0;
+			audiogram.redraw();
 		}
 	}
 

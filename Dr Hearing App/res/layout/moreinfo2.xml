@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/infoView4"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:width="310dp" />
 
         </LinearLayout>
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:includeFontPadding="true"
                 android:text="@string/infoView5"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:width="310dp" />
 
         </LinearLayout>
