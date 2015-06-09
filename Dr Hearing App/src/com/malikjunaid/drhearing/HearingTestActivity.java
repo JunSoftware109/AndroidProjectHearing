@@ -41,12 +41,12 @@ import com.androidplot.xy.XYStepMode;
 /**
  * A class used to create instances of Hearing Test with Audiogram and Frequency
  * Generator
+ * Note: frequencies are multiplied by 2 when played
  */
 public class HearingTestActivity extends
 		android.support.v4.app.FragmentActivity implements OnClickListener {
 
 	public HearingTestActivity() { // default constructor
-
 	}
 
 	private Button canHearButton, cannotHearButton, nextFrequencyButton,
@@ -55,7 +55,6 @@ public class HearingTestActivity extends
 	static int defaultdB = 40; // default dB level (yVal point)
 	private FrequencyGenerator frequencygen = new FrequencyGenerator(); // create
 																		// FreqGen
-
 	// private AudioManager audioManager; // reference to AudioManager class
 	public XYPlot audiogram; // reference to XYPlot class
 	private SimpleXYSeries series1, series2;
@@ -64,13 +63,12 @@ public class HearingTestActivity extends
 	private int indexYval = 0; // initial index position for yVals
 	private int FREQ_LEN = 120; // length of array for x vals
 	private int DB_LEN = 120; // length of array for y vals
-
-	// private int[] frequencies = new frequencies;
-	Integer[] frequencies = { 0, 250, 500, 1000, 2000, 4000, 6000, 8000 };
+	float left, right; // left and right volume
+	Integer[] frequencies = { 0, 125, 250, 500, 1000, 2000, 4000, 6000 };
 	Integer[] xVals = new Integer[FREQ_LEN]; // array of type Integer with
 												// length defined
 	Integer[] yVals = new Integer[DB_LEN];
-
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -82,9 +80,6 @@ public class HearingTestActivity extends
 																// current
 																// volume stream
 		// frequencies = getResources().getIntArray(R.array.frequencies);
-
-		// frequencies = getResources().getIntArray(R.array.frequencies);
-
 		leftEarButton = (RadioButton) findViewById(R.id.leftEarButton);
 		leftEarButton.setOnClickListener(this);// if button clicked
 												// onClickListener runs
@@ -126,11 +121,9 @@ public class HearingTestActivity extends
 												// onClickListener runs
 												// corresponding onClick()
 												// method
-
 		// initialize our XYPlot reference:
 		audiogram = (XYPlot) findViewById(R.id.mySimpleXYPlot);
 		graphSettings(); // retrieve layout for audiogram
-
 	}
 
 	// onClick method gets called each time a button is pressed
@@ -164,7 +157,7 @@ public class HearingTestActivity extends
 
 		case R.id.playFrequencyButton: {
 			try {
-				frequencygen.freqOfTone = frequencies[currentFreq];
+				frequencygen.frequencyOfTone = frequencies[currentFreq];
 				frequencygen.genTone();
 				frequencygen.playSound();
 			} catch (ArrayIndexOutOfBoundsException exception) {
@@ -203,14 +196,13 @@ public class HearingTestActivity extends
 		}
 
 		case R.id.canHearButton: {
-			try {
-				
-				yVals[indexYval] -= 5;
+			try {				
+				yVals[indexYval] -=10;
 				updatePlot();
-				audioManager.adjustVolume(AudioManager.ADJUST_LOWER,
-						AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
-				if (yVals[indexYval] < 1) {
-					yVals[indexYval] += 1;
+				audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
+						AudioManager.ADJUST_LOWER, AudioManager.FLAG_VIBRATE);
+				if (yVals[indexYval] < 1) { // stop the yVal going below range
+					yVals[indexYval] = 0;
 					Toast.makeText(getApplicationContext(), "Lowest dB reached!",
 							Toast.LENGTH_SHORT).show();
 				}
@@ -223,12 +215,12 @@ public class HearingTestActivity extends
 
 		case R.id.cannotHearButton: {
 			try {
-				yVals[indexYval] += 5;
+				yVals[indexYval] += 10;
 				updatePlot();
 				audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
 						AudioManager.ADJUST_RAISE, AudioManager.FLAG_VIBRATE);
-				if (yVals[indexYval] > 120) {
-					
+				if (yVals[indexYval] > 120) { // stop the yVal going above range
+					yVals[indexYval] = 120;
 				}
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(), "Error",
@@ -244,14 +236,15 @@ public class HearingTestActivity extends
 	} // end of onClick methodrightEarButton
 
 	private void setFreqIndex() {
-		xVals[0] = 250;
-		xVals[1] = 500;
-		xVals[2] = 1000;
-		xVals[3] = 2000;
-		xVals[4] = 3000;
-		xVals[5] = 4000;
-		xVals[6] = 6000;
-		xVals[7] = 8000;
+		xVals[0] = 0;
+		xVals[1] = 250;
+		xVals[2] = 500;
+		xVals[3] = 1000;
+		xVals[4] = 2000;
+		xVals[5] = 3000;
+		xVals[6] = 4000;
+		xVals[7] = 6000;
+		xVals[8] = 8000;
 	}
 
 	// not currently used
@@ -300,8 +293,8 @@ public class HearingTestActivity extends
 			series1Format.configure(getApplicationContext(),
 					R.xml.line_point_formatter_with_plf1);
 			audiogram.clear();
-
 			series1 = (SimpleXYSeries) getSeries(); // call getSeries function
+			// add a new series' to the xyplot:
 			audiogram.addSeries(series1, series1Format);
 			audiogram.redraw(); // redraw series
 		}
@@ -315,7 +308,6 @@ public class HearingTestActivity extends
 			series2 = (SimpleXYSeries) getSeries(); // call getSeries function
 			// add a new series' to the xyplot:
 			audiogram.addSeries(series2, series2Format);
-
 			audiogram.redraw();
 		}
 	}
@@ -493,6 +485,27 @@ public class HearingTestActivity extends
 			alertbox.show();
 		}
 		return super.onKeyDown(keyCode, event);
+	}
+	
+	/**
+	 * Method to prevent user from accessing volume keys
+	 * @param KeyEvent
+	 */
+	@Override
+	public boolean dispatchKeyEvent(KeyEvent event) {
+	    boolean result;
+	     switch( event.getKeyCode() ) {
+	        case KeyEvent.KEYCODE_VOLUME_UP:
+	        case KeyEvent.KEYCODE_VOLUME_DOWN:
+	            result = true;
+	            break;
+
+	         default:
+	            result= super.dispatchKeyEvent(event);
+	            break;
+	     }
+
+	     return result;
 	}
 
 	/**

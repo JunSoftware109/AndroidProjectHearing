@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
+import android.media.MediaPlayer;
 import android.widget.Toast;
 
 /**
@@ -28,7 +29,7 @@ public class FrequencyGenerator extends Activity {
 														// duration multiplied
 														// by sample rate
 	public final double sample[] = new double[numSamples];
-	public double freqOfTone; // frequency in Hz
+	public double frequencyOfTone; // frequency in Hz
 	public final byte generatedSound[] = new byte[2 * numSamples]; // array of
 																	// genSoun =
 																	// 2 times
@@ -44,7 +45,7 @@ public class FrequencyGenerator extends Activity {
 		for (int counter = 0; counter < numSamples; ++counter) {
 			sample[counter] = Math.sin(2 * Math.PI * counter // x(t)=A Sin 2pi n
 																// fa/fs
-					/ (sampleRate / freqOfTone));
+					/ (sampleRate / frequencyOfTone));
 		}
 		// convert to 16 bit pcm sound array
 		// assumes the sample buffer is normalised.
@@ -76,7 +77,6 @@ public class FrequencyGenerator extends Activity {
 				numSamples, AudioTrack.MODE_STATIC);
 		audioTrack.write(generatedSound, 0, generatedSound.length);
 		audioTrack.getChannelConfiguration();
-
 		try {
 			audioTrack.play();
 		} catch (Exception e) { // error message if not playable
@@ -90,7 +90,7 @@ public class FrequencyGenerator extends Activity {
 	 */
 	public void playTone() {
 		playTone(1.0f, 1.0f); // this method plays tone with full
-								// volume in both ear
+						      // volume in both ear
 	}
 	
 	/**
