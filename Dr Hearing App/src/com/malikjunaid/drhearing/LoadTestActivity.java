@@ -21,7 +21,9 @@ import java.util.List;
 import java.util.Random;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -54,8 +56,13 @@ public class LoadTestActivity extends Activity {
 		lv = (ListView) findViewById(R.id.listaudiogram);
 		lv.setAdapter(new MyViewAdapter(getApplicationContext(),
 				R.layout.loadprev_test, null));
+		
+		loadInfo();
 	}
-
+	
+	/**
+	 * Class enables us to load View objects in arrayList of views
+	 */
 	class MyViewAdapter extends ArrayAdapter<View> {
 		public MyViewAdapter(Context context, int resId, List<View> views) {
 			super(context, resId, views);
@@ -63,7 +70,7 @@ public class LoadTestActivity extends Activity {
 
 		@Override
 		public int getCount() {
-			return 5;
+			return 3;
 		}
 
 		@Override
@@ -82,9 +89,9 @@ public class LoadTestActivity extends Activity {
 
 			graphSettings();
 
-			for (int k = 0; k < 2; k++) {
+			for (int i = 0; i < 2; i++) {
 				ArrayList<Number> nums = new ArrayList<Number>();
-				for (int j = 0; j < 10; j++) {
+				for (int j = 0; j < 100; j++) {
 					nums.add(generator.nextFloat());
 				}
 
@@ -97,7 +104,7 @@ public class LoadTestActivity extends Activity {
 				double bp = Math.random();
 
 				XYSeries series = new SimpleXYSeries(nums,
-						SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Left Ear" + k);
+						SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, "Left Ear" + i);
 				audiogram.addSeries(
 						series,
 						new LineAndPointFormatter(Color.rgb(
@@ -112,7 +119,25 @@ public class LoadTestActivity extends Activity {
 			return v;
 		}
 	}
-
+	
+	/**
+	 * Method to load info at activity start up
+	 */
+	public void loadInfo() {
+		
+		AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
+		alertbox.setIcon(R.drawable.ic_launcher);
+		alertbox.setMessage("This service is currently unavailable"
+				+ "\nand will be implemented in a future update");
+		alertbox.setTitle("Load test");
+		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface arg0, int arg1) {
+				// finish used for destroyed activity
+			}
+		});
+		alertbox.show();	
+	}
+	
 	/**
 	 * Method to create the audiogram it is placed in xml layout here we add the
 	 * extra details

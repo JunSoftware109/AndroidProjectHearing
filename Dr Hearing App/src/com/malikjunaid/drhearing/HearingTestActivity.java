@@ -57,14 +57,14 @@ public class HearingTestActivity extends
 																		// FreqGen
 	// private AudioManager audioManager; // reference to AudioManager class
 	public XYPlot audiogram; // reference to XYPlot class
-	private SimpleXYSeries series1, series2;
+	public SimpleXYSeries series1, series2;
 	// private int[] frequencies;
 	private int currentFreq = 0;
 	private int indexYval = 0; // initial index position for yVals
 	private int FREQ_LEN = 120; // length of array for x vals
 	private int DB_LEN = 120; // length of array for y vals
 	float left, right; // left and right volume
-	Integer[] frequencies = { 0, 125, 250, 500, 1000, 2000, 4000, 6000 };
+	Integer[] frequencies = { 0, 125, 250, 500, 1000, 2000, 4000, 6000, 8000 };
 	Integer[] xVals = new Integer[FREQ_LEN]; // array of type Integer with
 												// length defined
 	Integer[] yVals = new Integer[DB_LEN];
@@ -76,9 +76,6 @@ public class HearingTestActivity extends
 													// defined XML file
 		startUp(); // opens up info box
 		
-		this.setVolumeControlStream(AudioManager.STREAM_MUSIC); // reference to
-																// current
-																// volume stream
 		// frequencies = getResources().getIntArray(R.array.frequencies);
 		leftEarButton = (RadioButton) findViewById(R.id.leftEarButton);
 		leftEarButton.setOnClickListener(this);// if button clicked
@@ -143,7 +140,7 @@ public class HearingTestActivity extends
 				// setFreqValue();
 				indexYval += 1;
 				currentFreq += 1;
-				yVals[indexYval] = 40; // set next index to default value 40
+				yVals[indexYval] = 40; // set next index to default value 40#
 				updatePlot();
 			} catch (ArrayIndexOutOfBoundsException exception) {
 				if (currentFreq > 8) {
@@ -250,7 +247,7 @@ public class HearingTestActivity extends
 	// not currently used
 	private void setFreqValue() {
 
-		frequencygen.freqOfTone = frequencies[currentFreq];
+		frequencygen.frequencyOfTone = frequencies[currentFreq];
 		if (currentFreq > 6) {
 			frequencies[0] = currentFreq;
 		}
@@ -259,23 +256,23 @@ public class HearingTestActivity extends
 	}
 
 	/**
-	 * Nested class that retusn series based on what ear is selected
+	 * Nested class that return series based on what ear is selected
 	 */
 	public SimpleXYSeries getSeries() {
 		if (leftEarButton.isChecked()) {
 			return new SimpleXYSeries(Arrays.asList(xVals),
 					Arrays.asList(yVals), "Left Ear");
+		// same as above:
 		} else {
 			return new SimpleXYSeries(Arrays.asList(xVals),
-					Arrays.asList(yVals), "Right Ear");
-			// same as above:
+					Arrays.asList(yVals), "Right Ear");		
 		}
 	}
 
 	/**
 	 * Method changes which points and what color is rendered
 	 */
-	private void updatePlot() {
+	public void updatePlot() {
 		// Remove all current series from each plot
 		Iterator<XYSeries> iterator1 = audiogram.getSeriesSet().iterator();
 		while (iterator1.hasNext()) {
@@ -315,25 +312,18 @@ public class HearingTestActivity extends
 	/**
 	 * Method clears plot points
 	 */
-	private void clearPlot() {
-		// Remove all current series from each plot
-		Iterator<XYSeries> iterator1 = audiogram.getSeriesSet().iterator();
-		while (iterator1.hasNext()) {
-			XYSeries setElement = iterator1.next();
-			audiogram.removeSeries(setElement);
-			audiogram.redraw();
-			xVals[0] = 0;
-			yVals[0] = 0;
+	public void clearPlot() {
+			xVals[FREQ_LEN] = 0;
+			yVals[indexYval] = 0;
 			currentFreq = 0;
 			FREQ_LEN = 0;
 			audiogram.redraw();
-		}
 	}
 
 	/**
 	 * Method draws simple bitmap image from resources /Drawable
 	 */
-	private void drawBackground() {
+	public void drawBackground() {
 		RectF rect = audiogram.getGraphWidget().getGridRect();
 		BitmapShader myShader = new BitmapShader(Bitmap.createScaledBitmap(
 				BitmapFactory.decodeResource(getResources(),
@@ -354,6 +344,7 @@ public class HearingTestActivity extends
 	 * extra details
 	 */
 	public void graphSettings() {
+	
 
 		audiogram.setTitle("Audiogram");
 		audiogram.setRangeLabel("[dB] Hearing level");
@@ -407,9 +398,9 @@ public class HearingTestActivity extends
 	public void startUp() {
 		AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
 		alertbox.setIcon(R.drawable.ic_launcher);
-		alertbox.setMessage("You will hear a series of tones for 5 seconds each."
-				+ "\n\nSelect whether you can hear or cannot hear"
-				+ "\n\nAt clearest dB you can hear a tone then choose select");
+		alertbox.setMessage("You will hear a series of tones."
+				+ "\n\nSelect whether you can hear it or cant hear"
+				+ "\n\nAt lowest colume you can hear a tone then choose next");
 		alertbox.setTitle("Getting started");
 		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface arg0, int arg1) {
@@ -431,7 +422,6 @@ public class HearingTestActivity extends
 		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface arg0, int arg1) {
 				// finish used for destroyed activity
-				clearPlot();
 			}
 		});
 		alertbox.show();
@@ -448,6 +438,10 @@ public class HearingTestActivity extends
 		alertbox.setTitle("End of Test");
 		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface arg0, int arg1) {
+				Intent intent = new Intent(null, TestResults.class); // intent used to
+				// launch
+				// activity
+				startActivity(intent);
 				// finish used for destroyed activity
 			}
 		});
