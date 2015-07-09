@@ -28,7 +28,7 @@ public class MainMenu extends Activity {
 	}
 
 	public void beginTest(View v) {
-		Intent intent = new Intent(this, StartTest.class); // intent used to launch activity
+		Intent intent = new Intent(this, AccountCreate.class); // intent used to launch activity
 		startActivity(intent);
 	}
 

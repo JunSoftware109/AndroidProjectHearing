@@ -1,9 +1,14 @@
 package com.malikjunaid.drhearing;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.BitmapShader;
 import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.RectF;
+import android.graphics.Shader;
 import android.os.Bundle;
-
 import com.androidplot.xy.BoundaryMode;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYStepMode;
@@ -24,13 +29,30 @@ public class TestResults extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.results_screen); // main menu view is loaded first
 				
-		
+		ht.getSeries();
 		audiogram = (XYPlot) findViewById(R.id.mySimpleXYPlotResult);
 		
-		graphSettings();// retrieve layout for audiogram
-		ht.updatePlot();
-		ht.getSeries();
+		graphSettings();
+		drawBackground();
+		
+	}
+	
+	/**
+	 * Method draws simple bitmap image from resources /Drawable
+	 */
+	public void drawBackground() {
+		RectF rect = audiogram.getGraphWidget().getGridRect();
+		BitmapShader myShader = new BitmapShader(Bitmap.createScaledBitmap(
+				BitmapFactory.decodeResource(getResources(),
+						R.drawable.audiogram_background), 1, (int) rect
+						.height(), false), Shader.TileMode.CLAMP,
+				Shader.TileMode.CLAMP);
+		Matrix m = new Matrix();
+		m.setTranslate(rect.left, rect.top);
+		myShader.setLocalMatrix(m);
 
+		audiogram.getGraphWidget().getGridBackgroundPaint()
+				.setShader(myShader);
 
 	}
 	

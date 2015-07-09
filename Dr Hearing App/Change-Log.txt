@@ -8,13 +8,18 @@ Changelog Legend:
 	[=] = No Changes
 	[x] = Deleted
 	[!] = Bugs
-	
+
+------------------------------------------------------------------------------------------	
+(5/6/15) - Improvements - Version 1.17
+
+	[+] - created create_account.xml and AccountCreate.java
+	[+] - added items in array.xml file
 
 ------------------------------------------------------------------------------------------	
 (24/6/15) - Improvements - Version 1.16
 
 	[*] - added xy plot layout to results screen
-	[+] - 
+	[*] - fixed Finish button
 	
 ------------------------------------------------------------------------------------------	
 (9/6/15) - Improvements - Version 1.15

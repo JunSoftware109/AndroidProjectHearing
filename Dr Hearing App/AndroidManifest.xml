@@ -7,7 +7,12 @@
     <uses-permission 
         android:name="android.permission.MODIFY_AUDIO_SETTINGS">
     </uses-permission>
-
+    
+    <uses-permission 
+    
+            android:name="android.permission.GET_ACCOUNTS">
+    </uses-permission>
+    
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="16" />
@@ -30,12 +35,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.malikjunaid.drhearing.AccountCreate"
+            android:label="@string/account_create"
+            android:screenOrientation="portrait"  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.malikjunaid.drhearing.StartTest"
             android:label="@string/start_test"
             android:screenOrientation="portrait"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -45,7 +58,6 @@
             android:screenOrientation="portrait"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -54,7 +66,6 @@
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -63,7 +74,6 @@
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -72,7 +82,6 @@
             android:label="@string/testing_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -81,7 +90,6 @@
             android:label="@string/results_sreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -90,7 +98,6 @@
             android:label="@string/loadprev_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -99,7 +106,6 @@
             android:label="@string/moreinfo_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -108,7 +114,6 @@
             android:label="@string/moreinfo2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -117,7 +122,6 @@
             android:label="@string/Infoview1" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -126,7 +130,6 @@
             android:label="@string/Infoview2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -135,7 +138,6 @@
             android:label="@string/Infoview3" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
@@ -144,10 +146,8 @@
             android:label="@string/Infoview4" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

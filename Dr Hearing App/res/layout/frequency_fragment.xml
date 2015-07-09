@@ -25,7 +25,7 @@
         android:id="@+id/finishButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="true"        
         android:layout_toLeftOf="@+id/cannotHearButton"
         android:layout_toRightOf="@+id/canHearButton"
         android:text="Finish" />

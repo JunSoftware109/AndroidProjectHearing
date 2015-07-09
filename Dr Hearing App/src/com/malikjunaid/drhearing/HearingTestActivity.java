@@ -344,8 +344,6 @@ public class HearingTestActivity extends
 	 * extra details
 	 */
 	public void graphSettings() {
-	
-
 		audiogram.setTitle("Audiogram");
 		audiogram.setRangeLabel("[dB] Hearing level");
 		audiogram.setDomainLabel("Frequency [Hz]");
@@ -438,7 +436,7 @@ public class HearingTestActivity extends
 		alertbox.setTitle("End of Test");
 		alertbox.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface arg0, int arg1) {
-				Intent intent = new Intent(null, TestResults.class); // intent used to
+				Intent intent = new Intent(HearingTestActivity.this, TestResults.class); // intent used to
 				// launch
 				// activity
 				startActivity(intent);
@@ -446,10 +444,6 @@ public class HearingTestActivity extends
 			}
 		});
 		alertbox.show();
-		Intent intent = new Intent(this, TestResults.class); // intent used to
-																// launch
-																// activity
-		startActivity(intent);
 	}
 
 	/**
