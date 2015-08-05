@@ -29,6 +29,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidplot.xy.BoundaryMode;
@@ -48,7 +49,8 @@ public class HearingTestActivity extends
 
 	public HearingTestActivity() { // default constructor
 	}
-
+	
+	private TextView dBTextView;
 	private Button canHearButton, cannotHearButton, nextFrequencyButton,
 			finishButton, playFrequencyButton;
 	private RadioButton rightEarButton, leftEarButton;
@@ -63,7 +65,7 @@ public class HearingTestActivity extends
 	private int indexYval = 0; // initial index position for yVals
 	private int FREQ_LEN = 120; // length of array for x vals
 	private int DB_LEN = 120; // length of array for y vals
-	float left, right; // left and right volume
+	float leftVolume, rightVolume; // left and right volume
 	Integer[] frequencies = { 0, 125, 250, 500, 1000, 2000, 4000, 6000, 8000 };
 	Integer[] xVals = new Integer[FREQ_LEN]; // array of type Integer with
 												// length defined
@@ -75,6 +77,8 @@ public class HearingTestActivity extends
 		setContentView(R.layout.hearingtest_view); // setting the view with
 													// defined XML file
 		startUp(); // opens up info box
+		
+		dBTextView = (TextView) findViewById(R.id.dBTextView);
 		
 		// frequencies = getResources().getIntArray(R.array.frequencies);
 		leftEarButton = (RadioButton) findViewById(R.id.leftEarButton);
@@ -141,6 +145,8 @@ public class HearingTestActivity extends
 				indexYval += 1;
 				currentFreq += 1;
 				yVals[indexYval] = 40; // set next index to default value 40#
+				defaultdB = 40;
+				dBTextView.setText("Current dB is: " + defaultdB);
 				updatePlot();
 			} catch (ArrayIndexOutOfBoundsException exception) {
 				if (currentFreq > 8) {
@@ -193,11 +199,20 @@ public class HearingTestActivity extends
 		}
 
 		case R.id.canHearButton: {
-			try {				
+			try {
+				String display = String.format((Integer.toString(defaultdB -= 10)));
+				dBTextView.setText("Current dB is: " + defaultdB);
+				if (defaultdB <= 1) {  // stop the yVal going below range
+					defaultdB = 0;
+				}
 				yVals[indexYval] -=10;
 				updatePlot();
-				audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
-						AudioManager.ADJUST_LOWER, AudioManager.FLAG_VIBRATE);
+				//audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
+				//		AudioManager.ADJUST_LOWER, AudioManager.FLAG_VIBRATE);
+				
+				frequencygen.audioTrack.setStereoVolume(leftVolume--, rightVolume--);
+
+				
 				if (yVals[indexYval] < 1) { // stop the yVal going below range
 					yVals[indexYval] = 0;
 					Toast.makeText(getApplicationContext(), "Lowest dB reached!",
@@ -212,10 +227,18 @@ public class HearingTestActivity extends
 
 		case R.id.cannotHearButton: {
 			try {
+				String display = String.format((Integer.toString(defaultdB += 10)));
+				dBTextView.setText("Current dB is: " + defaultdB);
+				if (defaultdB >= 120) { // stop the yVal going above range
+					defaultdB = 120;
+				}
 				yVals[indexYval] += 10;
 				updatePlot();
-				audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
-						AudioManager.ADJUST_RAISE, AudioManager.FLAG_VIBRATE);
+				//audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
+				//		AudioManager.ADJUST_RAISE, AudioManager.FLAG_VIBRATE);
+				
+				frequencygen.audioTrack.setStereoVolume(leftVolume++, rightVolume++);
+				
 				if (yVals[indexYval] > 120) { // stop the yVal going above range
 					yVals[indexYval] = 120;
 				}

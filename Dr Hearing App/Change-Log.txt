@@ -8,9 +8,16 @@ Changelog Legend:
 	[=] = No Changes
 	[x] = Deleted
 	[!] = Bugs
+	
+------------------------------------------------------------------------------------------	
+(5/8/15) - Improvements - Version 1.18
+
+	[+] - added textView of Decibel level change
+	[+] -
+
 
 ------------------------------------------------------------------------------------------	
-(5/6/15) - Improvements - Version 1.17
+(5/7/15) - Improvements - Version 1.17
 
 	[+] - created create_account.xml and AccountCreate.java
 	[+] - added items in array.xml file

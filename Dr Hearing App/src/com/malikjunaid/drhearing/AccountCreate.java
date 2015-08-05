@@ -53,19 +53,7 @@ public class AccountCreate extends Activity {
 				String gender = sp_gender.getSelectedItem().toString();
 				Spinner sp_age = (Spinner) findViewById(R.id.spinner_age);
 				int age = Integer.parseInt(sp_age.getSelectedItem().toString());
-
 				setAccountPref(account, gender, age);
-				// ConnectivityManager connMgr = (ConnectivityManager)
-				// getSystemService(Context.CONNECTIVITY_SERVICE);
-				// NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-				// if (networkInfo != null && networkInfo.isConnected()) {
-				// push data
-				// new PushToDB().execute("adduser", account, gender+"",
-				// age+"");//this pushed test result to the db.
-				// } else {
-				// display error
-				// Log.e("CreateAccount", "network connectivity error");
-				// }
 
 				Intent intent = new Intent(ctx, StartTest.class);
 				ctx.startActivity(intent);

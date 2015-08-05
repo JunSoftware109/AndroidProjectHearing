@@ -70,4 +70,14 @@
         android:layout_alignParentRight="true"
         android:text="Next Frequency" />
 
+    <TextView
+        android:id="@+id/dBTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nextFrequencyButton"
+        android:layout_alignBottom="@+id/nextFrequencyButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/canHearButton"
+        android:text="dB" />
+
 </RelativeLayout>
