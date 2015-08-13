@@ -49,6 +49,7 @@ public class AccountCreate extends Activity {
 											// the db and then start the next
 											// activity
 				String account = tv_account.getText().toString();
+			//	String userName = (TextView).getText().toString();
 				Spinner sp_gender = (Spinner) findViewById(R.id.spinner_gender);
 				String gender = sp_gender.getSelectedItem().toString();
 				Spinner sp_age = (Spinner) findViewById(R.id.spinner_age);
@@ -120,6 +121,7 @@ public class AccountCreate extends Activity {
 	protected void setAccountPref(String account_name, String gender, int age) {
 		SharedPreferences.Editor prefEditor = user_info.edit();
 		prefEditor.putString("account", account_name);
+		//prefEditor.putString("user-name", user_name);
 		prefEditor.putString("gender", gender);
 		prefEditor.putInt("age", age);
 
@@ -129,6 +131,7 @@ public class AccountCreate extends Activity {
 			FileOutputStream fos = ctx.openFileOutput("temp_data" + ".txt",
 					Context.MODE_PRIVATE);
 			Writer out = new OutputStreamWriter(fos);
+			out.write(user_info.getString("user-name", "default"));
 			out.write(user_info.getString("gender", "error") + "\n");
 			out.write(user_info.getInt("age", -1) + "\n");
 			out.close();
@@ -139,8 +142,11 @@ public class AccountCreate extends Activity {
 		Log.d("MAIN",
 				"user_info account = "
 						+ user_info.getString("account", "error"));
+	//	Log.d("MAIN",
+		//		"user_name = " + user_info.getString("user-name", "error"));
 		Log.d("MAIN",
 				"user_info gender = " + user_info.getString("gender", "error"));
+		
 		Log.d("MAIN", "user_info age = " + user_info.getInt("age", -1));
 	}
 }

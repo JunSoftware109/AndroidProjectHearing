@@ -55,8 +55,8 @@ public class HearingTestActivity extends
 			finishButton, playFrequencyButton;
 	private RadioButton rightEarButton, leftEarButton;
 	static int defaultdB = 40; // default dB level (yVal point)
-	private FrequencyGenerator frequencygen = new FrequencyGenerator(); // create
-																		// FreqGen
+	private FrequencyGenerator frequencygen = new FrequencyGenerator(); // create FreqGen
+	private FragmentDecibelMeter dBMeter;
 	// private AudioManager audioManager; // reference to AudioManager class
 	public XYPlot audiogram; // reference to XYPlot class
 	public SimpleXYSeries series1, series2;
@@ -77,8 +77,6 @@ public class HearingTestActivity extends
 		setContentView(R.layout.hearingtest_view); // setting the view with
 													// defined XML file
 		startUp(); // opens up info box
-		
-		dBTextView = (TextView) findViewById(R.id.dBTextView);
 		
 		// frequencies = getResources().getIntArray(R.array.frequencies);
 		leftEarButton = (RadioButton) findViewById(R.id.leftEarButton);

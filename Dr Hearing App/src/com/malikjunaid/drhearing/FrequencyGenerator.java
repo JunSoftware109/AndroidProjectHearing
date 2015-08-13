@@ -89,7 +89,7 @@ public class FrequencyGenerator extends Activity {
 	 * Method plays tone at highest volume
 	 */
 	public void playTone() {
-		playTone(1.0f, 1.0f); // this method plays tone with full
+		playTone(10.0f, 10.0f); // this method plays tone with full
 						      // volume in both ear
 	}
 	

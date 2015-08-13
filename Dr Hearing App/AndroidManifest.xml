@@ -9,6 +9,10 @@
     </uses-permission>
     
     <uses-permission 
+        android:name="android.permission.RECORD_AUDIO">
+    </uses-permission>
+  
+    <uses-permission 
     
             android:name="android.permission.GET_ACCOUNTS">
     </uses-permission>
@@ -80,6 +84,14 @@
         <activity
             android:name="com.malikjunaid.drhearing.FragmentAudiogram"
             android:label="@string/testing_screen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.malikjunaid.drhearing.FragmentDecibelMeter"
+            android:label="@string/decibel_reading" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.EMBED" />

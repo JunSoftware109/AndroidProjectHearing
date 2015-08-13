@@ -10,6 +10,12 @@ Changelog Legend:
 	[!] = Bugs
 	
 ------------------------------------------------------------------------------------------	
+(13/8/15) - Improvements - Version 1.19
+
+	[+] - added decibel meter to calculate db level from mediaRecorder
+	[+] - added decibel fragment
+	
+------------------------------------------------------------------------------------------	
 (5/8/15) - Improvements - Version 1.18
 
 	[+] - added textView of Decibel level change

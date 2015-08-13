@@ -22,5 +22,12 @@
         android:layout_alignParentLeft="true"
         class="com.malikjunaid.drhearing.FragmentFrequency"
         tools:layout="@layout/frequency_fragment" />
+    
+    <fragment
+        android:id="@+id/decibel_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        class="com.malikjunaid.drhearing.FragmentDecibelMeter"
+        tools:layout="@layout/decibel_fragment" />
 
 </RelativeLayout>

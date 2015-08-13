@@ -24,6 +24,7 @@
   	<string name="calibrate_info">For best results, its highly recommended that you use headphones for the remainder of this test.</string>
   	<string name="calibrate_button">Click here to continue</string>
   	<string name="loadprev_test">Load a test</string>
+  	<string name="decibel_reading">DB Meter Reading</string>
     <string name="loadtest_title_hint">Enter a title for the test</string>
     <string name="load_title_label">Title</string>
   	<string name="load_test_date">Date:</string>
