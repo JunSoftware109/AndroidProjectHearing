@@ -56,9 +56,9 @@ public class HearingTestActivity extends
 	private RadioButton rightEarButton, leftEarButton;
 	static int defaultdB = 40; // default dB level (yVal point)
 	private FrequencyGenerator frequencygen = new FrequencyGenerator(); // create FreqGen
-	private FragmentDecibelMeter dBMeter;
 	// private AudioManager audioManager; // reference to AudioManager class
 	public XYPlot audiogram; // reference to XYPlot class
+	private FragmentDecibelMeter decibelMeter;
 	public SimpleXYSeries series1, series2;
 	// private int[] frequencies;
 	private int currentFreq = 0;
@@ -144,7 +144,7 @@ public class HearingTestActivity extends
 				currentFreq += 1;
 				yVals[indexYval] = 40; // set next index to default value 40#
 				defaultdB = 40;
-				dBTextView.setText("Current dB is: " + defaultdB);
+				//dBTextView.setText("Current dB is: " + defaultdB);
 				updatePlot();
 			} catch (ArrayIndexOutOfBoundsException exception) {
 				if (currentFreq > 8) {

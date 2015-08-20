@@ -10,18 +10,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+/**
+ * A class used to create a simple textview to display decibel values, 
+ * while calculating amplitude
+ * Note: This class is still under construction needs to implemented*
+ */
 public class FragmentDecibelMeter extends Fragment {
 	
-	private TextView mStatusView;
-    MediaRecorder mRecorder;
+	private TextView statusView;
+	FrequencyGenerator frequencyGen;
+    MediaRecorder recorder;
     Thread runner;
     private static double mEMA = 0.0;
     static final private double EMA_FILTER = 0.6;
+    
+    public FragmentDecibelMeter() {} // default constructor
 
-    final Runnable updater = new Runnable(){
+    final Runnable updater = new Runnable() {
 
-        public void run(){          
-        	updateTextView();
+        public void run() {    
+            getAmplitude();
+            getPeakAmplitude();
+        	//updateTextView();
         };
     };
     
@@ -29,14 +39,13 @@ public class FragmentDecibelMeter extends Fragment {
 
     @Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState)  {
+			Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);	
-        mStatusView = (TextView) findViewById(R.id.decibelStatus);
-
+        statusView = (TextView) findViewById(R.id.decibelStatus);
 
         if (runner == null)
         { 
-            runner = new Thread(){
+            runner = new Thread() {
                 public void run()
                 {
                     while (runner != null)
@@ -53,7 +62,7 @@ public class FragmentDecibelMeter extends Fragment {
             runner.start();
             Log.d("Noise", "start runner()");
         }
-		return inflater.inflate(R.layout.frequency_fragment, container, false);
+		return inflater.inflate(R.layout.decibel_fragment, container, false);
     }
 
 	private TextView findViewById(int decibelstatus) {
@@ -61,72 +70,33 @@ public class FragmentDecibelMeter extends Fragment {
 		return null;
 	}
 
-	public void onResume()
-    {
-        super.onResume();
-        startRecorder();
-    }
-
-    public void onPause()
-    {
-        super.onPause();
-        stopRecorder();
-    }
-
-    public void startRecorder(){
-        if (mRecorder == null)
-        {
-            mRecorder = new MediaRecorder();
-            mRecorder.setAudioSource(MediaRecorder.AudioSource.DEFAULT);
-            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-            mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-            mRecorder.setOutputFile("/dev/null"); 
-            try
-            {           
-                mRecorder.prepare();
-            }catch (java.io.IOException ioe) {
-                android.util.Log.e("[Monkey]", "IOException: " + android.util.Log.getStackTraceString(ioe));
-
-            }catch (java.lang.SecurityException e) {
-                android.util.Log.e("[Monkey]", "SecurityException: " + android.util.Log.getStackTraceString(e));
-            }
-            try
-            {           
-                mRecorder.start();
-            }catch (java.lang.SecurityException e) {
-                android.util.Log.e("[Monkey]", "SecurityException: " + android.util.Log.getStackTraceString(e));
-            }
-
-            //mEMA = 0.0;
-        }
-
-    }
+    
     public void stopRecorder() {
-        if (mRecorder != null) {
-            mRecorder.stop();       
-            mRecorder.release();
-            mRecorder = null;
+        if (recorder != null) {
+            recorder.stop();       
+            recorder.release();
+            recorder = null;
         }
     }
 
-    public void updateTextView(){
-        mStatusView.setText(Double.toString((getPeakAmplitude())) + " dB");
+    public void updateTextView() {
+        statusView.setText(Double.toString((getPeakAmplitude())) + " dB");
     }
+    
     public double soundDb(double ampl){
-        return  20 * Math.log10(getPeakAmplitude() / 32767.0);
+        return  20 * Math.log10 (getPeakAmplitude() / 32767.0);
     }
+    
     public double getAmplitude() {
-        if (mRecorder != null)
-            return  (mRecorder.getMaxAmplitude());
- 
+        if (recorder != null)
+            return  (recorder.getMaxAmplitude());
         else
             return 0;
-
     }
+    
     public double getPeakAmplitude() {
         double amp =  getAmplitude();
-        mEMA = EMA_FILTER * amp + (1.0 - EMA_FILTER) * mEMA;
+       // mEMA = EMA_FILTER * amp + (1.0 - EMA_FILTER) * mEMA;
         return mEMA;
     }
-
 }

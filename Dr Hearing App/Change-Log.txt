@@ -8,6 +8,12 @@ Changelog Legend:
 	[=] = No Changes
 	[x] = Deleted
 	[!] = Bugs
+
+------------------------------------------------------------------------------------------		
+(20/8/15) - Improvements - Version 1.20
+
+	[+] - removed uneeded functions from the decibel meter class
+	
 	
 ------------------------------------------------------------------------------------------	
 (13/8/15) - Improvements - Version 1.19
