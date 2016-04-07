@@ -1,4 +1,4 @@
-Junaid Malik - Final Year Project 2015 - Dublin Institute of Tech. Hearing Test App
+Junaid Malik - Final Year Project 2015 for Dublin Institute of Tech. Hearing Test App
 ------------------- MAIN PROJECT IS SAVED IN GIT HUB, BACKUP IN WORKSPACE ---------------
 Changelog Legend:
 -----------------------------------------------------------------------------------------
@@ -8,6 +8,13 @@ Changelog Legend:
 	[=] = No Changes
 	[x] = Deleted
 	[!] = Bugs
+	
+------------------------------------------------------------------------------------------		
+(7/4/16) - Improvements - Version 1.21
+
+	[+] - Upgraded project to Android Studio.
+	[+] - Updated damaged png files.
+	[+] - Updated project OS version from 16 to 21.
 
 ------------------------------------------------------------------------------------------		
 (20/8/15) - Improvements - Version 1.20

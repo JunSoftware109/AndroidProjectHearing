@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="frequencies">
+        <item>60</item>
+        <item>175</item>
+        <item>250</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>4000</item>
+        <item>8000</item>
+        <item>16000</item>
+    </integer-array>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <color name="NiceButtonBorderColor">#254117</color>
+    <color name="NiceButtonDisabledEndColor">#736F6E</color>
+    <color name="NiceButtonDisabledStartColor">#565051</color>
+    <color name="NiceButtonEndColor">#348017</color>
+    <color name="NiceButtonStartColor">#4AA02C</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="domain_label_font_size">13dp</dimen>
+    <dimen name="domain_tick_label_font_size">15dp</dimen>
+    <dimen name="legend_text_font_size">20dp</dimen>
+    <dimen name="pie_segment_label_font_size">10dp</dimen>
+    <dimen name="range_label_font_size">13dp</dimen>
+    <dimen name="range_tick_label_font_size">15dp</dimen>
+    <dimen name="title_font_size">20dp</dimen>
+    <string name="Infoview1">What is hearing loss?</string>
+    <string name="Infoview2">Symptoms of hearing loss</string>
+    <string name="Infoview3">What is a hearing test?</string>
+    <string name="Infoview4">About developer</string>
+    <string name="about">About</string>
+    <string name="account_create">Create a user account</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Dr Hearing</string>
+    <string name="audiogram_fragment">Audiogram fragment</string>
+    <string name="audiogram_screen">This screen displays the results</string>
+    <string name="begin">Begin a test</string>
+    <string name="button1">500hz</string>
+    <string name="button2">1kHz</string>
+    <string name="button3">2kHz</string>
+    <string name="button4">3kHz</string>
+    <string name="button5">4kHz</string>
+    <string name="button6">Begin a test</string>
+    <string name="calibrate_button">Click here to continue</string>
+    <string name="calibrate_info">For best results, its highly recommended that you use headphones for the remainder of this test.</string>
+    <string name="calibrate_title">Calibration</string>
+    <string name="decibel_reading">DB Meter Reading</string>
+    <string name="frequency_fragment">Frequency fragment</string>
+    <string name="hello_world">Welcome to\nDr Hearing</string>
+    <string name="infoView1">\n•Hearing is the ability to perceive sounds. Sound occurs over a wide spectrum of frequencies.
+								The human ear is sensitive to a frequency band within that spectrum expressed in decibels
+								(dB).
+								\n\n•Frequencies capable of being heard by humans are called audio or sonic. The range is
+								typically considered to be between 20 Hz and 20 ,000 Hz (Hertz).
+								\n\n•Frequencies higher than
+								audio are referred to as ultrasonic, while frequencies below audio are referred to as
+								infrasonic. Loss of the ability to hear sound frequencies in the normal range of hearing is
+								called hearing impairment.\n\n</string>
+    <string name="infoView2">\nYou may have a hearing loss if:
+        						\n\n•You hear people speaking but you have difficulty understanding what they are saying
+								\n\n•You are frequently having to ask people to repeat what they have said
+								\n\n•You feel left out of conversations
+								\n\n•You complain that others are mumbling
+								\n\n•You need to ask colleagues about the details of a meeting or presentation you attended
+								\n\n•You miss jokes because you didn\'t hear all of what was said
+								\n\n•Friends and family need you to turn the TV or radiodown
+								\n\n•You do not hear the telephone and or doorbell
+								\n\n•You have difficulty working out where sounds are coming from
+								\n\n•You have a history of exposure to loud noise e.g. working in the construction industry
+								\n\n•You understand more of what is being said if you are looking at the person speaking to you
+								\n\n•Soft sounds seem to have disappeared altogether in speech</string>
+    <string name="infoView3">\n•Pure tone audiometry is the standard assesment of an individual\'s hearing.\n\n•The results of a pure tone audiometry test are recorded onto a chart called an audiogram.
+	    					 \n\n•It is an easy method to obtain and provide information about an individuals hearing across a range of frequencies.
+	    					 \n\n•A pure tone is a tone that has a single specific frequency.This tone is determined by the rate, or speed at which the sound waves vibrate.
+	    					 \n\n•A 4000 Hz tone has a higher frequency than the 500 Hz tone.</string>
+    <string name="infoView4">The system of the body that lets a person hear sound is called the auditory system. It is made up of four main parts. 
+The visible part of the ear and the ear canal make up the outer ear.
+The area behind the eardrum is called the middle ear. It is made up of the three smallest bones in the body (malleus, incus and stapes) and the Eustachian tube, which leads from the middle ear to the back of the throat.
+\n\nThe main organ for hearing, the  cochlea, is in the inner ear. The cochlea is the sense organ for hearing like the nose is for smelling. The middle ear bones are connected to the cochlea and the cochlea is connected to the  auditory nerve.
+The auditory nerve is the nerve that runs from the inner ear (cochlea) to the brainstem. The cochlea sends signals to the auditory nerve; then the auditory nerve sends these signals to the brain.
+Hearing loss can happen because of problems in any part of the auditory system.</string>
+    <string name="infoView5">Hearing is different than other senses like vision, smell and taste. The hearing system is about changing movement into a signal that the brain can understand. Sound travels through the air as vibrations in the air pressure (i.e. sound waves). It takes four steps through the auditory system before the brain can understand sounds.
+	    \n\nStep 1: Sound moves into the ear through the outer ear and the ear canal. Once the sound has moved down the ear canal, the sound waves hit the eardrum, which makes the eardrum vibrate.
+	    \n\nStep 2: When the eardrum vibrates, it moves the bones of the middle part of the ear (malleus, incus and stapes). The movement of the malleus and incus makes the stapes move in and out of the entrance of the inner ear, the oval window.
+	    \n\nStep 3: The other side of the oval window, in the inner ear, is filled with fluid. As the stapes moves back and forth on the oval window, it makes waves. This changes the vibrations of the middle ear into hydraulic energy.
+	    \n\nStep 4: The hydraulic energy of the waves makes tiny hair cells in the  cochlea sway back and forth. The swaying action creates signals, which move through the  auditory nerve then up the levels of the brainstem until they reach the brain.</string>
+    <string name="infobutton1">What is hearing loss?</string>
+    <string name="infobutton2">Symptoms of hearing loss</string>
+    <string name="infobutton3">What is the test?</string>
+    <string name="infobutton4">About developer</string>
+    <string name="leftEar">Left</string>
+    <string name="load">Load test</string>
+    <string name="load_test_checked">Checked:</string>
+    <string name="load_test_date">Date:</string>
+    <string name="load_test_title_hint">Enter a name for the test.</string>
+    <string name="load_title_label">Title</string>
+    <string name="loadprev_test">Load a test</string>
+    <string name="loadtest_title_hint">Enter a title for the test</string>
+    <string name="moreinfo2">Human Auditory System</string>
+    <string name="moreinfo_activity">Information on hearing</string>
+    <string name="okbutton">OK</string>
+    <string name="result_info1">Depending on the range of your audiogram results
+		\n\nBelow is the classfication based upon decibel level
+		\n\nNormal hearing 0 to 20 dB
+		\n\nMild 21 to 40 dB
+		\n\nModerate 41 to 55 dB
+		\n\nModerately-severe 56 to 70 dB
+		\n\nSevere 71 to 90 dB
+		\n\nProfound 91+ dB </string>
+    <string name="results_sreen">Results Interpretation</string>
+    <string name="rightEar">Right</string>
+    <string name="rta_dialog_cancel">Remind later</string>
+    <string name="rta_dialog_message">If you enjoy this app, please take a moment to rate this app. It won\'t take more than a minute. Thank you for your support!</string>
+    <string name="rta_dialog_no">No, thanks</string>
+    <string name="rta_dialog_ok">Rate now</string>
+    <string name="rta_dialog_title">Rate this app</string>
+    <string name="splash">SplashScreen</string>
+    <string name="start_test">Test starting.</string>
+    <string name="testing_screen">Test Screen</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

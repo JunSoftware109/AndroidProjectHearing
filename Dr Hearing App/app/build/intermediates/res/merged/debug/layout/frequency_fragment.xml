@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.malikjunaid.drhearing.FragmentFrequency" >
+
+    <Button
+        android:id="@+id/cannotHearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Cant hear" />
+
+    <Button
+        android:id="@+id/canHearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Can hear" />
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"        
+        android:layout_toLeftOf="@+id/cannotHearButton"
+        android:layout_toRightOf="@+id/canHearButton"
+        android:text="Finish" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/canHearButton"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/leftEarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Left" />
+
+        <RadioButton
+            android:id="@+id/rightEarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/playFrequencyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/radioGroup1"
+        android:layout_alignLeft="@+id/nextFrequencyButton"
+        android:layout_alignParentRight="true"
+        android:text="Play Tone" />
+
+    <Button
+        android:id="@+id/nextFrequencyButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playFrequencyButton"
+        android:layout_alignParentRight="true"
+        android:text="Next Frequency" />
+
+</RelativeLayout>

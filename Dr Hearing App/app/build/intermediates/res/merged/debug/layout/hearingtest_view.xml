@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <fragment
+        android:id="@+id/audiogram_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="140dp"
+        class="com.malikjunaid.drhearing.FragmentAudiogram"
+        tools:layout="@layout/audiogram_fragment" />
+
+    <fragment
+        android:id="@+id/frequency_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        class="com.malikjunaid.drhearing.FragmentFrequency"
+        tools:layout="@layout/frequency_fragment" />
+    
+    <fragment
+        android:id="@+id/decibel_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        class="com.malikjunaid.drhearing.FragmentDecibelMeter"
+        tools:layout="@layout/decibel_fragment" />
+
+</RelativeLayout>
