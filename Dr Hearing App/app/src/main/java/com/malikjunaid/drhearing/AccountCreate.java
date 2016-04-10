@@ -32,7 +32,7 @@ public class AccountCreate extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.create_account);
+		setContentView(R.layout.create_account);
 		user_info = getSharedPreferences("user_info", MODE_PRIVATE);
 		final TextView tv_account = (TextView) findViewById(R.id.tv_account);
 
@@ -80,11 +80,11 @@ public class AccountCreate extends Activity {
 					showAccountAlert(accounts);
 				}
 			});
-			// showAccountAlert(accounts);
+			 showAccountAlert(accounts);
 		} else {
-			// tv_account = (TextView) findViewById(R.id.tv_account);
-			// tv_account.setText(accounts[0].name);
-			// setAccountPref(accounts[0].name);
+			 //tv_account = (TextView) findViewById(R.id.tv_account);
+			 //tv_account.setText(accounts[0].name);
+			 //setAccountPref(accounts[0].name);
 		}
 		tv_account.setText(accounts[0].name);
 		for (int i = 0; i < len; i++)

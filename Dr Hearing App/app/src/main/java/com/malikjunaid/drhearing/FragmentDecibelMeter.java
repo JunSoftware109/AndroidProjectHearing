@@ -79,8 +79,9 @@ public class FragmentDecibelMeter extends Fragment {
         }
     }
 
+    // dB counter not yet working
     public void updateTextView() {
-        statusView.setText(Double.toString((getPeakAmplitude())) + " dB");
+//        statusView.setText(Double.toString((getPeakAmplitude())) + " dB");
     }
     
     public double soundDb(double ampl){
