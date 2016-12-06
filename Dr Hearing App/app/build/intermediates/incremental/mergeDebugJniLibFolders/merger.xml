@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Junaid\Documents\GitHub\AndroidProjectHearing\Dr Hearing App\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\Junaid\Documents\GitHub\AndroidProjectHearing\Dr Hearing App\app\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Junaid Malik\Documents\AndroidStudioProjects\My Projects\AndroidProjectHearing\Dr Hearing App\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\Junaid Malik\Documents\AndroidStudioProjects\My Projects\AndroidProjectHearing\Dr Hearing App\app\src\debug\jniLibs"/></dataSet></merger>

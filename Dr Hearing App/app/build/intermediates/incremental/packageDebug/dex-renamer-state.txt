@@ -1,0 +1,7 @@
+#Tue Dec 06 12:12:06 GMT 2016
+base.0=C\:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_e6e6de5eecdedb5fc24d2a29d2da79fbcdc3f8c8
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_37484eac6b1652ce5d2bb14113be2fd8a608e9ca\\classes.dex
+base.1=C\:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_37484eac6b1652ce5d2bb14113be2fd8a608e9ca
+file.0=C\:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_e6e6de5eecdedb5fc24d2a29d2da79fbcdc3f8c8\\classes.dex

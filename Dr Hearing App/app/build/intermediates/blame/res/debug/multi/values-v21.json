@@ -1,0 +1,28 @@
+[
+    {
+        "outputFile": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 8,
+                    "endColumn": 12,
+                    "endOffset": 512
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values-v21\\styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endLine": 9,
+                        "endColumn": 12,
+                        "endOffset": 522
+                    }
+                }
+            }
+        ]
+    }
+]

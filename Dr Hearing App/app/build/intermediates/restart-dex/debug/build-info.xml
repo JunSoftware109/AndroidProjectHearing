@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxxhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="83199461916054"
+    token="5927354353969474752"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="439" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="356" />
+    <task
+        name="verifier"
+        duration="38" />
+
+    <artifact
+        location="C:\Users\Junaid Malik\Documents\AndroidStudioProjects\My Projects\AndroidProjectHearing\Dr Hearing App\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="83199461916054"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\Junaid Malik\Documents\AndroidStudioProjects\My Projects\AndroidProjectHearing\Dr Hearing App\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

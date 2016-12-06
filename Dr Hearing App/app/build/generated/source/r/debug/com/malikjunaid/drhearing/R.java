@@ -20,6 +20,14 @@ public final class R {
         public static final int NiceButtonDisabledStartColor=0x7f070002;
         public static final int NiceButtonEndColor=0x7f070003;
         public static final int NiceButtonStartColor=0x7f070004;
+        public static final int accent_material_light=0x7f070005;
+        public static final int background_material_light=0x7f070006;
+        public static final int colorAccent=0x7f070007;
+        public static final int colorPrimary=0x7f070008;
+        public static final int colorPrimaryDark=0x7f070009;
+        public static final int navigationBarColor=0x7f07000a;
+        public static final int textColorPrimary=0x7f07000b;
+        public static final int windowBackground=0x7f07000c;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f080000;
@@ -60,7 +68,7 @@ public final class R {
         public static final int TextView02=0x7f0a001b;
         public static final int TextView03=0x7f0a0019;
         public static final int audiogram_fragment=0x7f0a0013;
-        public static final int btn_create_account=0x7f0a000a;
+        public static final int btn_create_account=0x7f0a0009;
         public static final int button1=0x7f0a0003;
         public static final int canHearButton=0x7f0a000c;
         public static final int cannotHearButton=0x7f0a000b;
@@ -95,13 +103,13 @@ public final class R {
         public static final int rightEarButton=0x7f0a0010;
         public static final int scrollView1=0x7f0a0029;
         public static final int scrollView3=0x7f0a002d;
-        public static final int spinner_age=0x7f0a0009;
-        public static final int spinner_gender=0x7f0a0007;
+        public static final int spinner_age=0x7f0a0006;
+        public static final int spinner_gender=0x7f0a0008;
         public static final int textView2=0x7f0a0002;
-        public static final int textView3=0x7f0a0008;
-        public static final int textView4=0x7f0a0006;
+        public static final int textView3=0x7f0a0005;
+        public static final int textView4=0x7f0a0007;
         public static final int textview=0x7f0a001a;
-        public static final int tv_account=0x7f0a0005;
+        public static final int tv_account=0x7f0a000a;
         public static final int xyplot=0x7f0a001f;
     }
     public static final class layout {
@@ -179,17 +187,7 @@ public final class R {
         public static final int testing_screen=0x7f090035;
     }
     public static final class style {
-        /**  API 11 theme customizations can go here. 
- API 14 theme customizations can go here. 
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-         */
         public static final int AppBaseTheme=0x7f050000;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f050001;
     }
     public static final class xml {

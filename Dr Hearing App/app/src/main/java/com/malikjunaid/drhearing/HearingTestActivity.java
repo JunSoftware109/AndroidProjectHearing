@@ -145,6 +145,7 @@ public class HearingTestActivity extends
 				defaultdB = 40;
 				//dBTextView.setText("Current dB is: " + defaultdB);
 				updatePlot();
+				updatePlot();
 			} catch (ArrayIndexOutOfBoundsException exception) {
 				if (currentFreq > 8) {
 
@@ -197,7 +198,7 @@ public class HearingTestActivity extends
 		case R.id.canHearButton: {
 			try {
 				String display = String.format((Integer.toString(defaultdB -= 10)));
-				dBTextView.setText("Current dB is: " + defaultdB);
+				//dBTextView.setText("Current dB is: " + defaultdB);
 				if (defaultdB <= 1) {  // stop the yVal going below range
 					defaultdB = 0;
 				}
@@ -224,7 +225,7 @@ public class HearingTestActivity extends
 		case R.id.cannotHearButton: {
 			try {
 				String display = String.format((Integer.toString(defaultdB += 10)));
-				dBTextView.setText("Current dB is: " + defaultdB);
+				//dBTextView.setText("Current dB is: " + defaultdB);
 				if (defaultdB >= 120) { // stop the yVal going above range
 					defaultdB = 120;
 				}

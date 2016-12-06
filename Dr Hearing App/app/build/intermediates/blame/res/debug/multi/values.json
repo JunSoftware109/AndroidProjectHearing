@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "outputFile": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -12,15 +12,7 @@
                     "endOffset": 340
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\arrays.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 162,
-                        "endLine": 16,
-                        "endColumn": 20,
-                        "endOffset": 447
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\arrays.xml"
                 }
             },
             {
@@ -33,15 +25,7 @@
                     "endOffset": 447
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\arrays.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 5,
-                        "endColumn": 19,
-                        "endOffset": 157
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\arrays.xml"
                 }
             },
             {
@@ -53,14 +37,7 @@
                     "endOffset": 503
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 293,
-                        "endColumn": 55,
-                        "endOffset": 344
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
@@ -72,14 +49,7 @@
                     "endOffset": 564
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 231,
-                        "endColumn": 60,
-                        "endOffset": 287
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
@@ -91,14 +61,7 @@
                     "endOffset": 627
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 167,
-                        "endColumn": 62,
-                        "endOffset": 225
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
@@ -110,14 +73,7 @@
                     "endOffset": 680
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 113,
-                        "endColumn": 52,
-                        "endOffset": 161
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
@@ -129,14 +85,7 @@
                     "endOffset": 735
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 57,
-                        "endColumn": 54,
-                        "endOffset": 107
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
@@ -144,17 +93,17 @@
                     "startLine": 22,
                     "startColumn": 4,
                     "startOffset": 740,
-                    "endColumn": 57,
-                    "endOffset": 793
+                    "endColumn": 55,
+                    "endOffset": 791
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 92,
-                        "endColumn": 57,
-                        "endOffset": 145
+                        "startOffset": 716,
+                        "endColumn": 55,
+                        "endOffset": 767
                     }
                 }
             },
@@ -162,37 +111,30 @@
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 798,
-                    "endColumn": 55,
-                    "endOffset": 849
+                    "startOffset": 796,
+                    "endColumn": 59,
+                    "endOffset": 851
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 151,
-                        "endColumn": 55,
-                        "endOffset": 202
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 854,
-                    "endColumn": 53,
-                    "endOffset": 903
+                    "startOffset": 856,
+                    "endColumn": 45,
+                    "endOffset": 897
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml",
                     "position": {
-                        "startLine": 7,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 316,
-                        "endColumn": 53,
-                        "endOffset": 365
+                        "startOffset": 608,
+                        "endColumn": 45,
+                        "endOffset": 649
                     }
                 }
             },
@@ -200,37 +142,30 @@
                 "to": {
                     "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 908,
-                    "endColumn": 58,
-                    "endOffset": 962
+                    "startOffset": 902,
+                    "endColumn": 46,
+                    "endOffset": 944
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 484,
-                        "endColumn": 58,
-                        "endOffset": 538
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 967,
-                    "endColumn": 52,
-                    "endOffset": 1015
+                    "startOffset": 949,
+                    "endColumn": 50,
+                    "endOffset": 995
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 544,
-                        "endColumn": 52,
-                        "endOffset": 592
+                        "startOffset": 398,
+                        "endColumn": 50,
+                        "endOffset": 444
                     }
                 }
             },
@@ -238,1156 +173,824 @@
                 "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1020,
-                    "endColumn": 58,
-                    "endOffset": 1074
+                    "startOffset": 1000,
+                    "endColumn": 52,
+                    "endOffset": 1048
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 208,
-                        "endColumn": 58,
-                        "endOffset": 262
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1079,
-                    "endColumn": 52,
-                    "endOffset": 1127
+                    "startOffset": 1053,
+                    "endColumn": 50,
+                    "endOffset": 1099
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 371,
-                        "endColumn": 52,
-                        "endOffset": 419
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1132,
-                    "endColumn": 57,
-                    "endOffset": 1185
+                    "startOffset": 1104,
+                    "endColumn": 50,
+                    "endOffset": 1150
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 425,
-                        "endColumn": 57,
-                        "endOffset": 478
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 1190,
-                    "endColumn": 46,
-                    "endOffset": 1232
+                    "startOffset": 1155,
+                    "endColumn": 57,
+                    "endOffset": 1208
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 268,
-                        "endColumn": 46,
-                        "endOffset": 310
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 1237,
-                    "endColumn": 59,
-                    "endOffset": 1292
+                    "startOffset": 1213,
+                    "endColumn": 55,
+                    "endOffset": 1264
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 555,
-                        "endColumn": 59,
-                        "endOffset": 610
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 1297,
-                    "endColumn": 62,
-                    "endOffset": 1355
+                    "startOffset": 1269,
+                    "endColumn": 53,
+                    "endOffset": 1318
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 616,
-                        "endColumn": 62,
-                        "endOffset": 674
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 1360,
-                    "endColumn": 61,
-                    "endOffset": 1417
+                    "startOffset": 1323,
+                    "endColumn": 58,
+                    "endOffset": 1377
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 680,
-                        "endColumn": 61,
-                        "endOffset": 737
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 1422,
-                    "endColumn": 53,
-                    "endOffset": 1471
+                    "startOffset": 1382,
+                    "endColumn": 52,
+                    "endOffset": 1430
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 743,
-                        "endColumn": 53,
-                        "endOffset": 792
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 1476,
-                    "endColumn": 39,
-                    "endOffset": 1511
+                    "startOffset": 1435,
+                    "endColumn": 58,
+                    "endOffset": 1489
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 249,
-                        "endColumn": 39,
-                        "endOffset": 284
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 1516,
-                    "endColumn": 64,
-                    "endOffset": 1576
+                    "startOffset": 1494,
+                    "endColumn": 52,
+                    "endOffset": 1542
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 941,
-                        "endColumn": 64,
-                        "endOffset": 1001
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 1581,
-                    "endColumn": 52,
-                    "endOffset": 1629
+                    "startOffset": 1547,
+                    "endColumn": 57,
+                    "endOffset": 1600
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 32,
-                        "startColumn": 4,
-                        "startOffset": 1868,
-                        "endColumn": 52,
-                        "endOffset": 1916
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 1634,
-                    "endColumn": 47,
-                    "endOffset": 1677
+                    "startOffset": 1605,
+                    "endColumn": 46,
+                    "endOffset": 1647
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 59,
-                        "endColumn": 47,
-                        "endOffset": 102
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 1682,
-                    "endColumn": 65,
-                    "endOffset": 1743
+                    "startOffset": 1652,
+                    "endColumn": 59,
+                    "endOffset": 1707
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 357,
-                        "endColumn": 65,
-                        "endOffset": 418
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 1748,
-                    "endColumn": 77,
-                    "endOffset": 1821
+                    "startOffset": 1712,
+                    "endColumn": 62,
+                    "endOffset": 1770
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 798,
-                        "endColumn": 77,
-                        "endOffset": 871
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 1826,
-                    "endColumn": 46,
-                    "endOffset": 1868
+                    "startOffset": 1775,
+                    "endColumn": 61,
+                    "endOffset": 1832
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 157,
-                        "endColumn": 46,
-                        "endOffset": 199
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 1873,
-                    "endColumn": 41,
-                    "endOffset": 1910
+                    "startOffset": 1837,
+                    "endColumn": 53,
+                    "endOffset": 1886
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 33,
-                        "startColumn": 4,
-                        "startOffset": 1922,
-                        "endColumn": 41,
-                        "endOffset": 1959
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 1915,
-                    "endColumn": 40,
-                    "endOffset": 1951
+                    "startOffset": 1891,
+                    "endColumn": 39,
+                    "endOffset": 1926
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 34,
-                        "startColumn": 4,
-                        "startOffset": 1965,
-                        "endColumn": 40,
-                        "endOffset": 2001
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 1956,
-                    "endColumn": 40,
-                    "endOffset": 1992
+                    "startOffset": 1931,
+                    "endColumn": 64,
+                    "endOffset": 1991
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 35,
-                        "startColumn": 4,
-                        "startOffset": 2007,
-                        "endColumn": 40,
-                        "endOffset": 2043
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 1997,
-                    "endColumn": 40,
-                    "endOffset": 2033
+                    "startOffset": 1996,
+                    "endColumn": 52,
+                    "endOffset": 2044
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 36,
-                        "startColumn": 4,
-                        "startOffset": 2049,
-                        "endColumn": 40,
-                        "endOffset": 2085
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 2038,
-                    "endColumn": 40,
-                    "endOffset": 2074
+                    "startOffset": 2049,
+                    "endColumn": 47,
+                    "endOffset": 2092
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 37,
-                        "startColumn": 4,
-                        "startOffset": 2091,
-                        "endColumn": 40,
-                        "endOffset": 2127
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 2079,
-                    "endColumn": 48,
-                    "endOffset": 2123
+                    "startOffset": 2097,
+                    "endColumn": 65,
+                    "endOffset": 2158
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 38,
-                        "startColumn": 4,
-                        "startOffset": 2133,
-                        "endColumn": 48,
-                        "endOffset": 2177
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 2128,
-                    "endColumn": 67,
-                    "endOffset": 2191
+                    "startOffset": 2163,
+                    "endColumn": 77,
+                    "endOffset": 2236
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 3,
-                        "startOffset": 1376,
-                        "endColumn": 66,
-                        "endOffset": 1439
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 2196,
-                    "endColumn": 139,
-                    "endOffset": 2331
+                    "startOffset": 2241,
+                    "endColumn": 46,
+                    "endOffset": 2283
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 3,
-                        "startOffset": 1236,
-                        "endColumn": 138,
-                        "endOffset": 1371
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 2336,
-                    "endColumn": 55,
-                    "endOffset": 2387
+                    "startOffset": 2288,
+                    "endColumn": 41,
+                    "endOffset": 2325
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 3,
-                        "startOffset": 1180,
-                        "endColumn": 54,
-                        "endOffset": 1231
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 2392,
-                    "endColumn": 60,
-                    "endOffset": 2448
+                    "startOffset": 2330,
+                    "endColumn": 40,
+                    "endOffset": 2366
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 3,
-                        "startOffset": 1498,
-                        "endColumn": 59,
-                        "endOffset": 1554
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 2453,
-                    "endColumn": 65,
-                    "endOffset": 2514
+                    "startOffset": 2371,
+                    "endColumn": 40,
+                    "endOffset": 2407
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 290,
-                        "endColumn": 65,
-                        "endOffset": 351
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 2519,
-                    "endColumn": 62,
-                    "endOffset": 2577
+                    "startOffset": 2412,
+                    "endColumn": 40,
+                    "endOffset": 2448
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 877,
-                        "endColumn": 62,
-                        "endOffset": 935
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 54,
                     "startColumn": 4,
-                    "startOffset": 2582,
-                    "endLine": 62,
+                    "startOffset": 2453,
+                    "endColumn": 40,
+                    "endOffset": 2489
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 2494,
+                    "endColumn": 48,
+                    "endOffset": 2538
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 2543,
+                    "endColumn": 67,
+                    "endOffset": 2606
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 2611,
+                    "endColumn": 139,
+                    "endOffset": 2746
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 2751,
+                    "endColumn": 55,
+                    "endOffset": 2802
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 2807,
+                    "endColumn": 60,
+                    "endOffset": 2863
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 2868,
+                    "endColumn": 65,
+                    "endOffset": 2929
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 2934,
+                    "endColumn": 62,
+                    "endOffset": 2992
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 2997,
+                    "endLine": 70,
                     "endColumn": 47,
-                    "endOffset": 3264
+                    "endOffset": 3679
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 47,
-                        "startColumn": 4,
-                        "startOffset": 2561,
-                        "endLine": 55,
-                        "endColumn": 47,
-                        "endOffset": 3251
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 63,
+                    "startLine": 71,
                     "startColumn": 4,
-                    "startOffset": 3269,
-                    "endLine": 75,
+                    "startOffset": 3684,
+                    "endLine": 83,
                     "endColumn": 79,
-                    "endOffset": 4272
+                    "endOffset": 4687
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 57,
-                        "startColumn": 4,
-                        "startOffset": 3267,
-                        "endLine": 69,
-                        "endColumn": 79,
-                        "endOffset": 4282
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 76,
+                    "startLine": 84,
                     "startColumn": 4,
-                    "startOffset": 4277,
-                    "endLine": 79,
+                    "startOffset": 4692,
+                    "endLine": 87,
                     "endColumn": 84,
-                    "endOffset": 4845
+                    "endOffset": 5260
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 73,
-                        "startColumn": 1,
-                        "startOffset": 4298,
-                        "endLine": 76,
-                        "endColumn": 84,
-                        "endOffset": 4869
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 80,
+                    "startLine": 88,
                     "startColumn": 4,
-                    "startOffset": 4850,
-                    "endLine": 85,
+                    "startOffset": 5265,
+                    "endLine": 93,
                     "endColumn": 88,
-                    "endOffset": 5811
+                    "endOffset": 6226
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 78,
-                        "startColumn": 1,
-                        "startOffset": 4885,
-                        "endLine": 83,
-                        "endColumn": 88,
-                        "endOffset": 5851
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 86,
-                    "startColumn": 4,
-                    "startOffset": 5816,
-                    "endLine": 90,
-                    "endColumn": 257,
-                    "endOffset": 7100
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 85,
-                        "startColumn": 1,
-                        "startOffset": 5856,
-                        "endLine": 89,
-                        "endColumn": 257,
-                        "endOffset": 7144
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 91,
-                    "startColumn": 4,
-                    "startOffset": 7105,
-                    "endColumn": 61,
-                    "endOffset": 7162
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 41,
-                        "startColumn": 4,
-                        "startOffset": 2269,
-                        "endColumn": 61,
-                        "endOffset": 2326
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 92,
-                    "startColumn": 4,
-                    "startOffset": 7167,
-                    "endColumn": 64,
-                    "endOffset": 7227
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 42,
-                        "startColumn": 4,
-                        "startOffset": 2332,
-                        "endColumn": 64,
-                        "endOffset": 2392
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 93,
-                    "startColumn": 4,
-                    "startOffset": 7232,
-                    "endColumn": 57,
-                    "endOffset": 7285
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 43,
-                        "startColumn": 4,
-                        "startOffset": 2398,
-                        "endColumn": 57,
-                        "endOffset": 2451
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 94,
                     "startColumn": 4,
-                    "startOffset": 7290,
-                    "endColumn": 55,
-                    "endOffset": 7341
+                    "startOffset": 6231,
+                    "endLine": 98,
+                    "endColumn": 257,
+                    "endOffset": 7515
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 44,
-                        "startColumn": 4,
-                        "startOffset": 2457,
-                        "endColumn": 55,
-                        "endOffset": 2508
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 95,
-                    "startColumn": 4,
-                    "startOffset": 7346,
-                    "endColumn": 40,
-                    "endOffset": 7382
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 2183,
-                        "endColumn": 40,
-                        "endOffset": 2219
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 96,
-                    "startColumn": 4,
-                    "startOffset": 7387,
-                    "endColumn": 42,
-                    "endOffset": 7425
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 205,
-                        "endColumn": 42,
-                        "endOffset": 243
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 97,
-                    "startColumn": 4,
-                    "startOffset": 7430,
-                    "endColumn": 54,
-                    "endOffset": 7480
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 30,
-                        "startColumn": 3,
-                        "startOffset": 1736,
-                        "endColumn": 53,
-                        "endOffset": 1786
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 98,
-                    "startColumn": 4,
-                    "startOffset": 7485,
-                    "endColumn": 48,
-                    "endOffset": 7529
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 3,
-                        "startOffset": 1687,
-                        "endColumn": 47,
-                        "endOffset": 1731
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 99,
                     "startColumn": 4,
-                    "startOffset": 7534,
-                    "endColumn": 75,
-                    "endOffset": 7605
+                    "startOffset": 7520,
+                    "endColumn": 61,
+                    "endOffset": 7577
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 31,
-                        "startColumn": 3,
-                        "startOffset": 1791,
-                        "endColumn": 74,
-                        "endOffset": 1862
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 100,
                     "startColumn": 4,
-                    "startOffset": 7610,
-                    "endColumn": 50,
-                    "endOffset": 7656
+                    "startOffset": 7582,
+                    "endColumn": 64,
+                    "endOffset": 7642
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 4,
-                        "startOffset": 1636,
-                        "endColumn": 50,
-                        "endOffset": 1682
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 101,
                     "startColumn": 4,
-                    "startOffset": 7661,
-                    "endColumn": 53,
-                    "endOffset": 7710
+                    "startOffset": 7647,
+                    "endColumn": 57,
+                    "endOffset": 7700
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 3,
-                        "startOffset": 1444,
-                        "endColumn": 52,
-                        "endOffset": 1493
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 102,
                     "startColumn": 4,
-                    "startOffset": 7715,
-                    "endColumn": 74,
-                    "endOffset": 7785
+                    "startOffset": 7705,
+                    "endColumn": 55,
+                    "endOffset": 7756
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 4,
-                        "startOffset": 1560,
-                        "endColumn": 74,
-                        "endOffset": 1630
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 103,
                     "startColumn": 4,
-                    "startOffset": 7790,
-                    "endColumn": 59,
-                    "endOffset": 7845
+                    "startOffset": 7761,
+                    "endColumn": 40,
+                    "endOffset": 7797
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 494,
-                        "endColumn": 59,
-                        "endOffset": 549
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 104,
                     "startColumn": 4,
-                    "startOffset": 7850,
-                    "endColumn": 68,
-                    "endOffset": 7914
+                    "startOffset": 7802,
+                    "endColumn": 42,
+                    "endOffset": 7840
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 424,
-                        "endColumn": 68,
-                        "endOffset": 488
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 105,
                     "startColumn": 4,
-                    "startOffset": 7919,
-                    "endColumn": 39,
-                    "endOffset": 7954
+                    "startOffset": 7845,
+                    "endColumn": 54,
+                    "endOffset": 7895
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 45,
-                        "startColumn": 4,
-                        "startOffset": 2514,
-                        "endColumn": 39,
-                        "endOffset": 2549
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 106,
                     "startColumn": 4,
-                    "startOffset": 7959,
-                    "endLine": 113,
-                    "endColumn": 31,
-                    "endOffset": 8268
+                    "startOffset": 7900,
+                    "endColumn": 48,
+                    "endOffset": 7944
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 91,
-                        "startColumn": 1,
-                        "startOffset": 7154,
-                        "endLine": 98,
-                        "endColumn": 31,
-                        "endOffset": 7470
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 107,
+                    "startColumn": 4,
+                    "startOffset": 7949,
+                    "endColumn": 75,
+                    "endOffset": 8020
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 108,
+                    "startColumn": 4,
+                    "startOffset": 8025,
+                    "endColumn": 50,
+                    "endOffset": 8071
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 109,
+                    "startColumn": 4,
+                    "startOffset": 8076,
+                    "endColumn": 53,
+                    "endOffset": 8125
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 110,
+                    "startColumn": 4,
+                    "startOffset": 8130,
+                    "endColumn": 74,
+                    "endOffset": 8200
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 111,
+                    "startColumn": 4,
+                    "startOffset": 8205,
+                    "endColumn": 59,
+                    "endOffset": 8260
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 112,
+                    "startColumn": 4,
+                    "startOffset": 8265,
+                    "endColumn": 68,
+                    "endOffset": 8329
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 113,
+                    "startColumn": 4,
+                    "startOffset": 8334,
+                    "endColumn": 39,
+                    "endOffset": 8369
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 114,
                     "startColumn": 4,
-                    "startOffset": 8273,
-                    "endColumn": 64,
-                    "endOffset": 8333
+                    "startOffset": 8374,
+                    "endLine": 121,
+                    "endColumn": 31,
+                    "endOffset": 8683
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 3,
-                        "startOffset": 1115,
-                        "endColumn": 63,
-                        "endOffset": 1175
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 115,
-                    "startColumn": 4,
-                    "startOffset": 8338,
-                    "endColumn": 42,
-                    "endOffset": 8376
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 40,
-                        "startColumn": 4,
-                        "startOffset": 2225,
-                        "endColumn": 42,
-                        "endOffset": 2263
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 116,
-                    "startColumn": 4,
-                    "startOffset": 8381,
-                    "endColumn": 58,
-                    "endOffset": 8435
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 103,
-                        "startColumn": 4,
-                        "startOffset": 7772,
-                        "endColumn": 58,
-                        "endOffset": 7826
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 117,
-                    "startColumn": 4,
-                    "startOffset": 8440,
-                    "endColumn": 171,
-                    "endOffset": 8607
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 101,
-                        "startColumn": 4,
-                        "startOffset": 7547,
-                        "endColumn": 171,
-                        "endOffset": 7714
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 118,
-                    "startColumn": 4,
-                    "startOffset": 8612,
-                    "endColumn": 52,
-                    "endOffset": 8660
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 104,
-                        "startColumn": 4,
-                        "startOffset": 7832,
-                        "endColumn": 52,
-                        "endOffset": 7880
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 119,
-                    "startColumn": 4,
-                    "startOffset": 8665,
-                    "endColumn": 50,
-                    "endOffset": 8711
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 102,
-                        "startColumn": 4,
-                        "startOffset": 7720,
-                        "endColumn": 50,
-                        "endOffset": 7766
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 120,
-                    "startColumn": 4,
-                    "startOffset": 8716,
-                    "endColumn": 58,
-                    "endOffset": 8770
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 100,
-                        "startColumn": 1,
-                        "startOffset": 7487,
-                        "endColumn": 55,
-                        "endOffset": 7541
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 121,
-                    "startColumn": 4,
-                    "startOffset": 8775,
-                    "endColumn": 47,
-                    "endOffset": 8818
-                },
-                "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 108,
-                        "endColumn": 47,
-                        "endOffset": 151
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 122,
                     "startColumn": 4,
-                    "startOffset": 8823,
-                    "endColumn": 53,
-                    "endOffset": 8872
+                    "startOffset": 8688,
+                    "endColumn": 64,
+                    "endOffset": 8748
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 3,
-                        "startOffset": 1061,
-                        "endColumn": 52,
-                        "endOffset": 1110
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 123,
                     "startColumn": 4,
-                    "startOffset": 8877,
-                    "endColumn": 54,
-                    "endOffset": 8927
+                    "startOffset": 8753,
+                    "endColumn": 42,
+                    "endOffset": 8791
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 3,
-                        "startOffset": 1006,
-                        "endColumn": 53,
-                        "endOffset": 1056
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 124,
                     "startColumn": 4,
-                    "startOffset": 8932,
-                    "endLine": 130,
-                    "endColumn": 12,
-                    "endOffset": 9218
+                    "startOffset": 8796,
+                    "endColumn": 58,
+                    "endOffset": 8850
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\styles.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 191,
-                        "endLine": 12,
-                        "endColumn": 12,
-                        "endOffset": 481
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 125,
+                    "startColumn": 4,
+                    "startOffset": 8855,
+                    "endColumn": 171,
+                    "endOffset": 9022
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 9027,
+                    "endColumn": 52,
+                    "endOffset": 9075
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 127,
+                    "startColumn": 4,
+                    "startOffset": 9080,
+                    "endColumn": 50,
+                    "endOffset": 9126
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 128,
+                    "startColumn": 4,
+                    "startOffset": 9131,
+                    "endColumn": 58,
+                    "endOffset": 9185
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 129,
+                    "startColumn": 4,
+                    "startOffset": 9190,
+                    "endColumn": 47,
+                    "endOffset": 9233
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 130,
+                    "startColumn": 4,
+                    "startOffset": 9238,
+                    "endColumn": 53,
+                    "endOffset": 9287
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 131,
                     "startColumn": 4,
-                    "startOffset": 9223,
-                    "endLine": 133,
-                    "endColumn": 12,
-                    "endOffset": 9378
+                    "startOffset": 9292,
+                    "endColumn": 54,
+                    "endOffset": 9342
                 },
                 "from": {
-                    "file": "C:\\Users\\Junaid\\Documents\\GitHub\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\styles.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 522,
-                        "endLine": 17,
-                        "endColumn": 12,
-                        "endOffset": 679
-                    }
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 132,
+                    "startColumn": 4,
+                    "startOffset": 9347,
+                    "endLine": 136,
+                    "endColumn": 12,
+                    "endOffset": 9506
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 137,
+                    "startColumn": 4,
+                    "startOffset": 9511,
+                    "endLine": 139,
+                    "endColumn": 12,
+                    "endOffset": 9570
+                },
+                "from": {
+                    "file": "C:\\Users\\Junaid Malik\\Documents\\AndroidStudioProjects\\My Projects\\AndroidProjectHearing\\Dr Hearing App\\app\\src\\main\\res\\values\\styles.xml"
                 }
             }
         ]
